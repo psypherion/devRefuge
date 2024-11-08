@@ -1,0 +1,114 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [4. More Control Flow Tools](#)
+    * [4.1. `if` Statements](#if-statements)
+    * [4.2. `for` Statements](#for-statements)
+    * [4.3. The `range()` Function](#the-range-function)
+    * [4.4. `break` and `continue` Statements](#break-and-continue-statements)
+    * [4.5. `else` Clauses on Loops](#else-clauses-on-loops)
+    * [4.6. `pass` Statements](#pass-statements)
+    * [4.7. `match` Statements](#match-statements)
+    * [4.8. Defining Functions](#defining-functions)
+    * [4.9. More on Defining Functions](#more-on-defining-functions)
+      * [4.9.1. Default Argument Values](#default-argument-values)
+      * [4.9.2. Keyword Arguments](#keyword-arguments)
+      * [4.9.3. Special parameters](#special-parameters)
+        * [4.9.3.1. Positional-or-Keyword Arguments](#positional-or-keyword-arguments)
+        * [4.9.3.2. Positional-Only Parameters](#positional-only-parameters)
+        * [4.9.3.3. Keyword-Only Arguments](#keyword-only-arguments)
+        * [4.9.3.4. Function Examples](#function-examples)
+        * [4.9.3.5. Recap](#recap)
+      * [4.9.4. Arbitrary Argument Lists](#arbitrary-argument-lists)
+      * [4.9.5. Unpacking Argument Lists](#unpacking-argument-lists)
+      * [4.9.6. Lambda Expressions](#lambda-expressions)
+      * [4.9.7. Documentation Strings](#documentation-strings)
+      * [4.9.8. Function Annotations](#function-annotations)
+    * [4.10. Intermezzo: Coding Style](#intermezzo-coding-style)
+
+
+
+#### Previous topic
+
+[3. An Informal Introduction to Python](introduction.html "previous chapter")
+
+#### Next topic
+
+[5. Data Structures](datastructures.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/controlflow.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](datastructures.html "5. Data Structures") |
+  * [previous](introduction.html "3. An Informal Introduction to Python") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [4. More Control Flow Tools]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 4. More Control Flow Tools[¶](#more-control-flow-tools "Link to this heading")
+
+As well as the [`while`](../reference/compound_stmts.html#while) statement just introduced, Python uses a few more that we will encounter in this chapter.
+
+## 4.1. `if` Statements[¶](#if-statements "Link to this heading")
+
+Perhaps the most well-known statement type is the [`if`](../reference/compound_stmts.html#if) statement. For example:
+
+>>>```
+
+    
+    
+    >>> x = int(input("Please enter an integer: "))
+    Please enter an integer: 42
+    >>> if x < 0:
+    ... x = 0
+    ... print('Negative changed to zero')
+    ... elif x == 0:
+    ... print('Zero')
+    ... elif x == 1:
+    ... print('Single')
+    ... else:
+    ... print('More')
+    ...
+    More
+    
+```
+
+There can be zero or more [`elif`](../reference/compound_stmts.html#elif) parts, and the [`else`](../reference/compound_stmts.html#else) part is optional. The keyword ‘`elif`’ is short for ‘else if’, and is useful to avoid excessive indentation. An `if` … `elif` … `elif` … sequence is a substitute for the `switch` or `case` statements found in other languages.
+
+If you’re comparing the same value to several constants, or checking for specific types or attributes, you may also find the `match` statement useful. For more details see [match Statements](#tut-match).
+
+## 4.2. `for` Statements[¶](#for-statements "Link to this heading")
+
+The [`for`](../reference/compound_stmts.html#for) statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python’s `for` statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):
+
+>>>```
+
+    
+    
+    >>> # Measure some strings:
+    >>> words = ['cat', 'window', 'defenestrate']
+    >>> for w in words:
+    ...

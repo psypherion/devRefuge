@@ -1,0 +1,48 @@
+Mailing list archives are available at <https://mail.python.org/pipermail/>.
+
+Before posting, be sure to check the list of [Frequently Asked Questions](../faq/index.html#faq-index) (also called the FAQ). The FAQ answers many of the questions that come up again and again, and may already contain the solution for your problem.
+
+Footnotes
+
+[[1](#id1)]
+
+“Cheese Shop” is a Monty Python’s sketch: a customer enters a cheese shop, but whatever cheese he asks for, the clerk says it’s missing.
+
+#### Previous topic
+
+[12. Virtual Environments and Packages](venv.html "previous chapter")
+
+#### Next topic
+
+[14. Interactive Input Editing and History Substitution](interactive.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/whatnow.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](interactive.html "14. Interactive Input Editing and History Substitution") |
+  * [previous](venv.html "12. Virtual Environments and Packages") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [13. What Now?]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+© [ Copyright ](../copyright.html) 2001-2024, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See [History and License](/license.html) for more information. The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/) Last updated on Nov 07, 2024 (15:51 UTC). [Found a bug](/bugs.html)? Created using [Sphinx](https://www.sphinx-doc.org/) 8.1.3. 

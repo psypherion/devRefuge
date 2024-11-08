@@ -1,0 +1,82 @@
+Lists are [mutable](../glossary.html#term-mutable), and their elements are usually homogeneous and are accessed by iterating over the list.
+
+A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accommodate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective. For example:
+
+>>>```
+
+    
+    
+    >>> empty = ()
+    >>> singleton = 'hello',  # <-- note trailing comma
+    >>> len(empty)
+    0
+    >>> len(singleton)
+    1
+    >>> singleton
+    ('hello',)
+    
+```
+
+The statement `t = 12345, 54321, 'hello!'` is an example of _tuple packing_ : the values `12345`, `54321` and `'hello!'` are packed together in a tuple. The reverse operation is also possible:
+
+>>>```
+
+    
+    
+    >>> x, y, z = t
+    
+```
+
+This is called, appropriately enough, _sequence unpacking_ and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
+
+## 5.4. Sets[¶](#sets "Link to this heading")
+
+Python also includes a data type for _sets_. A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+
+Curly braces or the [`set()`](../library/stdtypes.html#set "set") function can be used to create sets. Note: to create an empty set you have to use `set()`, not `{}`; the latter creates an empty dictionary, a data structure that we discuss in the next section.
+
+Here is a brief demonstration:
+
+>>>```
+
+    
+    
+    >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+    >>> print(basket)           # show that duplicates have been removed
+    {'orange', 'banana', 'pear', 'apple'}
+    >>> 'orange' in basket         # fast membership testing
+    True
+    >>> 'crabgrass' in basket
+    False
+    >>> # Demonstrate set operations on unique letters from two words
+    >>>
+    >>> a = set('abracadabra')
+    >>> b = set('alacazam')
+    >>> a                 # unique letters in a
+    {'a', 'r', 'b', 'c', 'd'}
+    >>> a - b               # letters in a but not in b
+    {'r', 'd', 'b'}
+    >>> a | b               # letters in a or b or both
+    {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+    >>> a & b               # letters in both a and b
+    {'a', 'c'}
+    >>> a ^ b               # letters in a or b but not both
+    {'r', 'd', 'b', 'm', 'z', 'l'}
+    
+```
+
+Similarly to [list comprehensions](#tut-listcomps), set comprehensions are also supported:
+
+>>>```
+
+    
+    
+    >>> a = {x for x in 'abracadabra' if x not in 'abc'}
+    >>> a
+    {'r', 'd'}
+    
+```
+
+## 5.5. Dictionaries[¶](#dictionaries "Link to this heading")
+
+Another useful data type built into Python is the _dictionary_ (see [Mapping Types — dict](../library/stdtypes.html#typesmapping)). Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”.

@@ -1,0 +1,784 @@
+  * [Skip to main content](#content)
+  * [Skip to search](#top-nav-search-input)
+  * [Skip to select language](#languages-switcher-button)
+
+
+
+[MDN Web Docs](/en-US/)Open main menu
+
+  * References[References](/en-US/docs/Web)
+    * [Overview / Web TechnologyWeb technology reference for developers](/en-US/docs/Web)
+    * [HTMLStructure of content on the web](/en-US/docs/Web/HTML)
+    * [CSSCode used to describe document style](/en-US/docs/Web/CSS)
+    * [JavaScriptGeneral-purpose scripting language](/en-US/docs/Web/JavaScript)
+    * [HTTPProtocol for transmitting web resources](/en-US/docs/Web/HTTP)
+    * [Web APIsInterfaces for building web applications](/en-US/docs/Web/API)
+    * [Web ExtensionsDeveloping extensions for web browsers](/en-US/docs/Mozilla/Add-ons/WebExtensions)
+    * [Web TechnologyWeb technology reference for developers](/en-US/docs/Web)
+  * Guides[Guides](/en-US/docs/Learn)
+    * [Overview / MDN Learning AreaLearn web development](/en-US/docs/Learn)
+    * [MDN Learning AreaLearn web development](/en-US/docs/Learn)
+    * [HTMLLearn to structure web content with HTML](/en-US/docs/Learn/HTML)
+    * [CSSLearn to style content using CSS](/en-US/docs/Learn/CSS)
+    * [JavaScriptLearn to run scripts in the browser](/en-US/docs/Learn/JavaScript)
+    * [AccessibilityLearn to make the web accessible to all](/en-US/docs/Web/Accessibility)
+  * Plus[Plus](/en-US/plus)
+    * [OverviewA customized MDN experience](/en-US/plus)
+    * [AI HelpGet real-time assistance and support](/en-US/plus/ai-help)
+    * [UpdatesAll browser compatibility updates at a glance](/en-US/plus/updates)
+    * [DocumentationLearn how to use MDN Plus](/en-US/plus/docs/features/overview)
+    * [FAQFrequently asked questions about MDN Plus](/en-US/plus/docs/faq)
+  * [Curriculum New](/en-US/curriculum/)
+  * [Blog](/en-US/blog/)
+  * Tools
+    * [PlaygroundWrite, test and share your code](/en-US/play)
+    * [HTTP ObservatoryScan a website for free](/en-US/observatory)
+    * [AI HelpGet real-time assistance and support](/en-US/plus/ai-help)
+
+
+
+Search MDNClear search inputSearch
+
+Theme
+
+  * [Log in](/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide)
+  * [Sign up for free](/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide)
+
+
+
+  1. [References](/en-US/docs/Web)
+  2. [JavaScript](/en-US/docs/Web/JavaScript)
+  3. [Guide](/en-US/docs/Web/JavaScript/Guide)
+
+
+
+Article Actions
+
+  * English (US)
+
+    * Remember language[](https://github.com/orgs/mdn/discussions/739 "Enable this setting to automatically switch to this language when it's available. \(Click to learn more.\)")
+
+Is this useful?This feature is useful.This feature is not useful.
+    * [Deutsch](/de/docs/Web/JavaScript/Guide)
+    * [Español](/es/docs/Web/JavaScript/Guide)
+    * [Français](/fr/docs/Web/JavaScript/Guide)
+    * [日本語](/ja/docs/Web/JavaScript/Guide)
+    * [한국어](/ko/docs/Web/JavaScript/Guide)
+    * [Português (do Brasil)](/pt-BR/docs/Web/JavaScript/Guide)
+    * [Русский](/ru/docs/Web/JavaScript/Guide)
+    * [中文 (简体)](/zh-CN/docs/Web/JavaScript/Guide)
+    * [正體中文 (繁體)](/zh-TW/docs/Web/JavaScript/Guide)
+
+
+
+
+Filter sidebarClear filter input
+
+## In this article
+
+  * [Introduction](#introduction)
+  * [Grammar and types](#grammar_and_types)
+  * [Control flow and error handling](#control_flow_and_error_handling)
+  * [Loops and iteration](#loops_and_iteration)
+  * [Functions](#functions)
+  * [Expressions and operators](#expressions_and_operators)
+  * [Numbers and dates](#numbers_and_dates)
+  * [Text formatting](#text_formatting)
+  * [Indexed collections](#indexed_collections)
+  * [Keyed collections](#keyed_collections)
+  * [Working with objects](#working_with_objects)
+  * [Using classes](#using_classes)
+  * [Promises](#promises)
+  * [Typed arrays](#typed_arrays)
+  * [Iterators and generators](#iterators_and_generators)
+  * [Meta programming](#meta_programming)
+  * [JavaScript modules](#javascript_modules)
+
+
+
+  1. [JavaScript](/en-US/docs/Web/JavaScript)
+  2. Tutorials
+  3. Complete beginners
+    1. [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+    2. [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
+    3. [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
+    4. [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)
+  4. JavaScript Guide
+    1. [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
+    2. [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+    3. [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+    4. [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+    5. [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+    6. [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+    7. [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+    8. [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+    9. [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+    10. [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+    11. [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
+    12. [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+    13. [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+    14. [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+    15. [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+    16. [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+    17. [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+    18. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+  5. Intermediate
+    1. [Client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+    2. [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
+    3. [Language overview](/en-US/docs/Web/JavaScript/Language_overview)
+    4. [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
+    5. [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+    6. [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+    7. [Closures](/en-US/docs/Web/JavaScript/Closures)
+  6. Advanced
+    1. [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+    2. [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
+    3. [Concurrency model and Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
+  7. [References](/en-US/docs/Web/JavaScript/Reference)
+  8. Built-in objects
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Global_Objects)
+    2. [AggregateError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError)
+    3. [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+    4. [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    5. [AsyncFunction](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+    6. [AsyncGenerator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
+    7. [AsyncGeneratorFunction](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
+    8. [AsyncIterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator)
+    9. [Atomics](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
+    10. [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+    11. [BigInt64Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
+    12. [BigUint64Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
+    13. [Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+    14. [DataView](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+    15. [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+    16. [decodeURI()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
+    17. [decodeURIComponent()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
+    18. [encodeURI()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+    19. [encodeURIComponent()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+    20. [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+    21. [escape()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape) Deprecated
+    22. [eval()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+    23. [EvalError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError)
+    24. [FinalizationRegistry](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+    25. [Float16Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float16Array)
+    26. [Float32Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
+    27. [Float64Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+    28. [Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+    29. [Generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+    30. [GeneratorFunction](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
+    31. [globalThis](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+    32. [Infinity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+    33. [Int16Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
+    34. [Int32Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+    35. [Int8Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+    36. [InternalError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError) Non-standard
+    37. [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+    38. [isFinite()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
+    39. [isNaN()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
+    40. [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)
+    41. [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+    42. [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+    43. [Math](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+    44. [NaN](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+    45. [Number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+    46. [Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+    47. [parseFloat()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+    48. [parseInt()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+    49. [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+    50. [Proxy](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+    51. [RangeError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
+    52. [ReferenceError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
+    53. [Reflect](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
+    54. [RegExp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+    55. [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+    56. [SharedArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
+    57. [String](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+    58. [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+    59. [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+    60. [TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+    61. [TypeError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+    62. [Uint16Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
+    63. [Uint32Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
+    64. [Uint8Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+    65. [Uint8ClampedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+    66. [undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+    67. [unescape()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape) Deprecated
+    68. [URIError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError)
+    69. [WeakMap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+    70. [WeakRef](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
+    71. [WeakSet](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+  9. Expressions & operators
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Operators)
+    2. [Addition (+)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+    3. [Addition assignment (+=)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
+    4. [Assignment (=)](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)
+    5. [async function expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
+    6. [async function* expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
+    7. [await](/en-US/docs/Web/JavaScript/Reference/Operators/await)
+    8. [Bitwise AND (&)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+    9. [Bitwise AND assignment (&=)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+    10. [Bitwise NOT (~)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)
+    11. [Bitwise OR (|)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+    12. [Bitwise OR assignment (|=)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+    13. [Bitwise XOR (^)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+    14. [Bitwise XOR assignment (^=)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+    15. [class expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+    16. [Comma operator (,)](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)
+    17. [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
+    18. [Decrement (--)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+    19. [delete](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+    20. [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+    21. [Division (/)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+    22. [Division assignment (/=)](/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)
+    23. [Equality (==)](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+    24. [Exponentiation (**)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+    25. [Exponentiation assignment (**=)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)
+    26. [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+    27. [function* expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
+    28. [Greater than (>)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+    29. [Greater than or equal (>=)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+    30. [Grouping operator ( )](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping)
+    31. [import.meta](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
+    32. [import()](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+    33. [in](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+    34. [Increment (++)](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+    35. [Inequality (!=)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+    36. [instanceof](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+    37. [Left shift (<<)](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift)
+    38. [Left shift assignment (<<=)](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+    39. [Less than (<)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+    40. [Less than or equal (<=)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+    41. [Logical AND (&&)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+    42. [Logical AND assignment (&&=)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+    43. [Logical NOT (!)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT)
+    44. [Logical OR (||)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+    45. [Logical OR assignment (||=)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+    46. [Multiplication (*)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+    47. [Multiplication assignment (*=)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)
+    48. [new](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+    49. [new.target](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
+    50. [null](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+    51. [Nullish coalescing assignment (??=)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+    52. [Nullish coalescing operator (??)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+    53. [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+    54. [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+    55. [Optional chaining (?.)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+    56. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+    57. [Remainder (%)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+    58. [Remainder assignment (%=)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
+    59. [Right shift (>>)](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
+    60. [Right shift assignment (>>=)](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+    61. [Spread syntax (...)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+    62. [Strict equality (===)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+    63. [Strict inequality (!==)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+    64. [Subtraction (-)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+    65. [Subtraction assignment (-=)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
+    66. [super](/en-US/docs/Web/JavaScript/Reference/Operators/super)
+    67. [this](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+    68. [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+    69. [Unary negation (-)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+    70. [Unary plus (+)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+    71. [Unsigned right shift (>>>)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+    72. [Unsigned right shift assignment (>>>=)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+    73. [void operator](/en-US/docs/Web/JavaScript/Reference/Operators/void)
+    74. [yield](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+    75. [yield*](/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
+  10. Statements & declarations
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Statements)
+    2. [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+    3. [async function*](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
+    4. [Block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)
+    5. [break](/en-US/docs/Web/JavaScript/Reference/Statements/break)
+    6. [class](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+    7. [const](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+    8. [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue)
+    9. [debugger](/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+    10. [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+    11. [Empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
+    12. [export](/en-US/docs/Web/JavaScript/Reference/Statements/export)
+    13. [Expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement)
+    14. [for](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+    15. [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+    16. [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+    17. [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+    18. [function](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+    19. [function*](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+    20. [if...else](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+    21. [import](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+    22. [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+    23. [let](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+    24. [return](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+    25. [switch](/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+    26. [throw](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+    27. [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+    28. [var](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+    29. [while](/en-US/docs/Web/JavaScript/Reference/Statements/while)
+    30. [with](/en-US/docs/Web/JavaScript/Reference/Statements/with) Deprecated
+  11. Functions
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Functions)
+    2. [Arrow function expressions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+    3. [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+    4. [get](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+    5. [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+    6. [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+    7. [set](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+    8. [The arguments object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+  12. Classes
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Classes)
+    2. [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+    3. [extends](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+    4. [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+    5. [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+    6. [static](/en-US/docs/Web/JavaScript/Reference/Classes/static)
+    7. [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+  13. Regular expressions
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+    2. [Backreference: \1, \2](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+    3. [Capturing group: (...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+    4. [Character class escape: \d, \D, \w, \W, \s, \S](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
+    5. [Character class: [...], [^...]](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+    6. [Character escape: \n, \u{...}](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
+    7. [Disjunction: |](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+    8. [Input boundary assertion: ^, $](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
+    9. [Literal character: a, b](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
+    10. [Lookahead assertion: (?=...), (?!...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+    11. [Lookbehind assertion: (?<=...), (?<!...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+    12. [Modifier: (?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
+    13. [Named backreference: \k<name>](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
+    14. [Named capturing group: (?<name>...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+    15. [Non-capturing group: (?:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
+    16. [Quantifier: *, +, ?, {n}, {n,}, {n,m}](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
+    17. [Unicode character class escape: \p{...}, \P{...}](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+    18. [Wildcard: .](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
+    19. [Word boundary assertion: \b, \B](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
+  14. Errors
+    1. [Overview](/en-US/docs/Web/JavaScript/Reference/Errors)
+    2. [AggregateError: No Promise in Promise.any was resolved](/en-US/docs/Web/JavaScript/Reference/Errors/Promise_any_all_rejected)
+    3. [Error: Permission denied to access property "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Property_access_denied)
+    4. [InternalError: too much recursion](/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+    5. [RangeError: argument is not a valid code point](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point)
+    6. [RangeError: BigInt division by zero](/en-US/docs/Web/JavaScript/Reference/Errors/BigInt_division_by_zero)
+    7. [RangeError: BigInt negative exponent](/en-US/docs/Web/JavaScript/Reference/Errors/BigInt_negative_exponent)
+    8. [RangeError: form must be one of 'NFC', 'NFD', 'NFKC', or 'NFKD'](/en-US/docs/Web/JavaScript/Reference/Errors/Form_must_be_one_of)
+    9. [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+    10. [RangeError: invalid date](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_date)
+    11. [RangeError: precision is out of range](/en-US/docs/Web/JavaScript/Reference/Errors/Precision_range)
+    12. [RangeError: radix must be an integer](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_radix)
+    13. [RangeError: repeat count must be less than infinity](/en-US/docs/Web/JavaScript/Reference/Errors/Resulting_string_too_large)
+    14. [RangeError: repeat count must be non-negative](/en-US/docs/Web/JavaScript/Reference/Errors/Negative_repetition_count)
+    15. [RangeError: x can't be converted to BigInt because it isn't an integer](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer)
+    16. [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)
+    17. [ReferenceError: assignment to undeclared variable "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Undeclared_var)
+    18. [ReferenceError: can't access lexical declaration 'X' before initialization](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init)
+    19. [ReferenceError: deprecated caller or arguments usage](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage)
+    20. [ReferenceError: must call super constructor before using 'this' in derived class constructor](/en-US/docs/Web/JavaScript/Reference/Errors/Super_not_called)
+    21. [ReferenceError: super() called twice in derived class constructor](/en-US/docs/Web/JavaScript/Reference/Errors/Super_called_twice)
+    22. [SyntaxError: 'arguments'/'eval' can't be defined or assigned to in strict mode code](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_strict_arguments_eval)
+    23. [SyntaxError: "0"-prefixed octal literals are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)
+    24. [SyntaxError: "use strict" not allowed in function with non-simple parameters](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)
+    25. [SyntaxError: "x" is a reserved identifier](/en-US/docs/Web/JavaScript/Reference/Errors/Reserved_identifier)
+    26. [SyntaxError: \ at end of pattern](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_backslash_at_end_of_pattern)
+    27. [SyntaxError: a declaration in the head of a for-of loop can't have an initializer](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-of_initializer)
+    28. [SyntaxError: applying the 'delete' operator to an unqualified name is deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Delete_in_strict_mode)
+    29. [SyntaxError: arguments is not valid in fields](/en-US/docs/Web/JavaScript/Reference/Errors/Arguments_not_allowed)
+    30. [SyntaxError: await is only valid in async functions, async generators and modules](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_await)
+    31. [SyntaxError: await/yield expression can't be used in parameter](/en-US/docs/Web/JavaScript/Reference/Errors/await_yield_in_parameter)
+    32. [SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized)
+    33. [SyntaxError: character class escape cannot be used in class range in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_character_class_escape_in_class_range)
+    34. [SyntaxError: continue must be inside loop](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_continue)
+    35. [SyntaxError: duplicate capture group name in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_duplicate_capture_group_name)
+    36. [SyntaxError: duplicate formal argument x](/en-US/docs/Web/JavaScript/Reference/Errors/Duplicate_parameter)
+    37. [SyntaxError: for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)
+    38. [SyntaxError: function statement requires a name](/en-US/docs/Web/JavaScript/Reference/Errors/Unnamed_function_statement)
+    39. [SyntaxError: functions cannot be labelled](/en-US/docs/Web/JavaScript/Reference/Errors/Function_label)
+    40. [SyntaxError: getter and setter for private name #x should either be both static or non-static](/en-US/docs/Web/JavaScript/Reference/Errors/Either_be_both_static_or_non-static)
+    41. [SyntaxError: getter functions must have no arguments](/en-US/docs/Web/JavaScript/Reference/Errors/Getter_no_arguments)
+    42. [SyntaxError: identifier starts immediately after numeric literal](/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number)
+    43. [SyntaxError: illegal character](/en-US/docs/Web/JavaScript/Reference/Errors/Illegal_character)
+    44. [SyntaxError: import declarations may only appear at top level of a module](/en-US/docs/Web/JavaScript/Reference/Errors/import_decl_module_top_level)
+    45. [SyntaxError: incomplete quantifier in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_incomplete_quantifier)
+    46. [SyntaxError: invalid assignment left-hand side](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side)
+    47. [SyntaxError: invalid BigInt syntax](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)
+    48. [SyntaxError: invalid capture group name in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_capture_group_name)
+    49. [SyntaxError: invalid character in class in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_char_in_class)
+    50. [SyntaxError: invalid class set operation in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_class_set_operation)
+    51. [SyntaxError: invalid decimal escape in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_decimal_escape)
+    52. [SyntaxError: invalid identity escape in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_identity_escape)
+    53. [SyntaxError: invalid named capture reference in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_named_capture_reference)
+    54. [SyntaxError: invalid property name in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_property_name)
+    55. [SyntaxError: invalid range in character class](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_range_in_character_class)
+    56. [SyntaxError: invalid regexp group](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_group)
+    57. [SyntaxError: invalid regular expression flag "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag)
+    58. [SyntaxError: invalid unicode escape in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_invalid_unicode_escape)
+    59. [SyntaxError: JSON.parse: bad parsing](/en-US/docs/Web/JavaScript/Reference/Errors/JSON_bad_parse)
+    60. [SyntaxError: label not found](/en-US/docs/Web/JavaScript/Reference/Errors/Label_not_found)
+    61. [SyntaxError: missing : after property id](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_colon_after_property_id)
+    62. [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list)
+    63. [SyntaxError: missing ) after condition](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition)
+    64. [SyntaxError: missing ] after element list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_bracket_after_list)
+    65. [SyntaxError: missing } after function body](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_function_body)
+    66. [SyntaxError: missing } after property list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_property_list)
+    67. [SyntaxError: missing = in const declaration](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_initializer_in_const)
+    68. [SyntaxError: missing formal parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter)
+    69. [SyntaxError: missing name after . operator](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator)
+    70. [SyntaxError: missing variable name](/en-US/docs/Web/JavaScript/Reference/Errors/No_variable_name)
+    71. [SyntaxError: negated character class with strings in regular expression](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_negated_char_class_with_strings)
+    72. [SyntaxError: new keyword cannot be used with an optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)
+    73. [SyntaxError: nothing to repeat](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_nothing_to_repeat)
+    74. [SyntaxError: numbers out of order in {} quantifier.](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_numbers_out_of_order_in_quantifier)
+    75. [SyntaxError: octal escape sequences can't be used in untagged template literals or in strict mode code](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_escape_sequence)
+    76. [SyntaxError: parameter after rest parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Parameter_after_rest_parameter)
+    77. [SyntaxError: private fields can't be deleted](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete_private_fields)
+    78. [SyntaxError: property name __proto__ appears more than once in object literal](/en-US/docs/Web/JavaScript/Reference/Errors/Duplicate_proto)
+    79. [SyntaxError: raw bracket is not allowed in regular expression with unicode flag](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_raw_bracket)
+    80. [SyntaxError: redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+    81. [SyntaxError: reference to undeclared private field or method #x](/en-US/docs/Web/JavaScript/Reference/Errors/Undeclared_private_field_or_method)
+    82. [SyntaxError: rest parameter may not have a default](/en-US/docs/Web/JavaScript/Reference/Errors/Rest_with_default)
+    83. [SyntaxError: return not in function](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_return)
+    84. [SyntaxError: setter functions must have one argument](/en-US/docs/Web/JavaScript/Reference/Errors/Setter_one_argument)
+    85. [SyntaxError: string literal contains an unescaped line break](/en-US/docs/Web/JavaScript/Reference/Errors/String_literal_EOL)
+    86. [SyntaxError: super() is only valid in derived class constructors](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_super_call)
+    87. [SyntaxError: tagged template cannot be used with optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)
+    88. [SyntaxError: Unexpected '#' used outside of class body](/en-US/docs/Web/JavaScript/Reference/Errors/Hash_outside_class)
+    89. [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token)
+    90. [SyntaxError: unlabeled break must be inside loop or switch](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_break)
+    91. [SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'](/en-US/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation)
+    92. [SyntaxError: use of super property/member accesses only valid within methods or eval code within methods](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_super_prop)
+    93. [SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma)
+    94. [TypeError: 'x' is not iterable](/en-US/docs/Web/JavaScript/Reference/Errors/is_not_iterable)
+    95. [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type)
+    96. [TypeError: "x" is not a constructor](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_constructor)
+    97. [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)
+    98. [TypeError: "x" is not a non-null object](/en-US/docs/Web/JavaScript/Reference/Errors/No_non-null_object)
+    99. [TypeError: "x" is read-only](/en-US/docs/Web/JavaScript/Reference/Errors/Read-only)
+    100. [TypeError: BigInt value can't be serialized in JSON](/en-US/docs/Web/JavaScript/Reference/Errors/BigInt_not_serializable)
+    101. [TypeError: calling a builtin X constructor without new is forbidden](/en-US/docs/Web/JavaScript/Reference/Errors/Builtin_ctor_no_new)
+    102. [TypeError: can't access/set private field or method: object is not the right class](/en-US/docs/Web/JavaScript/Reference/Errors/Get_set_missing_private)
+    103. [TypeError: can't assign to property "x" on "y": not an object](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property)
+    104. [TypeError: can't convert BigInt to number](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_convert_BigInt_to_number)
+    105. [TypeError: can't convert x to BigInt](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt)
+    106. [TypeError: can't define property "x": "obj" is not extensible](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible)
+    107. [TypeError: can't delete non-configurable array element](/en-US/docs/Web/JavaScript/Reference/Errors/Non_configurable_array_element)
+    108. [TypeError: can't redefine non-configurable property "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_redefine_property)
+    109. [TypeError: can't set prototype of this object](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_set_prototype)
+    110. [TypeError: can't set prototype: it would cause a prototype chain cycle](/en-US/docs/Web/JavaScript/Reference/Errors/Cyclic_prototype)
+    111. [TypeError: cannot use 'in' operator to search for 'x' in 'y'](/en-US/docs/Web/JavaScript/Reference/Errors/in_operator_no_object)
+    112. [TypeError: class constructors must be invoked with 'new'](/en-US/docs/Web/JavaScript/Reference/Errors/Class_ctor_no_new)
+    113. [TypeError: cyclic object value](/en-US/docs/Web/JavaScript/Reference/Errors/Cyclic_object_value)
+    114. [TypeError: derived class constructor returned invalid value x](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_derived_return)
+    115. [TypeError: getting private setter-only property](/en-US/docs/Web/JavaScript/Reference/Errors/Private_setter_only)
+    116. [TypeError: Initializing an object twice is an error with private fields/methods](/en-US/docs/Web/JavaScript/Reference/Errors/Private_double_initialization)
+    117. [TypeError: invalid 'instanceof' operand 'x'](/en-US/docs/Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand)
+    118. [TypeError: invalid Array.prototype.sort argument](/en-US/docs/Web/JavaScript/Reference/Errors/Array_sort_argument)
+    119. [TypeError: invalid assignment to const "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_const_assignment)
+    120. [TypeError: Iterator/AsyncIterator constructor can't be used directly](/en-US/docs/Web/JavaScript/Reference/Errors/Constructor_cant_be_used_directly)
+    121. [TypeError: matchAll/replaceAll must be called with a global RegExp](/en-US/docs/Web/JavaScript/Reference/Errors/Requires_global_RegExp)
+    122. [TypeError: More arguments needed](/en-US/docs/Web/JavaScript/Reference/Errors/More_arguments_needed)
+    123. [TypeError: null/undefined has no properties](/en-US/docs/Web/JavaScript/Reference/Errors/No_properties)
+    124. [TypeError: property "x" is non-configurable and can't be deleted](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete)
+    125. [TypeError: Reduce of empty array with no initial value](/en-US/docs/Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value)
+    126. [TypeError: setting getter-only property "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Getter_only)
+    127. [TypeError: WeakSet key/WeakMap value 'x' must be an object or an unregistered symbol](/en-US/docs/Web/JavaScript/Reference/Errors/Key_not_weakly_held)
+    128. [TypeError: X.prototype.y called on incompatible type](/en-US/docs/Web/JavaScript/Reference/Errors/Called_on_incompatible_type)
+    129. [URIError: malformed URI sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_URI)
+    130. [Warning: -file- is being assigned a //# sourceMappingURL, but already has one](/en-US/docs/Web/JavaScript/Reference/Errors/Already_has_pragma)
+    131. [Warning: unreachable code after return statement](/en-US/docs/Web/JavaScript/Reference/Errors/Stmt_after_return)
+  15. Misc
+    1. [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
+    2. [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+    3. [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+    4. [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+    5. [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
+    6. [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
+    7. [Deprecated features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+
+
+
+## In this article
+
+  * [Introduction](#introduction)
+  * [Grammar and types](#grammar_and_types)
+  * [Control flow and error handling](#control_flow_and_error_handling)
+  * [Loops and iteration](#loops_and_iteration)
+  * [Functions](#functions)
+  * [Expressions and operators](#expressions_and_operators)
+  * [Numbers and dates](#numbers_and_dates)
+  * [Text formatting](#text_formatting)
+  * [Indexed collections](#indexed_collections)
+  * [Keyed collections](#keyed_collections)
+  * [Working with objects](#working_with_objects)
+  * [Using classes](#using_classes)
+  * [Promises](#promises)
+  * [Typed arrays](#typed_arrays)
+  * [Iterators and generators](#iterators_and_generators)
+  * [Meta programming](#meta_programming)
+  * [JavaScript modules](#javascript_modules)
+
+
+
+# JavaScript Guide
+
+The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+
+This Guide is divided into the following chapters.
+
+## [Introduction](#introduction)
+
+Overview: [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
+
+  * [About this guide](/en-US/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information)
+  * [About JavaScript](/en-US/docs/Web/JavaScript/Guide/Introduction#what_is_javascript)
+  * [JavaScript and Java](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
+  * [ECMAScript](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
+  * [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
+  * [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
+
+
+
+## [Grammar and types](#grammar_and_types)
+
+Overview: [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+
+  * [Basic syntax & comments](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
+  * [Declarations](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+  * [Variable scope](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
+  * [Variable hoisting](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
+  * [Data structures and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
+  * [Literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals)
+
+
+
+## [Control flow and error handling](#control_flow_and_error_handling)
+
+Overview: [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
+  * [`if...else`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
+  * [`switch`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
+  * [`try`/`catch`/`throw`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
+  * [Error objects](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
+
+
+
+## [Loops and iteration](#loops_and_iteration)
+
+Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+  * [`for`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+  * [`while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
+  * [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
+  * [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
+  * [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
+  * [`for...in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+  * [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+
+
+
+## [Functions](#functions)
+
+Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+
+  * [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
+  * [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
+  * [Function scope](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
+  * [Closures](/en-US/docs/Web/JavaScript/Guide/Functions#closures)
+  * [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
+  * [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
+
+
+
+## [Expressions and operators](#expressions_and_operators)
+
+Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+
+  * [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
+  * [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
+  * [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
+  * [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_\(ternary\)_operator)
+
+
+
+## [Numbers and dates](#numbers_and_dates)
+
+Overview: [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+
+  * [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
+  * [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
+  * [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
+  * [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+
+
+
+## [Text formatting](#text_formatting)
+
+Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+
+  * [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
+  * [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
+  * [Template literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
+  * [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
+  * [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
+
+
+## [Indexed collections](#indexed_collections)
+
+Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+
+## [Keyed collections](#keyed_collections)
+
+Overview: [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
+
+  * [`Map`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#map_object)
+  * [`WeakMap`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+  * [`Set`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#set_object)
+  * [`WeakSet`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object)
+
+
+
+## [Working with objects](#working_with_objects)
+
+Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+
+  * [Objects and properties](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)
+  * [Creating objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)
+  * [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_methods)
+  * [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
+
+
+
+## [Using classes](#using_classes)
+
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+
+  * [Declaring a class](/en-US/docs/Web/JavaScript/Guide/Using_classes#declaring_a_class)
+  * [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_classes#constructor)
+  * [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_classes#extends_and_inheritance)
+  * [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_classes#why_classes)
+
+
+
+## [Promises](#promises)
+
+Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+
+  * [Guarantees](/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees)
+  * [Chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
+  * [Error handling](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_handling)
+  * [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
+  * [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
+
+
+
+## [Typed arrays](#typed_arrays)
+
+Overview: [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+
+## [Iterators and generators](#iterators_and_generators)
+
+Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+
+  * [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
+  * [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
+  * [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
+
+
+
+## [Meta programming](#meta_programming)
+
+Overview: [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+
+  * [`Proxy`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies)
+  * [Handlers and traps](/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
+  * [Revocable Proxy](/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
+  * [`Reflect`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection)
+
+
+
+## [JavaScript modules](#javascript_modules)
+
+Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+
+  * [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
+  * [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
+  * [Default exports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
+  * [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
+  * [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
+  * [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+
+
+  * [ Next ](/en-US/docs/Web/JavaScript/Guide/Introduction)
+
+
+
+## Help improve MDN
+
+Was this page helpfuul to you?
+
+YesNo
+
+[Learn how to contribute](https://github.com/mdn/content/blob/main/CONTRIBUTING.md "This will take you to our contribution guidelines on GitHub.").
+
+This page was last modified on May 2, 2023 by [MDN contributors](/en-US/docs/Web/JavaScript/Guide/contributors.txt).
+
+[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/javascript/guide/index.md?plain=1 "Folder: en-us/web/javascript/guide \(Opens in a new tab\)") • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fjavascript%2Fguide%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fjavascript%2Fguide%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F7b35a48ac0a10b67f9bd5270b082d40deff9c953%0A*+Document+last+modified%3A+2023-05-01T22%3A45%3A34.000Z%0A%0A%3C%2Fdetails%3E "This will take you to GitHub to file a new issue.")
+
+[MDN logo](/)
+
+Your blueprint for a better internet.
+
+  * [MDN on Mastodon](https://mozilla.social/@mdn)
+  * [MDN on X (formerly Twitter)](https://twitter.com/mozdevnet)
+  * [MDN on GitHub](https://github.com/mdn/)
+  * [MDN Blog RSS Feed](/en-US/blog/rss.xml)
+
+
+
+## MDN
+
+  * [About](/en-US/about)
+  * [Blog](/en-US/blog/)
+  * [Careers](https://www.mozilla.org/en-US/careers/listings/?team=ProdOps)
+  * [Advertise with us](/en-US/advertising)
+
+
+
+## Support
+
+  * [Product help](https://support.mozilla.org/products/mdn-plus)
+  * [Report an issue](/en-US/docs/MDN/Community/Issues)
+
+
+
+## Our communities
+
+  * [MDN Community](/en-US/community)
+  * [MDN Forum](https://discourse.mozilla.org/c/mdn/236)
+  * [MDN Chat](/discord)
+
+
+
+## Developers
+
+  * [Web Technologies](/en-US/docs/Web)
+  * [Learn Web Development](/en-US/docs/Learn)
+  * [MDN Plus](/en-US/plus)
+  * [Hacks Blog](https://hacks.mozilla.org/)
+
+
+
+[Mozilla logo](https://www.mozilla.org/)
+
+  * [Website Privacy Notice](https://www.mozilla.org/privacy/websites/)
+  * [Cookies](https://www.mozilla.org/privacy/websites/#cookies)
+  * [Legal](https://www.mozilla.org/about/legal/terms/mozilla)
+  * [Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/)
+
+
+
+Visit [Mozilla Corporation’s](https://www.mozilla.org) not-for-profit parent, the [Mozilla Foundation](https://foundation.mozilla.org/).Portions of this content are ©1998–2024 by individual mozilla.org contributors. Content available under [a Creative Commons license](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license).
+  *[
+Deprecated
+]: Deprecated. Not for use in new websites.
+  *[
+Non-standard
+]: Non-standard. Check cross-browser support before using.

@@ -1,0 +1,69 @@
+Threads can be used to improve the responsiveness of applications that accept user input while other tasks run in the background. A related use case is running I/O in parallel with computations in another thread.
+
+The following code shows how the high level [`threading`](../library/threading.html#module-threading "threading: Thread-based parallelism.") module can run tasks in background while the main program continues to run:
+
+```
+
+    
+    
+    import threading, zipfile
+    class AsyncZip(threading.Thread):
+      def __init__(self, infile, outfile):
+        threading.Thread.__init__(self)
+        self.infile = infile
+        self.outfile = outfile
+      def run(self):
+        f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)
+        f.write(self.infile)
+        f.close()
+        print('Finished background zip of:', self.infile)
+    background = AsyncZip('mydata.txt', 'myarchive.zip')
+    background.start()
+    print('The main program continues to run in foreground.')
+    background.join()  # Wait for the background task to finish
+    print('Main program waited until background was done.')
+    
+```
+
+The principal challenge of multi-threaded applications is coordinating threads that share data or other resources. To that end, the threading module provides a number of synchronization primitives including locks, events, condition variables, and semaphores.
+
+While those tools are powerful, minor design errors can result in problems that are difficult to reproduce. So, the preferred approach to task coordination is to concentrate all access to a resource in a single thread and then use the [`queue`](../library/queue.html#module-queue "queue: A synchronized queue class.") module to feed that thread with requests from other threads. Applications using [`Queue`](../library/queue.html#queue.Queue "queue.Queue") objects for inter-thread communication and coordination are easier to design, more readable, and more reliable.
+
+## 11.5. Logging[¶](#logging "Link to this heading")
+
+The [`logging`](../library/logging.html#module-logging "logging: Flexible event logging system for applications.") module offers a full featured and flexible logging system. At its simplest, log messages are sent to a file or to `sys.stderr`:
+
+```
+
+    
+    
+    import logging
+    logging.debug('Debugging information')
+    logging.info('Informational message')
+    logging.warning('Warning:config file %s not found', 'server.conf')
+    logging.error('Error occurred')
+    logging.critical('Critical error -- shutting down')
+    
+```
+
+This produces the following output:
+
+```
+
+    
+    
+    WARNING:root:Warning:config file server.conf not found
+    ERROR:root:Error occurred
+    CRITICAL:root:Critical error -- shutting down
+    
+```
+
+By default, informational and debugging messages are suppressed and the output is sent to standard error. Other output options include routing messages through email, datagrams, sockets, or to an HTTP Server. New filters can select different routing based on message priority: [`DEBUG`](../library/logging.html#logging.DEBUG "logging.DEBUG"), [`INFO`](../library/logging.html#logging.INFO "logging.INFO"), [`WARNING`](../library/logging.html#logging.WARNING "logging.WARNING"), [`ERROR`](../library/logging.html#logging.ERROR "logging.ERROR"), and [`CRITICAL`](../library/logging.html#logging.CRITICAL "logging.CRITICAL").
+
+The logging system can be configured directly from Python or can be loaded from a user editable configuration file for customized logging without altering the application.
+
+## 11.6. Weak References[¶](#weak-references "Link to this heading")
+
+Python does automatic memory management (reference counting for most objects and [garbage collection](../glossary.html#term-garbage-collection) to eliminate cycles). The memory is freed shortly after the last reference to it has been eliminated.
+
+This approach works fine for most applications but occasionally there is a need to track objects only as long as they are being used by something else. Unfortunately, just tracking them creates a reference that makes them permanent. The [`weakref`](../library/weakref.html#module-weakref "weakref: Support for weak references and weak dictionaries.") module provides tools for tracking objects without creating a reference. When the object is no longer needed, it is automatically removed from a weakref table and a callback is triggered for weakref objects.

@@ -1,0 +1,60 @@
+Also see [The Perils of Floating Point](http://www.indowsway.com/floatingpoint.htm) for a more complete account of other common surprises.
+
+As that says near the end, “there are no easy answers.” Still, don’t be unduly wary of floating point! The errors in Python float operations are inherited from the floating-point hardware, and on most machines are on the order of no more than 1 part in 2**53 per operation. That’s more than adequate for most tasks, but you do need to keep in mind that it’s not decimal arithmetic and that every float operation can suffer a new rounding error.
+
+While pathological cases do exist, for most casual use of floating-point arithmetic you’ll see the result you expect in the end if you simply round the display of your final results to the number of decimal digits you expect. [`str()`](../library/stdtypes.html#str "str") usually suffices, and for finer control see the [`str.format()`](../library/stdtypes.html#str.format "str.format") method’s format specifiers in [Format String Syntax](../library/string.html#formatstrings).
+
+For use cases which require exact decimal representation, try using the [`decimal`](../library/decimal.html#module-decimal "decimal: Implementation of the General Decimal Arithmetic Specification.") module which implements decimal arithmetic suitable for accounting applications and high-precision applications.
+
+Another form of exact arithmetic is supported by the [`fractions`](../library/fractions.html#module-fractions "fractions: Rational numbers.") module which implements arithmetic based on rational numbers (so the numbers like 1/3 can be represented exactly).
+
+If you are a heavy user of floating-point operations you should take a look at the NumPy package and many other packages for mathematical and statistical operations supplied by the SciPy project. See <<https://scipy.org>>.
+
+Python provides tools that may help on those rare occasions when you really _do_ want to know the exact value of a float. The [`float.as_integer_ratio()`](../library/stdtypes.html#float.as_integer_ratio "float.as_integer_ratio") method expresses the value of a float as a fraction:
+
+>>>```
+
+    
+    
+    >>> x = 3.14159
+    >>> x.as_integer_ratio()
+    (3537115888337719, 1125899906842624)
+    
+```
+
+Since the ratio is exact, it can be used to losslessly recreate the original value:
+
+>>>```
+
+    
+    
+    >>> x == 3537115888337719 / 1125899906842624
+    True
+    
+```
+
+The [`float.hex()`](../library/stdtypes.html#float.hex "float.hex") method expresses a float in hexadecimal (base 16), again giving the exact value stored by your computer:
+
+>>>```
+
+    
+    
+    >>> x.hex()
+    '0x1.921f9f01b866ep+1'
+    
+```
+
+This precise hexadecimal representation can be used to reconstruct the float value exactly:
+
+>>>```
+
+    
+    
+    >>> x == float.fromhex('0x1.921f9f01b866ep+1')
+    True
+    
+```
+
+Since the representation is exact, it is useful for reliably porting values across different versions of Python (platform independence) and exchanging data with other languages that support the same format (such as Java and C99).
+
+Another helpful tool is the [`sum()`](../library/functions.html#sum "sum") function which helps mitigate loss-of-precision during summation. It uses extended precision for intermediate rounding steps as values are added onto a running total.

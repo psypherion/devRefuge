@@ -1,0 +1,45 @@
+The _mode_ argument is optional; `'r'` will be assumed if it’s omitted.
+
+Normally, files are opened in _text mode_ , that means, you read and write strings from and to the file, which are encoded in a specific _encoding_. If _encoding_ is not specified, the default is platform dependent (see [`open()`](../library/functions.html#open "open")). Because UTF-8 is the modern de-facto standard, `encoding="utf-8"` is recommended unless you know that you need to use a different encoding. Appending a `'b'` to the mode opens the file in _binary mode_. Binary mode data is read and written as [`bytes`](../library/stdtypes.html#bytes "bytes") objects. You can not specify _encoding_ when opening file in binary mode.
+
+In text mode, the default when reading is to convert platform-specific line endings (`\n` on Unix, `\r\n` on Windows) to just `\n`. When writing in text mode, the default is to convert occurrences of `\n` back to platform-specific line endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in `JPEG` or `EXE` files. Be very careful to use binary mode when reading and writing such files.
+
+It is good practice to use the [`with`](../reference/compound_stmts.html#with) keyword when dealing with file objects. The advantage is that the file is properly closed after its suite finishes, even if an exception is raised at some point. Using `with` is also much shorter than writing equivalent [`try`](../reference/compound_stmts.html#try)-[`finally`](../reference/compound_stmts.html#finally) blocks:
+
+>>>```
+
+    
+    
+    >>> with open('workfile', encoding="utf-8") as f:
+    ... read_data = f.read()
+    >>> # We can check that the file has been automatically closed.
+    >>> f.closed
+    True
+    
+```
+
+If you’re not using the [`with`](../reference/compound_stmts.html#with) keyword, then you should call `f.close()` to close the file and immediately free up any system resources used by it.
+
+Warning
+
+Calling `f.write()` without using the `with` keyword or calling `f.close()` **might** result in the arguments of `f.write()` not being completely written to the disk, even if the program exits successfully.
+
+After a file object is closed, either by a [`with`](../reference/compound_stmts.html#with) statement or by calling `f.close()`, attempts to use the file object will automatically fail.
+
+>>>```
+
+    
+    
+    >>> f.close()
+    >>> f.read()
+    Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+    ValueError: I/O operation on closed file.
+    
+```
+
+### 7.2.1. Methods of File Objects[¶](#methods-of-file-objects "Link to this heading")
+
+The rest of the examples in this section will assume that a file object called `f` has already been created.
+
+To read a file’s contents, call `f.read(size)`, which reads some quantity of data and returns it as a string (in text mode) or bytes object (in binary mode). _size_ is an optional numeric argument. When _size_ is omitted or negative, the entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s memory. Otherwise, at most _size_ characters (in text mode) or _size_ bytes (in binary mode) are read and returned.

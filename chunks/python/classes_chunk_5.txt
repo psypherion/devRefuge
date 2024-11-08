@@ -1,0 +1,93 @@
+The original local scope (the one in effect just before the class definition was entered) is reinstated, and the class object is bound here to the class name given in the class definition header (`ClassName` in the example).
+
+### 9.3.2. Class Objects[¶](#class-objects "Link to this heading")
+
+Class objects support two kinds of operations: attribute references and instantiation.
+
+_Attribute references_ use the standard syntax used for all attribute references in Python: `obj.name`. Valid attribute names are all the names that were in the class’s namespace when the class object was created. So, if the class definition looked like this:
+
+```
+
+    
+    
+    class MyClass:
+    """A simple example class"""
+      i = 12345
+      def f(self):
+        return 'hello world'
+    
+```
+
+then `MyClass.i` and `MyClass.f` are valid attribute references, returning an integer and a function object, respectively. Class attributes can also be assigned to, so you can change the value of `MyClass.i` by assignment. [`__doc__`](../reference/datamodel.html#type.__doc__ "type.__doc__") is also a valid attribute, returning the docstring belonging to the class: `"A simple example class"`.
+
+Class _instantiation_ uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class. For example (assuming the above class):
+
+```
+
+    
+    
+    x = MyClass()
+    
+```
+
+creates a new _instance_ of the class and assigns this object to the local variable `x`.
+
+The instantiation operation (“calling” a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named [`__init__()`](../reference/datamodel.html#object.__init__ "object.__init__"), like this:
+
+```
+
+    
+    
+    def __init__(self):
+      self.data = []
+    
+```
+
+When a class defines an [`__init__()`](../reference/datamodel.html#object.__init__ "object.__init__") method, class instantiation automatically invokes `__init__()` for the newly created class instance. So in this example, a new, initialized instance can be obtained by:
+
+```
+
+    
+    
+    x = MyClass()
+    
+```
+
+Of course, the [`__init__()`](../reference/datamodel.html#object.__init__ "object.__init__") method may have arguments for greater flexibility. In that case, arguments given to the class instantiation operator are passed on to `__init__()`. For example,
+
+>>>```
+
+    
+    
+    >>> class Complex:
+    ... def __init__(self, realpart, imagpart):
+    ... self.r = realpart
+    ... self.i = imagpart
+    ...
+    >>> x = Complex(3.0, -4.5)
+    >>> x.r, x.i
+    (3.0, -4.5)
+    
+```
+
+### 9.3.3. Instance Objects[¶](#instance-objects "Link to this heading")
+
+Now what can we do with instance objects? The only operations understood by instance objects are attribute references. There are two kinds of valid attribute names: data attributes and methods.
+
+_data attributes_ correspond to “instance variables” in Smalltalk, and to “data members” in C++. Data attributes need not be declared; like local variables, they spring into existence when they are first assigned to. For example, if `x` is the instance of `MyClass` created above, the following piece of code will print the value `16`, without leaving a trace:
+
+```
+
+    
+    
+    x.counter = 1
+    while x.counter < 10:
+      x.counter = x.counter * 2
+    print(x.counter)
+    del x.counter
+    
+```
+
+The other kind of instance attribute reference is a _method_. A method is a function that “belongs to” an object.
+
+Valid method names of an instance object depend on its class.

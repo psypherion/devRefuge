@@ -1,0 +1,142 @@
+The best possible value for _J_ is then that quotient rounded:
+
+>>>```
+
+    
+    
+    >>> q, r = divmod(2**56, 10)
+    >>> r
+    6
+    
+```
+
+Since the remainder is more than half of 10, the best approximation is obtained by rounding up:
+
+>>>```
+
+    
+    
+    >>> q+1
+    7205759403792794
+    
+```
+
+Therefore the best possible approximation to 1/10 in IEEE 754 double precision is:
+
+```
+
+    
+    
+    7205759403792794 / 2 ** 56
+    
+```
+
+Dividing both the numerator and denominator by two reduces the fraction to:
+
+```
+
+    
+    
+    3602879701896397 / 2 ** 55
+    
+```
+
+Note that since we rounded up, this is actually a little bit larger than 1/10; if we had not rounded up, the quotient would have been a little bit smaller than 1/10. But in no case can it be _exactly_ 1/10!
+
+So the computer never “sees” 1/10: what it sees is the exact fraction given above, the best IEEE 754 double approximation it can get:
+
+>>>```
+
+    
+    
+    >>> 0.1 * 2 ** 55
+    3602879701896397.0
+    
+```
+
+If we multiply that fraction by 10**55, we can see the value out to 55 decimal digits:
+
+>>>```
+
+    
+    
+    >>> 3602879701896397 * 10 ** 55 // 2 ** 55
+    1000000000000000055511151231257827021181583404541015625
+    
+```
+
+meaning that the exact number stored in the computer is equal to the decimal value 0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal value, many languages (including older versions of Python), round the result to 17 significant digits:
+
+>>>```
+
+    
+    
+    >>> format(0.1, '.17f')
+    '0.10000000000000001'
+    
+```
+
+The [`fractions`](../library/fractions.html#module-fractions "fractions: Rational numbers.") and [`decimal`](../library/decimal.html#module-decimal "decimal: Implementation of the General Decimal Arithmetic Specification.") modules make these calculations easy:
+
+>>>```
+
+    
+    
+    >>> from decimal import Decimal
+    >>> from fractions import Fraction
+    >>> Fraction.from_float(0.1)
+    Fraction(3602879701896397, 36028797018963968)
+    >>> (0.1).as_integer_ratio()
+    (3602879701896397, 36028797018963968)
+    >>> Decimal.from_float(0.1)
+    Decimal('0.1000000000000000055511151231257827021181583404541015625')
+    >>> format(Decimal.from_float(0.1), '.17')
+    '0.10000000000000001'
+    
+```
+
+### [Table of Contents](../contents.html)
+
+  * [15. Floating-Point Arithmetic: Issues and Limitations](#)
+    * [15.1. Representation Error](#representation-error)
+
+
+
+#### Previous topic
+
+[14. Interactive Input Editing and History Substitution](interactive.html "previous chapter")
+
+#### Next topic
+
+[16. Appendix](appendix.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/floatingpoint.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](appendix.html "16. Appendix") |
+  * [previous](interactive.html "14. Interactive Input Editing and History Substitution") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [15. Floating-Point Arithmetic: Issues and Limitations]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+© [ Copyright ](../copyright.html) 2001-2024, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See [History and License](/license.html) for more information. The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/) Last updated on Nov 07, 2024 (15:51 UTC). [Found a bug](/bugs.html)? Created using [Sphinx](https://www.sphinx-doc.org/) 8.1.3. 

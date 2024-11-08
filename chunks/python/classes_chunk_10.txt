@@ -1,0 +1,71 @@
+It should be considered an implementation detail and subject to change without notice.
+
+Since there is a valid use-case for class-private members (namely to avoid name clashes of names with names defined by subclasses), there is limited support for such a mechanism, called _name mangling_. Any identifier of the form `__spam` (at least two leading underscores, at most one trailing underscore) is textually replaced with `_classname__spam`, where `classname` is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.
+
+See also
+
+The [private name mangling specifications](../reference/expressions.html#private-name-mangling) for details and special cases.
+
+Name mangling is helpful for letting subclasses override methods without breaking intraclass method calls. For example:
+
+```
+
+    
+    
+    class Mapping:
+      def __init__(self, iterable):
+        self.items_list = []
+        self.__update(iterable)
+      def update(self, iterable):
+        for item in iterable:
+          self.items_list.append(item)
+      __update = update  # private copy of original update() method
+    class MappingSubclass(Mapping):
+      def update(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+          self.items_list.append(item)
+    
+```
+
+The above example would work even if `MappingSubclass` were to introduce a `__update` identifier since it is replaced with `_Mapping__update` in the `Mapping` class and `_MappingSubclass__update` in the `MappingSubclass` class respectively.
+
+Note that the mangling rules are designed mostly to avoid accidents; it still is possible to access or modify a variable that is considered private. This can even be useful in special circumstances, such as in the debugger.
+
+Notice that code passed to `exec()` or `eval()` does not consider the classname of the invoking class to be the current class; this is similar to the effect of the `global` statement, the effect of which is likewise restricted to code that is byte-compiled together. The same restriction applies to `getattr()`, `setattr()` and `delattr()`, as well as when referencing `__dict__` directly.
+
+## 9.7. Odds and Ends[¶](#odds-and-ends "Link to this heading")
+
+Sometimes it is useful to have a data type similar to the Pascal “record” or C “struct”, bundling together a few named data items. The idiomatic approach is to use [`dataclasses`](../library/dataclasses.html#module-dataclasses "dataclasses: Generate special methods on user-defined classes.") for this purpose:
+
+```
+
+    
+    
+    from dataclasses import dataclass
+    @dataclass
+    class Employee:
+      name: str
+      dept: str
+      salary: int
+    
+```
+
+>>>```
+
+    
+    
+    >>> john = Employee('john', 'computer lab', 1000)
+    >>> john.dept
+    'computer lab'
+    >>> john.salary
+    1000
+    
+```
+
+A piece of Python code that expects a particular abstract data type can often be passed a class that emulates the methods of that data type instead. For instance, if you have a function that formats some data from a file object, you can define a class with methods [`read()`](../library/io.html#io.TextIOBase.read "io.TextIOBase.read") and [`readline()`](../library/io.html#io.TextIOBase.readline "io.TextIOBase.readline") that get the data from a string buffer instead, and pass it as an argument.
+
+[Instance method objects](../reference/datamodel.html#instance-methods) have attributes, too: [`m.__self__`](../reference/datamodel.html#method.__self__ "method.__self__") is the instance object with the method `m()`, and [`m.__func__`](../reference/datamodel.html#method.__func__ "method.__func__") is the [function object](../reference/datamodel.html#user-defined-funcs) corresponding to the method.
+
+## 9.8.

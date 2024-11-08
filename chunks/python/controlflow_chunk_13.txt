@@ -1,0 +1,96 @@
+Making it easy for others to read your code is always a good idea, and adopting a nice coding style helps tremendously for that.
+
+For Python, [**PEP 8**](https://peps.python.org/pep-0008/) has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Python developer should read it at some point; here are the most important points extracted for you:
+
+  * Use 4-space indentation, and no tabs.
+
+4 spaces are a good compromise between small indentation (allows greater nesting depth) and large indentation (easier to read). Tabs introduce confusion, and are best left out.
+
+  * Wrap lines so that they don’t exceed 79 characters.
+
+This helps users with small displays and makes it possible to have several code files side-by-side on larger displays.
+
+  * Use blank lines to separate functions and classes, and larger blocks of code inside functions.
+
+  * When possible, put comments on a line of their own.
+
+  * Use docstrings.
+
+  * Use spaces around operators and after commas, but not directly inside bracketing constructs: `a = f(1, 2) + g(3, 4)`.
+
+  * Name your classes and functions consistently; the convention is to use `UpperCamelCase` for classes and `lowercase_with_underscores` for functions and methods. Always use `self` as the name for the first method argument (see [A First Look at Classes](classes.html#tut-firstclasses) for more on classes and methods).
+
+  * Don’t use fancy encodings if your code is meant to be used in international environments. Python’s default, UTF-8, or even plain ASCII work best in any case.
+
+  * Likewise, don’t use non-ASCII characters in identifiers if there is only the slightest chance people speaking a different language will read or maintain the code.
+
+
+
+
+Footnotes
+
+[[1](#id1)]
+
+Actually, _call by object reference_ would be a better description, since if a mutable object is passed, the caller will see any changes the callee makes to it (items inserted into a list).
+
+### [Table of Contents](../contents.html)
+
+  * [4. More Control Flow Tools](#)
+    * [4.1. `if` Statements](#if-statements)
+    * [4.2. `for` Statements](#for-statements)
+    * [4.3. The `range()` Function](#the-range-function)
+    * [4.4. `break` and `continue` Statements](#break-and-continue-statements)
+    * [4.5. `else` Clauses on Loops](#else-clauses-on-loops)
+    * [4.6. `pass` Statements](#pass-statements)
+    * [4.7. `match` Statements](#match-statements)
+    * [4.8. Defining Functions](#defining-functions)
+    * [4.9. More on Defining Functions](#more-on-defining-functions)
+      * [4.9.1. Default Argument Values](#default-argument-values)
+      * [4.9.2. Keyword Arguments](#keyword-arguments)
+      * [4.9.3. Special parameters](#special-parameters)
+        * [4.9.3.1. Positional-or-Keyword Arguments](#positional-or-keyword-arguments)
+        * [4.9.3.2. Positional-Only Parameters](#positional-only-parameters)
+        * [4.9.3.3. Keyword-Only Arguments](#keyword-only-arguments)
+        * [4.9.3.4. Function Examples](#function-examples)
+        * [4.9.3.5. Recap](#recap)
+      * [4.9.4. Arbitrary Argument Lists](#arbitrary-argument-lists)
+      * [4.9.5. Unpacking Argument Lists](#unpacking-argument-lists)
+      * [4.9.6. Lambda Expressions](#lambda-expressions)
+      * [4.9.7. Documentation Strings](#documentation-strings)
+      * [4.9.8. Function Annotations](#function-annotations)
+    * [4.10. Intermezzo: Coding Style](#intermezzo-coding-style)
+
+
+
+#### Previous topic
+
+[3. An Informal Introduction to Python](introduction.html "previous chapter")
+
+#### Next topic
+
+[5. Data Structures](datastructures.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/controlflow.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](datastructures.html "5. Data Structures") |
+  * [previous](introduction.html "3. An Informal Introduction to Python") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [4.

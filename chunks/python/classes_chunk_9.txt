@@ -1,0 +1,39 @@
+(For C++ programmers: all methods in Python are effectively `virtual`.)
+
+An overriding method in a derived class may in fact want to extend rather than simply replace the base class method of the same name. There is a simple way to call the base class method directly: just call `BaseClassName.methodname(self, arguments)`. This is occasionally useful to clients as well. (Note that this only works if the base class is accessible as `BaseClassName` in the global scope.)
+
+Python has two built-in functions that work with inheritance:
+
+  * Use [`isinstance()`](../library/functions.html#isinstance "isinstance") to check an instance’s type: `isinstance(obj, int)` will be `True` only if `obj.__class__` is [`int`](../library/functions.html#int "int") or some class derived from [`int`](../library/functions.html#int "int").
+
+  * Use [`issubclass()`](../library/functions.html#issubclass "issubclass") to check class inheritance: `issubclass(bool, int)` is `True` since [`bool`](../library/functions.html#bool "bool") is a subclass of [`int`](../library/functions.html#int "int"). However, `issubclass(float, int)` is `False` since [`float`](../library/functions.html#float "float") is not a subclass of [`int`](../library/functions.html#int "int").
+
+
+
+
+### 9.5.1. Multiple Inheritance[¶](#multiple-inheritance "Link to this heading")
+
+Python supports a form of multiple inheritance as well. A class definition with multiple base classes looks like this:
+
+```
+
+    
+    
+    class DerivedClassName(Base1, Base2, Base3):
+      <statement-1>
+      .
+      .
+      .
+      <statement-N>
+    
+```
+
+For most purposes, in the simplest cases, you can think of the search for attributes inherited from a parent class as depth-first, left-to-right, not searching twice in the same class where there is an overlap in the hierarchy. Thus, if an attribute is not found in `DerivedClassName`, it is searched for in `Base1`, then (recursively) in the base classes of `Base1`, and if it was not found there, it was searched for in `Base2`, and so on.
+
+In fact, it is slightly more complex than that; the method resolution order changes dynamically to support cooperative calls to [`super()`](../library/functions.html#super "super"). This approach is known in some other multiple-inheritance languages as call-next-method and is more powerful than the super call found in single-inheritance languages.
+
+Dynamic ordering is necessary because all cases of multiple inheritance exhibit one or more diamond relationships (where at least one of the parent classes can be accessed through multiple paths from the bottommost class). For example, all classes inherit from [`object`](../library/functions.html#object "object"), so any case of multiple inheritance provides more than one path to reach [`object`](../library/functions.html#object "object"). To keep the base classes from being accessed more than once, the dynamic algorithm linearizes the search order in a way that preserves the left-to-right ordering specified in each class, that calls each parent only once, and that is monotonic (meaning that a class can be subclassed without affecting the precedence order of its parents). Taken together, these properties make it possible to design reliable and extensible classes with multiple inheritance. For more detail, see [The Python 2.3 Method Resolution Order](../howto/mro.html#python-2-3-mro).
+
+## 9.6. Private Variables[¶](#private-variables "Link to this heading")
+
+“Private” instance variables that cannot be accessed except from inside an object don’t exist in Python. However, there is a convention that is followed by most Python code: a name prefixed with an underscore (e.g. `_spam`) should be treated as a non-public part of the API (whether it is a function, a method or a data member).

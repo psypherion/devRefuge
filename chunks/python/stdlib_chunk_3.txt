@@ -1,0 +1,77 @@
+""")
+    >>> server.quit()
+    
+```
+
+(Note that the second example needs a mailserver running on localhost.)
+
+## 10.8. Dates and Times[¶](#dates-and-times "Link to this heading")
+
+The [`datetime`](../library/datetime.html#module-datetime "datetime: Basic date and time types.") module supplies classes for manipulating dates and times in both simple and complex ways. While date and time arithmetic is supported, the focus of the implementation is on efficient member extraction for output formatting and manipulation. The module also supports objects that are timezone aware.
+
+>>>```
+
+    
+    
+    >>> # dates are easily constructed and formatted
+    >>> from datetime import date
+    >>> now = date.today()
+    >>> now
+    datetime.date(2003, 12, 2)
+    >>> now.strftime("%m-%d-%y. %d %b %Y is a %A on the %d day of %B.")
+    '12-02-03. 02 Dec 2003 is a Tuesday on the 02 day of December.'
+    >>> # dates support calendar arithmetic
+    >>> birthday = date(1964, 7, 31)
+    >>> age = now - birthday
+    >>> age.days
+    14368
+    
+```
+
+## 10.9. Data Compression[¶](#data-compression "Link to this heading")
+
+Common data archiving and compression formats are directly supported by modules including: [`zlib`](../library/zlib.html#module-zlib "zlib: Low-level interface to compression and decompression routines compatible with gzip."), [`gzip`](../library/gzip.html#module-gzip "gzip: Interfaces for gzip compression and decompression using file objects."), [`bz2`](../library/bz2.html#module-bz2 "bz2: Interfaces for bzip2 compression and decompression."), [`lzma`](../library/lzma.html#module-lzma "lzma: A Python wrapper for the liblzma compression library."), [`zipfile`](../library/zipfile.html#module-zipfile "zipfile: Read and write ZIP-format archive files.") and [`tarfile`](../library/tarfile.html#module-tarfile "tarfile: Read and write tar-format archive files.").
+
+>>>```
+
+    
+    
+    >>> import zlib
+    >>> s = b'witch which has which witches wrist watch'
+    >>> len(s)
+    41
+    >>> t = zlib.compress(s)
+    >>> len(t)
+    37
+    >>> zlib.decompress(t)
+    b'witch which has which witches wrist watch'
+    >>> zlib.crc32(s)
+    226805979
+    
+```
+
+## 10.10. Performance Measurement[¶](#performance-measurement "Link to this heading")
+
+Some Python users develop a deep interest in knowing the relative performance of different approaches to the same problem. Python provides a measurement tool that answers those questions immediately.
+
+For example, it may be tempting to use the tuple packing and unpacking feature instead of the traditional approach to swapping arguments. The [`timeit`](../library/timeit.html#module-timeit "timeit: Measure the execution time of small code snippets.") module quickly demonstrates a modest performance advantage:
+
+>>>```
+
+    
+    
+    >>> from timeit import Timer
+    >>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()
+    0.57535828626024577
+    >>> Timer('a,b = b,a', 'a=1; b=2').timeit()
+    0.54962537085770791
+    
+```
+
+In contrast to [`timeit`](../library/timeit.html#module-timeit "timeit: Measure the execution time of small code snippets.")’s fine level of granularity, the [`profile`](../library/profile.html#module-profile "profile: Python source profiler.") and [`pstats`](../library/profile.html#module-pstats "pstats: Statistics object for use with the profiler.") modules provide tools for identifying time critical sections in larger blocks of code.
+
+## 10.11. Quality Control[¶](#quality-control "Link to this heading")
+
+One approach for developing high quality software is to write tests for each function as it is developed and to run those tests frequently during the development process.
+
+The [`doctest`](../library/doctest.html#module-doctest "doctest: Test pieces of code within docstrings.") module provides a tool for scanning a module and validating tests embedded in a program’s docstrings. Test construction is as simple as cutting-and-pasting a typical call along with its results into the docstring.

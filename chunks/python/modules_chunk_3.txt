@@ -1,0 +1,100 @@
+However, it is okay to use it to save typing in interactive sessions.
+
+If the module name is followed by `as`, then the name following `as` is bound directly to the imported module.
+
+>>>```
+
+    
+    
+    >>> import fibo as fib
+    >>> fib.fib(500)
+    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+    
+```
+
+This is effectively importing the module in the same way that `import fibo` will do, with the only difference of it being available as `fib`.
+
+It can also be used when utilising [`from`](../reference/simple_stmts.html#from) with similar effects:
+
+>>>```
+
+    
+    
+    >>> from fibo import fib as fibonacci
+    >>> fibonacci(500)
+    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+    
+```
+
+Note
+
+For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use [`importlib.reload()`](../library/importlib.html#importlib.reload "importlib.reload"), e.g. `import importlib; importlib.reload(modulename)`.
+
+### 6.1.1. Executing modules as scripts[¶](#executing-modules-as-scripts "Link to this heading")
+
+When you run a Python module with
+
+```
+
+    
+    
+    python fibo.py <arguments>
+    
+```
+
+the code in the module will be executed, just as if you imported it, but with the `__name__` set to `"__main__"`. That means that by adding this code at the end of your module:
+
+```
+
+    
+    
+    if __name__ == "__main__":
+      import sys
+      fib(int(sys.argv[1]))
+    
+```
+
+you can make the file usable as a script as well as an importable module, because the code that parses the command line only runs if the module is executed as the “main” file:
+
+```
+
+    
+    
+    $ pythonfibo.py50
+    0 1 1 2 3 5 8 13 21 34
+    
+```
+
+If the module is imported, the code is not run:
+
+>>>```
+
+    
+    
+    >>> import fibo
+    >>>
+    
+```
+
+This is often used either to provide a convenient user interface to a module, or for testing purposes (running the module as a script executes a test suite).
+
+### 6.1.2. The Module Search Path[¶](#the-module-search-path "Link to this heading")
+
+When a module named `spam` is imported, the interpreter first searches for a built-in module with that name. These module names are listed in [`sys.builtin_module_names`](../library/sys.html#sys.builtin_module_names "sys.builtin_module_names"). If not found, it then searches for a file named `spam.py` in a list of directories given by the variable [`sys.path`](../library/sys.html#sys.path "sys.path"). [`sys.path`](../library/sys.html#sys.path "sys.path") is initialized from these locations:
+
+  * The directory containing the input script (or the current directory when no file is specified).
+
+  * [`PYTHONPATH`](../using/cmdline.html#envvar-PYTHONPATH) (a list of directory names, with the same syntax as the shell variable `PATH`).
+
+  * The installation-dependent default (by convention including a `site-packages` directory, handled by the [`site`](../library/site.html#module-site "site: Module responsible for site-specific configuration.") module).
+
+
+
+
+More details are at [The initialization of the sys.path module search path](../library/sys_path_init.html#sys-path-init).
+
+Note
+
+On file systems which support symlinks, the directory containing the input script is calculated after the symlink is followed. In other words the directory containing the symlink is **not** added to the module search path.
+
+After initialization, Python programs can modify [`sys.path`](../library/sys.html#sys.path "sys.path").

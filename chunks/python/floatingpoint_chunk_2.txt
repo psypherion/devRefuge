@@ -1,0 +1,92 @@
+On most machines, if Python were to print the true decimal value of the binary approximation stored for 0.1, it would have to display:
+
+>>>```
+
+    
+    
+    >>> 0.1
+    0.1000000000000000055511151231257827021181583404541015625
+    
+```
+
+That is more digits than most people find useful, so Python keeps the number of digits manageable by displaying a rounded value instead:
+
+>>>```
+
+    
+    
+    >>> 1 / 10
+    0.1
+    
+```
+
+Just remember, even though the printed result looks like the exact value of 1/10, the actual stored value is the nearest representable binary fraction.
+
+Interestingly, there are many different decimal numbers that share the same nearest approximate binary fraction. For example, the numbers `0.1` and `0.10000000000000001` and `0.1000000000000000055511151231257827021181583404541015625` are all approximated by `3602879701896397 / 2 ** 55`. Since all of these decimal values share the same approximation, any one of them could be displayed while still preserving the invariant `eval(repr(x)) == x`.
+
+Historically, the Python prompt and built-in [`repr()`](../library/functions.html#repr "repr") function would choose the one with 17 significant digits, `0.10000000000000001`. Starting with Python 3.1, Python (on most systems) is now able to choose the shortest of these and simply display `0.1`.
+
+Note that this is in the very nature of binary floating point: this is not a bug in Python, and it is not a bug in your code either. You’ll see the same kind of thing in all languages that support your hardware’s floating-point arithmetic (although some languages may not _display_ the difference by default, or in all output modes).
+
+For more pleasant output, you may wish to use string formatting to produce a limited number of significant digits:
+
+>>>```
+
+    
+    
+    >>> format(math.pi, '.12g') # give 12 significant digits
+    '3.14159265359'
+    >>> format(math.pi, '.2f')  # give 2 digits after the point
+    '3.14'
+    >>> repr(math.pi)
+    '3.141592653589793'
+    
+```
+
+It’s important to realize that this is, in a real sense, an illusion: you’re simply rounding the _display_ of the true machine value.
+
+One illusion may beget another. For example, since 0.1 is not exactly 1/10, summing three values of 0.1 may not yield exactly 0.3, either:
+
+>>>```
+
+    
+    
+    >>> 0.1 + 0.1 + 0.1 == 0.3
+    False
+    
+```
+
+Also, since the 0.1 cannot get any closer to the exact value of 1/10 and 0.3 cannot get any closer to the exact value of 3/10, then pre-rounding with [`round()`](../library/functions.html#round "round") function cannot help:
+
+>>>```
+
+    
+    
+    >>> round(0.1, 1) + round(0.1, 1) + round(0.1, 1) == round(0.3, 1)
+    False
+    
+```
+
+Though the numbers cannot be made closer to their intended exact values, the [`math.isclose()`](../library/math.html#math.isclose "math.isclose") function can be useful for comparing inexact values:
+
+>>>```
+
+    
+    
+    >>> math.isclose(0.1 + 0.1 + 0.1, 0.3)
+    True
+    
+```
+
+Alternatively, the [`round()`](../library/functions.html#round "round") function can be used to compare rough approximations:
+
+>>>```
+
+    
+    
+    >>> round(math.pi, ndigits=2) == round(22 / 7, ndigits=2)
+    True
+    
+```
+
+Binary floating-point arithmetic holds many surprises like this. The problem with “0.1” is explained in precise detail below, in the “Representation Error” section. See [Examples of Floating Point Problems](https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/) for a pleasant summary of how binary floating point works and the kinds of problems commonly encountered in practice.

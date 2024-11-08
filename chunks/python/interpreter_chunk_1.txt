@@ -1,0 +1,77 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [2. Using the Python Interpreter](#)
+    * [2.1. Invoking the Interpreter](#invoking-the-interpreter)
+      * [2.1.1. Argument Passing](#argument-passing)
+      * [2.1.2. Interactive Mode](#interactive-mode)
+    * [2.2. The Interpreter and Its Environment](#the-interpreter-and-its-environment)
+      * [2.2.1. Source Code Encoding](#source-code-encoding)
+
+
+
+#### Previous topic
+
+[1. Whetting Your Appetite](appetite.html "previous chapter")
+
+#### Next topic
+
+[3. An Informal Introduction to Python](introduction.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/interpreter.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](introduction.html "3. An Informal Introduction to Python") |
+  * [previous](appetite.html "1. Whetting Your Appetite") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [2. Using the Python Interpreter]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 2. Using the Python Interpreter[¶](#using-the-python-interpreter "Link to this heading")
+
+## 2.1. Invoking the Interpreter[¶](#invoking-the-interpreter "Link to this heading")
+
+The Python interpreter is usually installed as `/usr/local/bin/python3.13` on those machines where it is available; putting `/usr/local/bin` in your Unix shell’s search path makes it possible to start it by typing the command:
+
+```
+
+    
+    
+    python3.13
+    
+```
+
+to the shell. [[1]](#id2) Since the choice of the directory where the interpreter lives is an installation option, other places are possible; check with your local Python guru or system administrator. (E.g., `/usr/local/python` is a popular alternative location.)
+
+On Windows machines where you have installed Python from the [Microsoft Store](../using/windows.html#windows-store), the `python3.13` command will be available. If you have the [py.exe launcher](../using/windows.html#launcher) installed, you can use the `py` command. See [Excursus: Setting environment variables](../using/windows.html#setting-envvars) for other ways to launch Python.
+
+Typing an end-of-file character (``Control`-`D`` on Unix, ``Control`-`Z`` on Windows) at the primary prompt causes the interpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the following command: `quit()`.
+
+The interpreter’s line-editing features include interactive editing, history substitution and code completion on systems that support the [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html) library. Perhaps the quickest check to see whether command line editing is supported is typing ``Control`-`P`` to the first Python prompt you get. If it beeps, you have command line editing; see Appendix [Interactive Input Editing and History Substitution](interactive.html#tut-interacting) for an introduction to the keys. If nothing appears to happen, or if `^P` is echoed, command line editing isn’t available; you’ll only be able to use backspace to remove characters from the current line.
+
+The interpreter operates somewhat like the Unix shell: when called with standard input connected to a tty device, it reads and executes commands interactively; when called with a file name argument or with a file as standard input, it reads and executes a _script_ from that file.
+
+A second way of starting the interpreter is `python -c command [arg] ...`, which executes the statement(s) in _command_ , analogous to the shell’s [`-c`](../using/cmdline.html#cmdoption-c) option.

@@ -1,0 +1,80 @@
+Writing the value `None` is normally suppressed by the interpreter if it would be the only value written. You can see it if you really want to using [`print()`](../library/functions.html#print "print"):
+
+>>>```
+
+    
+    
+    >>> fib(0)
+    >>> print(fib(0))
+    None
+    
+```
+
+It is simple to write a function that returns a list of the numbers of the Fibonacci series, instead of printing it:
+
+>>>```
+
+    
+    
+    >>> def fib2(n): # return Fibonacci series up to n
+    ... """Return a list containing the Fibonacci series up to n."""
+    ... result = []
+    ... a, b = 0, 1
+    ... while a < n:
+    ... result.append(a)  # see below
+    ... a, b = b, a+b
+    ... return result
+    ...
+    >>> f100 = fib2(100)  # call it
+    >>> f100        # write the result
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    
+```
+
+This example, as usual, demonstrates some new Python features:
+
+  * The [`return`](../reference/simple_stmts.html#return) statement returns with a value from a function. `return` without an expression argument returns `None`. Falling off the end of a function also returns `None`.
+
+  * The statement `result.append(a)` calls a _method_ of the list object `result`. A method is a function that ‘belongs’ to an object and is named `obj.methodname`, where `obj` is some object (this may be an expression), and `methodname` is the name of a method that is defined by the object’s type. Different types define different methods. Methods of different types may have the same name without causing ambiguity. (It is possible to define your own object types and methods, using _classes_ , see [Classes](classes.html#tut-classes)) The method `append()` shown in the example is defined for list objects; it adds a new element at the end of the list. In this example it is equivalent to `result = result + [a]`, but more efficient.
+
+
+
+
+## 4.9. More on Defining Functions[¶](#more-on-defining-functions "Link to this heading")
+
+It is also possible to define functions with a variable number of arguments. There are three forms, which can be combined.
+
+### 4.9.1. Default Argument Values[¶](#default-argument-values "Link to this heading")
+
+The most useful form is to specify a default value for one or more arguments. This creates a function that can be called with fewer arguments than it is defined to allow. For example:
+
+```
+
+    
+    
+    def ask_ok(prompt, retries=4, reminder='Please try again!'):
+      while True:
+        reply = input(prompt)
+        if reply in {'y', 'ye', 'yes'}:
+          return True
+        if reply in {'n', 'no', 'nop', 'nope'}:
+          return False
+        retries = retries - 1
+        if retries < 0:
+          raise ValueError('invalid user response')
+        print(reminder)
+    
+```
+
+This function can be called in several ways:
+
+  * giving only the mandatory argument: `ask_ok('Do you really want to quit?')`
+
+  * giving one of the optional arguments: `ask_ok('OK to overwrite the file?', 2)`
+
+  * or even giving all arguments: `ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')`
+
+
+
+
+This example also introduces the [`in`](../reference/expressions.html#in) keyword.

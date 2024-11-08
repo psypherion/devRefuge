@@ -1,0 +1,121 @@
+  * [Skip to main content](#content)
+  * [Skip to search](#top-nav-search-input)
+  * [Skip to select language](#languages-switcher-button)
+
+
+
+Learn front-end development with high quality, interactive courses from [Scrimba](https://scrimba.com/learn/frontend?via=mdn). Enroll now!
+
+[MDN Web Docs](/en-US/)Open main menu
+
+  * References[References](/en-US/docs/Web)
+    * [Overview / Web TechnologyWeb technology reference for developers](/en-US/docs/Web)
+    * [HTMLStructure of content on the web](/en-US/docs/Web/HTML)
+    * [CSSCode used to describe document style](/en-US/docs/Web/CSS)
+    * [JavaScriptGeneral-purpose scripting language](/en-US/docs/Web/JavaScript)
+    * [HTTPProtocol for transmitting web resources](/en-US/docs/Web/HTTP)
+    * [Web APIsInterfaces for building web applications](/en-US/docs/Web/API)
+    * [Web ExtensionsDeveloping extensions for web browsers](/en-US/docs/Mozilla/Add-ons/WebExtensions)
+    * [Web TechnologyWeb technology reference for developers](/en-US/docs/Web)
+  * Guides[Guides](/en-US/docs/Learn)
+    * [Overview / MDN Learning AreaLearn web development](/en-US/docs/Learn)
+    * [MDN Learning AreaLearn web development](/en-US/docs/Learn)
+    * [HTMLLearn to structure web content with HTML](/en-US/docs/Learn/HTML)
+    * [CSSLearn to style content using CSS](/en-US/docs/Learn/CSS)
+    * [JavaScriptLearn to run scripts in the browser](/en-US/docs/Learn/JavaScript)
+    * [AccessibilityLearn to make the web accessible to all](/en-US/docs/Web/Accessibility)
+  * Plus[Plus](/en-US/plus)
+    * [OverviewA customized MDN experience](/en-US/plus)
+    * [AI HelpGet real-time assistance and support](/en-US/plus/ai-help)
+    * [UpdatesAll browser compatibility updates at a glance](/en-US/plus/updates)
+    * [DocumentationLearn how to use MDN Plus](/en-US/plus/docs/features/overview)
+    * [FAQFrequently asked questions about MDN Plus](/en-US/plus/docs/faq)
+  * [Curriculum New](/en-US/curriculum/)
+  * [Blog](/en-US/blog/)
+  * Tools
+    * [PlaygroundWrite, test and share your code](/en-US/play)
+    * [HTTP ObservatoryScan a website for free](/en-US/observatory)
+    * [AI HelpGet real-time assistance and support](/en-US/plus/ai-help)
+
+
+
+Search MDNClear search inputSearch
+
+Theme
+
+  * [Log in](/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FLanguage_overview)
+  * [Sign up for free](/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FGuide%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FLanguage_overview)
+
+
+
+# Page not found
+
+Sorry, the page `/en-US/docs/Web/JavaScript/Guide/en-US/docs/Web/JavaScript/Language_overview` could not be found.
+
+The page you requested doesn't exist, but you could try a site search for:
+
+  * [`Language overview`](/en-US/search?q=Language%20overview)
+  * [`JavaScript`](/en-US/search?q=JavaScript)
+  * [`Web`](/en-US/search?q=Web)
+  * [`Guide`](/en-US/search?q=Guide)
+  * [`JavaScript`](/en-US/search?q=JavaScript)
+  * [`Web`](/en-US/search?q=Web)
+
+
+
+[Go back to the home page](/)
+
+[MDN logo](/)
+
+Your blueprint for a better internet.
+
+  * [MDN on Mastodon](https://mozilla.social/@mdn)
+  * [MDN on X (formerly Twitter)](https://twitter.com/mozdevnet)
+  * [MDN on GitHub](https://github.com/mdn/)
+  * [MDN Blog RSS Feed](/en-US/blog/rss.xml)
+
+
+
+## MDN
+
+  * [About](/en-US/about)
+  * [Blog](/en-US/blog/)
+  * [Careers](https://www.mozilla.org/en-US/careers/listings/?team=ProdOps)
+  * [Advertise with us](/en-US/advertising)
+
+
+
+## Support
+
+  * [Product help](https://support.mozilla.org/products/mdn-plus)
+  * [Report an issue](/en-US/docs/MDN/Community/Issues)
+
+
+
+## Our communities
+
+  * [MDN Community](/en-US/community)
+  * [MDN Forum](https://discourse.mozilla.org/c/mdn/236)
+  * [MDN Chat](/discord)
+
+
+
+## Developers
+
+  * [Web Technologies](/en-US/docs/Web)
+  * [Learn Web Development](/en-US/docs/Learn)
+  * [MDN Plus](/en-US/plus)
+  * [Hacks Blog](https://hacks.mozilla.org/)
+
+
+
+[Mozilla logo](https://www.mozilla.org/)
+
+  * [Website Privacy Notice](https://www.mozilla.org/privacy/websites/)
+  * [Cookies](https://www.mozilla.org/privacy/websites/#cookies)
+  * [Legal](https://www.mozilla.org/about/legal/terms/mozilla)
+  * [Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/)
+
+
+
+Visit [Mozilla Corporation’s](https://www.mozilla.org) not-for-profit parent, the [Mozilla Foundation](https://foundation.mozilla.org/).Portions of this content are ©1998–2024 by individual mozilla.org contributors. Content available under [a Creative Commons license](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license).

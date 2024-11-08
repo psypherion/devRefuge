@@ -1,0 +1,26 @@
+The namespace containing the built-in names is created when the Python interpreter starts up, and is never deleted. The global namespace for a module is created when the module definition is read in; normally, module namespaces also last until the interpreter quits. The statements executed by the top-level invocation of the interpreter, either read from a script file or interactively, are considered part of a module called [`__main__`](../library/__main__.html#module-__main__ "__main__: The environment where top-level code is run. Covers command-line interfaces, import-time behavior, and ``__name__ == '__main__'``."), so they have their own global namespace. (The built-in names actually also live in a module; this is called [`builtins`](../library/builtins.html#module-builtins "builtins: The module that provides the built-in namespace.").)
+
+The local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function. (Actually, forgetting would be a better way to describe what actually happens.) Of course, recursive invocations each have their own local namespace.
+
+A _scope_ is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.
+
+Although scopes are determined statically, they are used dynamically. At any time during execution, there are 3 or 4 nested scopes whose namespaces are directly accessible:
+
+  * the innermost scope, which is searched first, contains the local names
+
+  * the scopes of any enclosing functions, which are searched starting with the nearest enclosing scope, contain non-local, but also non-global names
+
+  * the next-to-last scope contains the current module’s global names
+
+  * the outermost scope (searched last) is the namespace containing built-in names
+
+
+
+
+If a name is declared global, then all references and assignments go directly to the next-to-last scope containing the module’s global names. To rebind variables found outside of the innermost scope, the [`nonlocal`](../reference/simple_stmts.html#nonlocal) statement can be used; if not declared nonlocal, those variables are read-only (an attempt to write to such a variable will simply create a _new_ local variable in the innermost scope, leaving the identically named outer variable unchanged).
+
+Usually, the local scope references the local names of the (textually) current function. Outside functions, the local scope references the same namespace as the global scope: the module’s namespace. Class definitions place yet another namespace in the local scope.
+
+It is important to realize that scopes are determined textually: the global scope of a function defined in a module is that module’s namespace, no matter from where or by what alias the function is called. On the other hand, the actual search for names is done dynamically, at run time — however, the language definition is evolving towards static name resolution, at “compile” time, so don’t rely on dynamic name resolution! (In fact, local variables are already determined statically.)
+
+A special quirk of Python is that – if no [`global`](../reference/simple_stmts.html#global) or [`nonlocal`](../reference/simple_stmts.html#nonlocal) statement is in effect – assignments to names always go into the innermost scope. Assignments do not copy data — they just bind names to objects.

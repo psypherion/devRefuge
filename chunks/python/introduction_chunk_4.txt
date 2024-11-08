@@ -1,0 +1,126 @@
+'to have them joined together.')
+    >>> text
+    'Put several strings within parentheses to have them joined together.'
+    
+```
+
+This only works with two literals though, not with variables or expressions:
+
+>>>```
+
+    
+    
+    >>> prefix = 'Py'
+    >>> prefix 'thon' # can't concatenate a variable and a string literal
+     File "<stdin>", line 1
+    prefix 'thon'
+    ^^^^^^
+    SyntaxError: invalid syntax
+    >>> ('un' * 3) 'ium'
+     File "<stdin>", line 1
+    ('un' * 3) 'ium'
+    ^^^^^
+    SyntaxError: invalid syntax
+    
+```
+
+If you want to concatenate variables or a variable and a literal, use `+`:
+
+>>>```
+
+    
+    
+    >>> prefix + 'thon'
+    'Python'
+    
+```
+
+Strings can be _indexed_ (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
+
+>>>```
+
+    
+    
+    >>> word = 'Python'
+    >>> word[0] # character in position 0
+    'P'
+    >>> word[5] # character in position 5
+    'n'
+    
+```
+
+Indices may also be negative numbers, to start counting from the right:
+
+>>>```
+
+    
+    
+    >>> word[-1] # last character
+    'n'
+    >>> word[-2] # second-last character
+    'o'
+    >>> word[-6]
+    'P'
+    
+```
+
+Note that since -0 is the same as 0, negative indices start from -1.
+
+In addition to indexing, _slicing_ is also supported. While indexing is used to obtain individual characters, _slicing_ allows you to obtain a substring:
+
+>>>```
+
+    
+    
+    >>> word[0:2] # characters from position 0 (included) to 2 (excluded)
+    'Py'
+    >>> word[2:5] # characters from position 2 (included) to 5 (excluded)
+    'tho'
+    
+```
+
+Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second index defaults to the size of the string being sliced.
+
+>>>```
+
+    
+    
+    >>> word[:2]  # character from the beginning to position 2 (excluded)
+    'Py'
+    >>> word[4:]  # characters from position 4 (included) to the end
+    'on'
+    >>> word[-2:] # characters from the second-last (included) to the end
+    'on'
+    
+```
+
+Note how the start is always included, and the end always excluded. This makes sure that `s[:i] + s[i:]` is always equal to `s`:
+
+>>>```
+
+    
+    
+    >>> word[:2] + word[2:]
+    'Python'
+    >>> word[:4] + word[4:]
+    'Python'
+    
+```
+
+One way to remember how slices work is to think of the indices as pointing _between_ characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of _n_ characters has index _n_ , for example:
+
+```
+
+    
+    
+     +---+---+---+---+---+---+
+     | P | y | t | h | o | n |
+     +---+---+---+---+---+---+
+     0  1  2  3  4  5  6
+    -6 -5 -4 -3 -2 -1
+    
+```
+
+The first row of numbers gives the position of the indices 0…6 in the string; the second row gives the corresponding negative indices. The slice from _i_ to _j_ consists of all characters between the edges labeled _i_ and _j_ , respectively.
+
+For non-negative indices, the length of a slice is the difference of the indices, if both are within bounds.

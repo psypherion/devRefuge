@@ -1,0 +1,133 @@
+For example:
+
+```
+
+    
+    
+    for arg in sys.argv[1:]:
+      try:
+        f = open(arg, 'r')
+      except OSError:
+        print('cannot open', arg)
+      else:
+        print(arg, 'has', len(f.readlines()), 'lines')
+        f.close()
+    
+```
+
+The use of the `else` clause is better than adding additional code to the [`try`](../reference/compound_stmts.html#try) clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the `try` … `except` statement.
+
+Exception handlers do not handle only exceptions that occur immediately in the _try clause_ , but also those that occur inside functions that are called (even indirectly) in the _try clause_. For example:
+
+>>>```
+
+    
+    
+    >>> def this_fails():
+    ... x = 1/0
+    ...
+    >>> try:
+    ... this_fails()
+    ... except ZeroDivisionError as err:
+    ... print('Handling run-time error:', err)
+    ...
+    Handling run-time error: division by zero
+    
+```
+
+## 8.4. Raising Exceptions[¶](#raising-exceptions "Link to this heading")
+
+The [`raise`](../reference/simple_stmts.html#raise) statement allows the programmer to force a specified exception to occur. For example:
+
+>>>```
+
+    
+    
+    >>> raise NameError('HiThere')
+    Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+    raise NameError('HiThere')
+    NameError: HiThere
+    
+```
+
+The sole argument to [`raise`](../reference/simple_stmts.html#raise) indicates the exception to be raised. This must be either an exception instance or an exception class (a class that derives from [`BaseException`](../library/exceptions.html#BaseException "BaseException"), such as [`Exception`](../library/exceptions.html#Exception "Exception") or one of its subclasses). If an exception class is passed, it will be implicitly instantiated by calling its constructor with no arguments:
+
+```
+
+    
+    
+    raise ValueError # shorthand for 'raise ValueError()'
+    
+```
+
+If you need to determine whether an exception was raised but don’t intend to handle it, a simpler form of the [`raise`](../reference/simple_stmts.html#raise) statement allows you to re-raise the exception:
+
+>>>```
+
+    
+    
+    >>> try:
+    ... raise NameError('HiThere')
+    ... except NameError:
+    ... print('An exception flew by!')
+    ... raise
+    ...
+    An exception flew by!
+    Traceback (most recent call last):
+     File "<stdin>", line 2, in <module>
+    raise NameError('HiThere')
+    NameError: HiThere
+    
+```
+
+## 8.5. Exception Chaining[¶](#exception-chaining "Link to this heading")
+
+If an unhandled exception occurs inside an [`except`](../reference/compound_stmts.html#except) section, it will have the exception being handled attached to it and included in the error message:
+
+>>>```
+
+    
+    
+    >>> try:
+    ... open("database.sqlite")
+    ... except OSError:
+    ... raise RuntimeError("unable to handle error")
+    ...
+    Traceback (most recent call last):
+     File "<stdin>", line 2, in <module>
+    open("database.sqlite")
+    ~~~~^^^^^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'
+    During handling of the above exception, another exception occurred:
+    Traceback (most recent call last):
+     File "<stdin>", line 4, in <module>
+    raise RuntimeError("unable to handle error")
+    RuntimeError: unable to handle error
+    
+```
+
+To indicate that an exception is a direct consequence of another, the [`raise`](../reference/simple_stmts.html#raise) statement allows an optional [`from`](../reference/simple_stmts.html#raise) clause:
+
+```
+
+    
+    
+    # exc must be exception instance or None.
+    raise RuntimeError from exc
+    
+```
+
+This can be useful when you are transforming exceptions. For example:
+
+>>>```
+
+    
+    
+    >>> def func():
+    ... raise ConnectionError
+    ...
+    >>> try:
+    ... func()
+    ... except ConnectionError as exc:
+    ...

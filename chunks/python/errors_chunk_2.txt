@@ -1,0 +1,51 @@
+The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception names are built-in identifiers (not reserved keywords).
+
+The rest of the line provides detail based on the type of exception and what caused it.
+
+The preceding part of the error message shows the context where the exception occurred, in the form of a stack traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from standard input.
+
+[Built-in Exceptions](../library/exceptions.html#bltin-exceptions) lists the built-in exceptions and their meanings.
+
+## 8.3. Handling Exceptions[¶](#handling-exceptions "Link to this heading")
+
+It is possible to write programs that handle selected exceptions. Look at the following example, which asks the user for input until a valid integer has been entered, but allows the user to interrupt the program (using ``Control`-`C`` or whatever the operating system supports); note that a user-generated interruption is signalled by raising the [`KeyboardInterrupt`](../library/exceptions.html#KeyboardInterrupt "KeyboardInterrupt") exception.
+
+>>>```
+
+    
+    
+    >>> while True:
+    ... try:
+    ... x = int(input("Please enter a number: "))
+    ... break
+    ... except ValueError:
+    ... print("Oops! That was no valid number. Try again...")
+    ...
+    
+```
+
+The [`try`](../reference/compound_stmts.html#try) statement works as follows.
+
+  * First, the _try clause_ (the statement(s) between the [`try`](../reference/compound_stmts.html#try) and [`except`](../reference/compound_stmts.html#except) keywords) is executed.
+
+  * If no exception occurs, the _except clause_ is skipped and execution of the [`try`](../reference/compound_stmts.html#try) statement is finished.
+
+  * If an exception occurs during execution of the [`try`](../reference/compound_stmts.html#try) clause, the rest of the clause is skipped. Then, if its type matches the exception named after the [`except`](../reference/compound_stmts.html#except) keyword, the _except clause_ is executed, and then execution continues after the try/except block.
+
+  * If an exception occurs which does not match the exception named in the _except clause_ , it is passed on to outer [`try`](../reference/compound_stmts.html#try) statements; if no handler is found, it is an _unhandled exception_ and execution stops with an error message.
+
+
+
+
+A [`try`](../reference/compound_stmts.html#try) statement may have more than one _except clause_ , to specify handlers for different exceptions. At most one handler will be executed. Handlers only handle exceptions that occur in the corresponding _try clause_ , not in other handlers of the same `try` statement. An _except clause_ may name multiple exceptions as a parenthesized tuple, for example:
+
+```
+
+    
+    
+    ... except (RuntimeError, TypeError, NameError):
+    ... pass
+    
+```
+
+A class in an [`except`](../reference/compound_stmts.html#except) clause matches exceptions which are instances of the class itself or one of its derived classes (but not the other way around — an _except clause_ listing a derived class does not match instances of its base classes).

@@ -1,0 +1,91 @@
+Generator Expressions[¶](#generator-expressions "Link to this heading")
+
+Some simple generators can be coded succinctly as expressions using a syntax similar to list comprehensions but with parentheses instead of square brackets. These expressions are designed for situations where the generator is used right away by an enclosing function. Generator expressions are more compact but less versatile than full generator definitions and tend to be more memory friendly than equivalent list comprehensions.
+
+Examples:
+
+>>>```
+
+    
+    
+    >>> sum(i*i for i in range(10))         # sum of squares
+    285
+    >>> xvec = [10, 20, 30]
+    >>> yvec = [7, 5, 3]
+    >>> sum(x*y for x,y in zip(xvec, yvec))     # dot product
+    260
+    >>> unique_words = set(word for line in page for word in line.split())
+    >>> valedictorian = max((student.gpa, student.name) for student in graduates)
+    >>> data = 'golf'
+    >>> list(data[i] for i in range(len(data)-1, -1, -1))
+    ['f', 'l', 'o', 'g']
+    
+```
+
+Footnotes
+
+[[1](#id1)]
+
+Except for one thing. Module objects have a secret read-only attribute called [`__dict__`](../reference/datamodel.html#object.__dict__ "object.__dict__") which returns the dictionary used to implement the module’s namespace; the name `__dict__` is an attribute but not a global name. Obviously, using this violates the abstraction of namespace implementation, and should be restricted to things like post-mortem debuggers.
+
+### [Table of Contents](../contents.html)
+
+  * [9. Classes](#)
+    * [9.1. A Word About Names and Objects](#a-word-about-names-and-objects)
+    * [9.2. Python Scopes and Namespaces](#python-scopes-and-namespaces)
+      * [9.2.1. Scopes and Namespaces Example](#scopes-and-namespaces-example)
+    * [9.3. A First Look at Classes](#a-first-look-at-classes)
+      * [9.3.1. Class Definition Syntax](#class-definition-syntax)
+      * [9.3.2. Class Objects](#class-objects)
+      * [9.3.3. Instance Objects](#instance-objects)
+      * [9.3.4. Method Objects](#method-objects)
+      * [9.3.5. Class and Instance Variables](#class-and-instance-variables)
+    * [9.4. Random Remarks](#random-remarks)
+    * [9.5. Inheritance](#inheritance)
+      * [9.5.1. Multiple Inheritance](#multiple-inheritance)
+    * [9.6. Private Variables](#private-variables)
+    * [9.7. Odds and Ends](#odds-and-ends)
+    * [9.8. Iterators](#iterators)
+    * [9.9. Generators](#generators)
+    * [9.10. Generator Expressions](#generator-expressions)
+
+
+
+#### Previous topic
+
+[8. Errors and Exceptions](errors.html "previous chapter")
+
+#### Next topic
+
+[10. Brief Tour of the Standard Library](stdlib.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/classes.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](stdlib.html "10. Brief Tour of the Standard Library") |
+  * [previous](errors.html "8. Errors and Exceptions") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [9. Classes]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+© [ Copyright ](../copyright.html) 2001-2024, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See [History and License](/license.html) for more information. The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/) Last updated on Nov 07, 2024 (15:51 UTC). [Found a bug](/bugs.html)? Created using [Sphinx](https://www.sphinx-doc.org/) 8.1.3. 

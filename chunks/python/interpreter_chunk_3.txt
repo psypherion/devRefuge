@@ -1,0 +1,90 @@
+To display all these characters properly, your editor must recognize that the file is UTF-8, and it must use a font that supports all the characters in the file.
+
+To declare an encoding other than the default one, a special comment line should be added as the _first_ line of the file. The syntax is as follows:
+
+```
+
+    
+    
+    # -*- coding: encoding -*-
+    
+```
+
+where _encoding_ is one of the valid [`codecs`](../library/codecs.html#module-codecs "codecs: Encode and decode data and streams.") supported by Python.
+
+For example, to declare that Windows-1252 encoding is to be used, the first line of your source code file should be:
+
+```
+
+    
+    
+    # -*- coding: cp1252 -*-
+    
+```
+
+One exception to the _first line_ rule is when the source code starts with a [UNIX “shebang” line](appendix.html#tut-scripts). In this case, the encoding declaration should be added as the second line of the file. For example:
+
+```
+
+    
+    
+    #!/usr/bin/env python3
+    # -*- coding: cp1252 -*-
+    
+```
+
+Footnotes
+
+[[1](#id1)]
+
+On Unix, the Python 3.x interpreter is by default not installed with the executable named `python`, so that it does not conflict with a simultaneously installed Python 2.x executable.
+
+### [Table of Contents](../contents.html)
+
+  * [2. Using the Python Interpreter](#)
+    * [2.1. Invoking the Interpreter](#invoking-the-interpreter)
+      * [2.1.1. Argument Passing](#argument-passing)
+      * [2.1.2. Interactive Mode](#interactive-mode)
+    * [2.2. The Interpreter and Its Environment](#the-interpreter-and-its-environment)
+      * [2.2.1. Source Code Encoding](#source-code-encoding)
+
+
+
+#### Previous topic
+
+[1. Whetting Your Appetite](appetite.html "previous chapter")
+
+#### Next topic
+
+[3. An Informal Introduction to Python](introduction.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/interpreter.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](introduction.html "3. An Informal Introduction to Python") |
+  * [previous](appetite.html "1. Whetting Your Appetite") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [2. Using the Python Interpreter]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+© [ Copyright ](../copyright.html) 2001-2024, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See [History and License](/license.html) for more information. The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/) Last updated on Nov 07, 2024 (15:51 UTC). [Found a bug](/bugs.html)? Created using [Sphinx](https://www.sphinx-doc.org/) 8.1.3. 

@@ -1,0 +1,116 @@
+print(f'caught {type(e)}: e')
+    ...
+    caught <class 'ExceptionGroup'>: e
+    >>>
+    
+```
+
+By using `except*` instead of `except`, we can selectively handle only the exceptions in the group that match a certain type. In the following example, which shows a nested exception group, each `except*` clause extracts from the group exceptions of a certain type while letting all other exceptions propagate to other clauses and eventually to be reraised.
+
+>>>```
+
+    
+    
+    >>> def f():
+    ... raise ExceptionGroup(
+    ... "group1",
+    ... [
+    ... OSError(1),
+    ... SystemError(2),
+    ... ExceptionGroup(
+    ... "group2",
+    ... [
+    ... OSError(3),
+    ... RecursionError(4)
+    ... ]
+    ... )
+    ... ]
+    ... )
+    ...
+    >>> try:
+    ... f()
+    ... except* OSError as e:
+    ... print("There were OSErrors")
+    ... except* SystemError as e:
+    ... print("There were SystemErrors")
+    ...
+    There were OSErrors
+    There were SystemErrors
+     + Exception Group Traceback (most recent call last):
+     |  File "<stdin>", line 2, in <module>
+     |   f()
+     |   ~^^
+     |  File "<stdin>", line 2, in f
+     |   raise ExceptionGroup(
+     |   ...<12 lines>...
+     |   )
+     | ExceptionGroup: group1 (1 sub-exception)
+     +-+---------------- 1 ----------------
+      | ExceptionGroup: group2 (1 sub-exception)
+      +-+---------------- 1 ----------------
+       | RecursionError: 4
+       +------------------------------------
+    >>>
+    
+```
+
+Note that the exceptions nested in an exception group must be instances, not types. This is because in practice the exceptions would typically be ones that have already been raised and caught by the program, along the following pattern:
+
+>>>```
+
+    
+    
+    >>> excs = []
+    ... for test in tests:
+    ... try:
+    ... test.run()
+    ... except Exception as e:
+    ... excs.append(e)
+    ...
+    >>> if excs:
+    ... raise ExceptionGroup("Test Failures", excs)
+    ...
+    
+```
+
+## 8.10. Enriching Exceptions with Notes[¶](#enriching-exceptions-with-notes "Link to this heading")
+
+When an exception is created in order to be raised, it is usually initialized with information that describes the error that has occurred. There are cases where it is useful to add information after the exception was caught. For this purpose, exceptions have a method `add_note(note)` that accepts a string and adds it to the exception’s notes list. The standard traceback rendering includes all notes, in the order they were added, after the exception.
+
+>>>```
+
+    
+    
+    >>> try:
+    ... raise TypeError('bad type')
+    ... except Exception as e:
+    ... e.add_note('Add some information')
+    ... e.add_note('Add some more information')
+    ... raise
+    ...
+    Traceback (most recent call last):
+     File "<stdin>", line 2, in <module>
+    raise TypeError('bad type')
+    TypeError: bad type
+    Add some information
+    Add some more information
+    >>>
+    
+```
+
+For example, when collecting exceptions into an exception group, we may want to add context information for the individual errors. In the following each exception in the group has a note indicating when this error has occurred.
+
+>>>```
+
+    
+    
+    >>> def f():
+    ... raise OSError('operation failed')
+    ...
+    >>> excs = []
+    >>> for i in range(3):
+    ... try:
+    ... f()
+    ... except Exception as e:
+    ... e.add_note(f'Happened in Iteration {i+1}')
+    ...

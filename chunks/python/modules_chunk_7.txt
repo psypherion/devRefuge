@@ -1,0 +1,83 @@
+In the simplest case, `__init__.py` can just be an empty file, but it can also execute initialization code for the package or set the `__all__` variable, described later.
+
+Users of the package can import individual modules from the package, for example:
+
+```
+
+    
+    
+    import sound.effects.echo
+    
+```
+
+This loads the submodule `sound.effects.echo`. It must be referenced with its full name.
+
+```
+
+    
+    
+    sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
+    
+```
+
+An alternative way of importing the submodule is:
+
+```
+
+    
+    
+    from sound.effects import echo
+    
+```
+
+This also loads the submodule `echo`, and makes it available without its package prefix, so it can be used as follows:
+
+```
+
+    
+    
+    echo.echofilter(input, output, delay=0.7, atten=4)
+    
+```
+
+Yet another variation is to import the desired function or variable directly:
+
+```
+
+    
+    
+    from sound.effects.echo import echofilter
+    
+```
+
+Again, this loads the submodule `echo`, but this makes its function `echofilter()` directly available:
+
+```
+
+    
+    
+    echofilter(input, output, delay=0.7, atten=4)
+    
+```
+
+Note that when using `from package import item`, the item can be either a submodule (or subpackage) of the package, or some other name defined in the package, like a function, class or variable. The `import` statement first tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to find it, an [`ImportError`](../library/exceptions.html#ImportError "ImportError") exception is raised.
+
+Contrarily, when using syntax like `import item.subitem.subsubitem`, each item except for the last must be a package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous item.
+
+### 6.4.1. Importing * From a Package[¶](#importing-from-a-package "Link to this heading")
+
+Now what happens when the user writes `from sound.effects import *`? Ideally, one would hope that this somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This could take a long time and importing sub-modules might have unwanted side-effects that should only happen when the sub-module is explicitly imported.
+
+The only solution is for the package author to provide an explicit index of the package. The [`import`](../reference/simple_stmts.html#import) statement uses the following convention: if a package’s `__init__.py` code defines a list named `__all__`, it is taken to be the list of module names that should be imported when `from package import *` is encountered. It is up to the package author to keep this list up-to-date when a new version of the package is released. Package authors may also decide not to support it, if they don’t see a use for importing * from their package. For example, the file `sound/effects/__init__.py` could contain the following code:
+
+```
+
+    
+    
+    __all__ = ["echo", "surround", "reverse"]
+    
+```
+
+This would mean that `from sound.effects import *` would import the three named submodules of the `sound.effects` package.
+
+Be aware that submodules might become shadowed by locally defined names.

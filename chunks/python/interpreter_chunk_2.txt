@@ -1,0 +1,49 @@
+Since Python statements often contain spaces or other characters that are special to the shell, it is usually advised to quote _command_ in its entirety.
+
+Some Python modules are also useful as scripts. These can be invoked using `python -m module [arg] ...`, which executes the source file for _module_ as if you had spelled out its full name on the command line.
+
+When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing [`-i`](../using/cmdline.html#cmdoption-i) before the script.
+
+All command line options are described in [Command line and environment](../using/cmdline.html#using-on-general).
+
+### 2.1.1. Argument Passing[¶](#argument-passing "Link to this heading")
+
+When known to the interpreter, the script name and additional arguments thereafter are turned into a list of strings and assigned to the `argv` variable in the `sys` module. You can access this list by executing `import sys`. The length of the list is at least one; when no script and no arguments are given, `sys.argv[0]` is an empty string. When the script name is given as `'-'` (meaning standard input), `sys.argv[0]` is set to `'-'`. When [`-c`](../using/cmdline.html#cmdoption-c) _command_ is used, `sys.argv[0]` is set to `'-c'`. When [`-m`](../using/cmdline.html#cmdoption-m) _module_ is used, `sys.argv[0]` is set to the full name of the located module. Options found after [`-c`](../using/cmdline.html#cmdoption-c) _command_ or [`-m`](../using/cmdline.html#cmdoption-m) _module_ are not consumed by the Python interpreter’s option processing but left in `sys.argv` for the command or module to handle.
+
+### 2.1.2. Interactive Mode[¶](#interactive-mode "Link to this heading")
+
+When commands are read from a tty, the interpreter is said to be in _interactive mode_. In this mode it prompts for the next command with the _primary prompt_ , usually three greater-than signs (`>>>`); for continuation lines it prompts with the _secondary prompt_ , by default three dots (`...`). The interpreter prints a welcome message stating its version number and a copyright notice before printing the first prompt:
+
+```
+
+    
+    
+    $ python3.13
+    Python 3.13 (default, April 4 2023, 09:25:04)
+    [GCC 10.2.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    
+```
+
+Continuation lines are needed when entering a multi-line construct. As an example, take a look at this [`if`](../reference/compound_stmts.html#if) statement:
+
+>>>```
+
+    
+    
+    >>> the_world_is_flat = True
+    >>> if the_world_is_flat:
+    ... print("Be careful not to fall off!")
+    ...
+    Be careful not to fall off!
+    
+```
+
+For more on interactive mode, see [Interactive Mode](appendix.html#tut-interac).
+
+## 2.2. The Interpreter and Its Environment[¶](#the-interpreter-and-its-environment "Link to this heading")
+
+### 2.2.1. Source Code Encoding[¶](#source-code-encoding "Link to this heading")
+
+By default, Python source files are treated as encoded in UTF-8. In that encoding, characters of most languages in the world can be used simultaneously in string literals, identifiers and comments — although the standard library only uses ASCII characters for identifiers, a convention that any portable code should follow.

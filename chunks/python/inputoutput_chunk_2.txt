@@ -1,0 +1,73 @@
+The string type has some methods that perform useful operations for padding strings to a given column width.
+
+
+
+
+When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can convert any value to a string with the [`repr()`](../library/functions.html#repr "repr") or [`str()`](../library/stdtypes.html#str "str") functions.
+
+The [`str()`](../library/stdtypes.html#str "str") function is meant to return representations of values which are fairly human-readable, while [`repr()`](../library/functions.html#repr "repr") is meant to generate representations which can be read by the interpreter (or will force a [`SyntaxError`](../library/exceptions.html#SyntaxError "SyntaxError") if there is no equivalent syntax). For objects which don’t have a particular representation for human consumption, [`str()`](../library/stdtypes.html#str "str") will return the same value as [`repr()`](../library/functions.html#repr "repr"). Many values, such as numbers or structures like lists and dictionaries, have the same representation using either function. Strings, in particular, have two distinct representations.
+
+Some examples:
+
+>>>```
+
+    
+    
+    >>> s = 'Hello, world.'
+    >>> str(s)
+    'Hello, world.'
+    >>> repr(s)
+    "'Hello, world.'"
+    >>> str(1/7)
+    '0.14285714285714285'
+    >>> x = 10 * 3.25
+    >>> y = 200 * 200
+    >>> s = 'The value of x is ' + repr(x) + ', and y is ' + repr(y) + '...'
+    >>> print(s)
+    The value of x is 32.5, and y is 40000...
+    >>> # The repr() of a string adds string quotes and backslashes:
+    >>> hello = 'hello, world\n'
+    >>> hellos = repr(hello)
+    >>> print(hellos)
+    'hello, world\n'
+    >>> # The argument to repr() may be any Python object:
+    >>> repr((x, y, ('spam', 'eggs')))
+    "(32.5, 40000, ('spam', 'eggs'))"
+    
+```
+
+The [`string`](../library/string.html#module-string "string: Common string operations.") module contains a [`Template`](../library/string.html#string.Template "string.Template") class that offers yet another way to substitute values into strings, using placeholders like `$x` and replacing them with values from a dictionary, but offers much less control of the formatting.
+
+### 7.1.1. Formatted String Literals[¶](#formatted-string-literals "Link to this heading")
+
+[Formatted string literals](../reference/lexical_analysis.html#f-strings) (also called f-strings for short) let you include the value of Python expressions inside a string by prefixing the string with `f` or `F` and writing expressions as `{expression}`.
+
+An optional format specifier can follow the expression. This allows greater control over how the value is formatted. The following example rounds pi to three places after the decimal:
+
+>>>```
+
+    
+    
+    >>> import math
+    >>> print(f'The value of pi is approximately {math.pi:.3f}.')
+    The value of pi is approximately 3.142.
+    
+```
+
+Passing an integer after the `':'` will cause that field to be a minimum number of characters wide. This is useful for making columns line up.
+
+>>>```
+
+    
+    
+    >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
+    >>> for name, phone in table.items():
+    ... print(f'{name:10} ==> {phone:10d}')
+    ...
+    Sjoerd   ==>    4127
+    Jack    ==>    4098
+    Dcab    ==>    7678
+    
+```
+
+Other modifiers can be used to convert the value before it is formatted.

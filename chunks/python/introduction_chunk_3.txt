@@ -1,0 +1,106 @@
+Yay!" # double quotes
+    'Paris rabbit got your back :)! Yay!'
+    >>> '1975' # digits and numerals enclosed in quotes are also strings
+    '1975'
+    
+```
+
+To quote a quote, we need to “escape” it, by preceding it with `\`. Alternatively, we can use the other type of quotation marks:
+
+>>>```
+
+    
+    
+    >>> 'doesn\'t' # use \' to escape the single quote...
+    "doesn't"
+    >>> "doesn't" # ...or use double quotes instead
+    "doesn't"
+    >>> '"Yes," they said.'
+    '"Yes," they said.'
+    >>> "\"Yes,\" they said."
+    '"Yes," they said.'
+    >>> '"Isn\'t," they said.'
+    '"Isn\'t," they said.'
+    
+```
+
+In the Python shell, the string definition and output string can look different. The [`print()`](../library/functions.html#print "print") function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:
+
+>>>```
+
+    
+    
+    >>> s = 'First line.\nSecond line.' # \n means newline
+    >>> s # without print(), special characters are included in the string
+    'First line.\nSecond line.'
+    >>> print(s) # with print(), special characters are interpreted, so \n produces new line
+    First line.
+    Second line.
+    
+```
+
+If you don’t want characters prefaced by `\` to be interpreted as special characters, you can use _raw strings_ by adding an `r` before the first quote:
+
+>>>```
+
+    
+    
+    >>> print('C:\some\name') # here \n means newline!
+    C:\some
+    ame
+    >>> print(r'C:\some\name') # note the r before the quote
+    C:\some\name
+    
+```
+
+There is one subtle aspect to raw strings: a raw string may not end in an odd number of `\` characters; see [the FAQ entry](../faq/programming.html#faq-programming-raw-string-backslash) for more information and workarounds.
+
+String literals can span multiple lines. One way is using triple-quotes: `"""..."""` or `'''...'''`. End of lines are automatically included in the string, but it’s possible to prevent this by adding a `\` at the end of the line. In the following example, the initial newline is not included:
+
+>>>```
+
+    
+    
+    >>> print("""\
+    ... Usage: thingy [OPTIONS]
+    ... -h            Display this usage message
+    ... -H hostname        Hostname to connect to
+    ... """)
+    Usage: thingy [OPTIONS]
+       -h            Display this usage message
+       -H hostname        Hostname to connect to
+    >>>
+    
+```
+
+Strings can be concatenated (glued together) with the `+` operator, and repeated with `*`:
+
+>>>```
+
+    
+    
+    >>> # 3 times 'un', followed by 'ium'
+    >>> 3 * 'un' + 'ium'
+    'unununium'
+    
+```
+
+Two or more _string literals_ (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.
+
+>>>```
+
+    
+    
+    >>> 'Py' 'thon'
+    'Python'
+    
+```
+
+This feature is particularly useful when you want to break long strings:
+
+>>>```
+
+    
+    
+    >>> text = ('Put several strings within parentheses '
+    ...

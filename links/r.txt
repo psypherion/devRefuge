@@ -1,0 +1,175 @@
+  * [Data Visualization](https://www.geeksforgeeks.org/data-visualization-in-r/?ref=shm)
+  * [Statistics in R](https://www.geeksforgeeks.org/r-statistics/?ref=shm)
+  * [Machine Learning in R](https://www.geeksforgeeks.org/introduction-to-machine-learning-in-r/?ref=shm)
+  * [Data Science in R](https://www.geeksforgeeks.org/r-programming-for-data-science/?ref=shm)
+  * [Packages in R](https://www.geeksforgeeks.org/packages-in-r-programming/?ref=shm)
+  * [Data Types](https://www.geeksforgeeks.org/r-data-types/?ref=shm)
+  * [String](https://www.geeksforgeeks.org/r-strings/?ref=shm)
+  * [Array](https://www.geeksforgeeks.org/r-array/?ref=shm)
+  * [Vector](https://www.geeksforgeeks.org/r-vector/?ref=shm)
+  * [Lists](https://www.geeksforgeeks.org/r-lists/?ref=shm)
+  * [Matrices](https://www.geeksforgeeks.org/r-matrices/?ref=shm)
+  * [Oops in R](https://www.geeksforgeeks.org/r-object-oriented-programming/?ref=shm)
+
+
+
+▲
+
+[ Open In App ](https://geeksforgeeksapp.page.link/?link=https://www.geeksforgeeks.org/r-tutorial/?type%3Darticle%26id%3D541038&apn=free.programming.programming&isi=1641848816&ibi=org.geeksforgeeks.GeeksforGeeksDev&efr=1)
+
+  * [Go Premium](https://www.geeksforgeeks.org/geeksforgeeks-premium-subscription?itm_source=geeksforgeeks&itm_medium=leftbar&itm_campaign=premium)
+  * [Share Your Experiences](https://write.geeksforgeeks.org/#experiences)
+
+  * [R Tutorial | Learn R Programming Language](https://www.geeksforgeeks.org/r-tutorial/?ref=lbp)
+
+## Introduction
+
+    * [R Programming Language - Introduction](https://www.geeksforgeeks.org/r-programming-language-introduction/?ref=lbp)
+    * [Interesting Facts about R Programming Language](https://www.geeksforgeeks.org/interesting-facts-about-r-programming-language/?ref=lbp)
+    * [R vs Python](https://www.geeksforgeeks.org/r-vs-python/?ref=lbp)
+    * [Environments in R Programming](https://www.geeksforgeeks.org/environments-in-r-programming/?ref=lbp)
+    * [Introduction to R Studio](https://www.geeksforgeeks.org/introduction-to-r-studio/?ref=lbp)
+    * [How to Install R and R Studio?](https://www.geeksforgeeks.org/how-to-install-r-studio-on-windows-and-linux/?ref=lbp)
+    * [Creation and Execution of R File in R Studio](https://www.geeksforgeeks.org/creation-and-execution-of-r-file-in-r-studio/?ref=lbp)
+    * [Clear the Console and the Environment in R Studio](https://www.geeksforgeeks.org/clear-the-console-and-the-environment-in-r-studio/?ref=lbp)
+    * [Hello World in R Programming](https://www.geeksforgeeks.org/hello-world-in-r-programming/?ref=lbp)
+
+## Fundamentals of R
+
+    * [Basic Syntax in R Programming](https://www.geeksforgeeks.org/basic-syntax-in-r-programming/?ref=lbp)
+    * [Comments in R](https://www.geeksforgeeks.org/comments-in-r/?ref=lbp)
+    * [R Operators](https://www.geeksforgeeks.org/r-operators/?ref=lbp)
+    * [R - Keywords](https://www.geeksforgeeks.org/r-keywords/?ref=lbp)
+    * [R Data Types](https://www.geeksforgeeks.org/r-data-types/?ref=lbp)
+
+## Variables
+
+    * [R Variables - Creating, Naming and Using Variables in R](https://www.geeksforgeeks.org/r-variables/?ref=lbp)
+    * [Scope of Variable in R](https://www.geeksforgeeks.org/scope-of-variable-in-r/?ref=lbp)
+    * [Dynamic Scoping in R Programming](https://www.geeksforgeeks.org/dynamic-scoping-in-r-programming/?ref=lbp)
+    * [Lexical Scoping in R Programming](https://www.geeksforgeeks.org/lexical-scoping-in-r-programming/?ref=lbp)
+
+## Input/Output
+
+    * [Taking Input from User in R Programming](https://www.geeksforgeeks.org/taking-input-from-user-in-r-programming/?ref=lbp)
+    * [Printing Output of an R Program](https://www.geeksforgeeks.org/printing-output-of-an-r-program/?ref=lbp)
+    * [Print the Argument to the Screen in R Programming - print() Function](https://www.geeksforgeeks.org/print-the-argument-to-the-screen-in-r-programming-print-function/?ref=lbp)
+
+## Control Flow
+
+    * [Control Statements in R Programming](https://www.geeksforgeeks.org/control-statements-in-r-programming/?ref=lbp)
+    * [Decision Making in R Programming - if, if-else, if-else-if ladder, nested if-else, and switch](https://www.geeksforgeeks.org/decision-making-in-r-programming-if-if-else-if-else-if-ladder-nested-if-else-and-switch/?ref=lbp)
+    * [Switch case in R](https://www.geeksforgeeks.org/switch-case-in-r/?ref=lbp)
+    * [For loop in R](https://www.geeksforgeeks.org/for-loop-in-r/?ref=lbp)
+    * [R - while loop](https://www.geeksforgeeks.org/r-while-loop/?ref=lbp)
+    * [R - Repeat loop](https://www.geeksforgeeks.org/r-repeat-loop/?ref=lbp)
+    * [goto statement in R Programming](https://www.geeksforgeeks.org/goto-statement-in-r-programming/?ref=lbp)
+    * [Break and Next statements in R](https://www.geeksforgeeks.org/break-and-next-statements-in-r/?ref=lbp)
+
+## Functions
+
+    * [Functions in R Programming](https://www.geeksforgeeks.org/functions-in-r-programming/?ref=lbp)
+    * [Function Arguments in R Programming](https://www.geeksforgeeks.org/function-arguments-in-r-programming/?ref=lbp)
+    * [Types of Functions in R Programming](https://www.geeksforgeeks.org/types-of-functions-in-r-programming/?ref=lbp)
+    * [Recursive Functions in R Programming](https://www.geeksforgeeks.org/recursive-functions-in-r-programming/?ref=lbp)
+    * [Conversion Functions in R Programming](https://www.geeksforgeeks.org/conversion-functions-in-r-programming/?ref=lbp)
+
+## Data Structures
+
+    * [Data Structures in R Programming](https://www.geeksforgeeks.org/data-structures-in-r-programming/?ref=lbp)
+    * [R Strings](https://www.geeksforgeeks.org/r-strings/?ref=lbp)
+    * [R Vectors](https://www.geeksforgeeks.org/r-vector/?ref=lbp)
+    * [R - Lists](https://www.geeksforgeeks.org/r-lists/?ref=lbp)
+    * [R - Array](https://www.geeksforgeeks.org/r-array/?ref=lbp)
+    * [R - Matrices](https://www.geeksforgeeks.org/r-matrices/?ref=lbp)
+    * [R Factors](https://www.geeksforgeeks.org/r-factors/?ref=lbp)
+    * [R - Data Frames](https://www.geeksforgeeks.org/r-data-frames/?ref=lbp)
+
+## Object Oriented Programming
+
+    * [R - Object Oriented Programming](https://www.geeksforgeeks.org/r-object-oriented-programming/?ref=lbp)
+    * [Classes in R Programming](https://www.geeksforgeeks.org/classes-in-r-programming/?ref=lbp)
+    * [R - Objects](https://www.geeksforgeeks.org/r-objects/?ref=lbp)
+    * [Encapsulation in R Programming](https://www.geeksforgeeks.org/encapsulation-in-r-programming/?ref=lbp)
+    * [Polymorphism in R Programming](https://www.geeksforgeeks.org/polymorphism-in-r-programming/?ref=lbp)
+    * [R - Inheritance](https://www.geeksforgeeks.org/r-inheritance/?ref=lbp)
+    * [Abstraction in R Programming](https://www.geeksforgeeks.org/abstraction-in-r-programming/?ref=lbp)
+    * [Looping over Objects in R Programming](https://www.geeksforgeeks.org/looping-over-objects-in-r-programming/?ref=lbp)
+    * [S3 class in R Programming](https://www.geeksforgeeks.org/s3-class-in-r-programming/?ref=lbp)
+    * [Explicit Coercion in R Programming](https://www.geeksforgeeks.org/explicit-coercion-in-r-programming/?ref=lbp)
+
+## Error Handling
+
+    * [Handling Errors in R Programming](https://www.geeksforgeeks.org/handling-errors-in-r-programming/?ref=lbp)
+    * [Condition Handling in R Programming](https://www.geeksforgeeks.org/condition-handling-in-r-programming/?ref=lbp)
+    * [Debugging in R Programming](https://www.geeksforgeeks.org/debugging-in-r-programming/?ref=lbp)
+
+## File Handling
+
+    * [File Handling in R Programming](https://www.geeksforgeeks.org/file-handling-in-r-programming/?ref=lbp)
+    * [Reading Files in R Programming](https://www.geeksforgeeks.org/reading-files-in-r-programming/?ref=lbp)
+    * [Writing to Files in R Programming](https://www.geeksforgeeks.org/writing-to-files-in-r-programming/?ref=lbp)
+    * [Working with Binary Files in R Programming](https://www.geeksforgeeks.org/working-with-binary-files-in-r-programming/?ref=lbp)
+
+## Packages in R
+
+    * [Packages in R Programming](https://www.geeksforgeeks.org/packages-in-r-programming/?ref=lbp)
+    * [Data visualization with R and ggplot2](https://www.geeksforgeeks.org/data-visualization-with-r-and-ggplot2/?ref=lbp)
+    * [dplyr Package in R Programming](https://www.geeksforgeeks.org/dplyr-package-in-r-programming/?ref=lbp)
+    * [Grid and Lattice Packages in R Programming](https://www.geeksforgeeks.org/grid-and-lattice-packages-in-r-programming/?ref=lbp)
+    * [Shiny Package in R Programming](https://www.geeksforgeeks.org/shiny-package-in-r-programming/?ref=lbp)
+    * [tidyr Package in R Programming](https://www.geeksforgeeks.org/tidyr-package-in-r-programming/?ref=lbp)
+    * [What Are the Tidyverse Packages in R Language?](https://www.geeksforgeeks.org/what-are-the-tidyverse-packages-in-r-language/?ref=lbp)
+    * [Data Munging in R Programming](https://www.geeksforgeeks.org/data-munging-in-r-programming/?ref=lbp)
+
+## Data Interfaces
+
+    * [Data Handling in R Programming](https://www.geeksforgeeks.org/data-handling-in-r-programming/?ref=lbp)
+    * [Importing Data in R Script](https://www.geeksforgeeks.org/importing-data-in-r-script/?ref=lbp)
+    * [Exporting Data from scripts in R Programming](https://www.geeksforgeeks.org/exporting-data-from-scripts-in-r-programming/?ref=lbp)
+    * [Working with CSV files in R Programming](https://www.geeksforgeeks.org/working-with-csv-files-in-r-programming/?ref=lbp)
+    * [Working with XML Files in R Programming](https://www.geeksforgeeks.org/working-with-xml-files-in-r-programming/?ref=lbp)
+    * [Working with Excel Files in R Programming](https://www.geeksforgeeks.org/working-with-excel-files-in-r-programming/?ref=lbp)
+    * [Working with JSON Files in R Programming](https://www.geeksforgeeks.org/working-with-json-files-in-r-programming/?ref=lbp)
+    * [Working with Databases in R Programming](https://www.geeksforgeeks.org/working-with-databases-in-r-programming/?ref=lbp)
+
+## Data Visualization
+
+    * [Getting started with Data Visualization in R](https://www.geeksforgeeks.org/data-visualization-in-r/?ref=lbp)
+    * [R - Line Graphs](https://www.geeksforgeeks.org/r-line-graphs/?ref=lbp)
+    * [R - Bar Charts](https://www.geeksforgeeks.org/r-bar-charts/?ref=lbp)
+    * [Histograms in R language](https://www.geeksforgeeks.org/histograms-in-r-language/?ref=lbp)
+    * [Scatter plots in R Language](https://www.geeksforgeeks.org/scatter-plots-in-r-language/?ref=lbp)
+    * [R - Pie Charts](https://www.geeksforgeeks.org/r-pie-charts/?ref=lbp)
+    * [Boxplots in R Language](https://www.geeksforgeeks.org/boxplots-in-r-language/?ref=lbp)
+
+## Statistics
+
+    * [R - Statistics](https://www.geeksforgeeks.org/r-statistics/?ref=lbp)
+    * [Mean, Median and Mode in R Programming](https://www.geeksforgeeks.org/mean-median-and-mode-in-r-programming/?ref=lbp)
+    * [Exploring Statistical Measures in R: Average, Variance, and Standard Deviation Explained](https://www.geeksforgeeks.org/calculate-the-average-variance-and-standard-deviation-in-r-programming/?ref=lbp)
+    * [Descriptive Analysis in R Programming](https://www.geeksforgeeks.org/descriptive-analysis-in-r-programming/?ref=lbp)
+    * [Normal Distribution in R](https://www.geeksforgeeks.org/normal-distribution-in-r/?ref=lbp)
+    * [Binomial Distribution in R Programming](https://www.geeksforgeeks.org/binomial-distribution-in-r-programming/?ref=lbp)
+    * [ANOVA (Analysis of Variance) Test in R Programming](https://www.geeksforgeeks.org/anova-test-in-r-programming/?ref=lbp)
+    * [Covariance and Correlation in R Programming](https://www.geeksforgeeks.org/covariance-and-correlation-in-r-programming/?ref=lbp)
+    * [Skewness in R Programming](https://www.geeksforgeeks.org/skewness-and-kurtosis-in-r-programming/?ref=lbp)
+    * [Hypothesis Testing in R Programming](https://www.geeksforgeeks.org/hypothesis-testing-in-r-programming/?ref=lbp)
+    * [Bootstrapping in R Programming](https://www.geeksforgeeks.org/bootstrapping-in-r-programming/?ref=lbp)
+    * [Time Series Analysis in R](https://www.geeksforgeeks.org/time-series-analysis-in-r/?ref=lbp)
+
+## Machine Learning
+
+    * [Introduction to Machine Learning in R](https://www.geeksforgeeks.org/introduction-to-machine-learning-in-r/?ref=lbp)
+    * [Setting up Environment for Machine Learning with R Programming](https://www.geeksforgeeks.org/setting-up-environment-for-machine-learning-with-r-programming/?ref=lbp)
+    * [Supervised and Unsupervised Learning in R Programming](https://www.geeksforgeeks.org/supervised-and-unsupervised-clustering-in-r-programming/?ref=lbp)
+    * [Regression and its Types in R Programming](https://www.geeksforgeeks.org/regression-and-its-types-in-r-programming/?ref=lbp)
+    * [Classification in R Programming](https://www.geeksforgeeks.org/classification-in-r-programming/?ref=lbp)
+    * [Naive Bayes Classifier in R Programming](https://www.geeksforgeeks.org/naive-bayes-classifier-in-r-programming/?ref=lbp)
+    * [KNN Classifier in R Programming](https://www.geeksforgeeks.org/k-nn-classifier-in-r-programming/?ref=lbp)
+    * [Clustering in R Programming](https://www.geeksforgeeks.org/clustering-in-r-programming/?ref=lbp)
+    * [Decision Tree in R Programming](https://www.geeksforgeeks.org/decision-tree-in-r-programming/?ref=lbp)
+    * [Random Forest Approach in R Programming](https://www.geeksforgeeks.org/random-forest-approach-in-r-programming/?ref=lbp)
+    * [Hierarchical Clustering in R Programming](https://www.geeksforgeeks.org/hierarchical-clustering-in-r-programming/?ref=lbp)
+    * [DBScan Clustering in R Programming](https://www.geeksforgeeks.org/dbscan-clustering-in-r-programming/?ref=lbp)
+    * [Deep Learning in R Programming](https://www.geeksforgeeks.org/deep-learning-in-r-programming/?ref=lbp)

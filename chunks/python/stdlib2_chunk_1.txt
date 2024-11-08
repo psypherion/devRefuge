@@ -1,0 +1,131 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [11. Brief Tour of the Standard Library — Part II](#)
+    * [11.1. Output Formatting](#output-formatting)
+    * [11.2. Templating](#templating)
+    * [11.3. Working with Binary Data Record Layouts](#working-with-binary-data-record-layouts)
+    * [11.4. Multi-threading](#multi-threading)
+    * [11.5. Logging](#logging)
+    * [11.6. Weak References](#weak-references)
+    * [11.7. Tools for Working with Lists](#tools-for-working-with-lists)
+    * [11.8. Decimal Floating-Point Arithmetic](#decimal-floating-point-arithmetic)
+
+
+
+#### Previous topic
+
+[10. Brief Tour of the Standard Library](stdlib.html "previous chapter")
+
+#### Next topic
+
+[12. Virtual Environments and Packages](venv.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/stdlib2.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](venv.html "12. Virtual Environments and Packages") |
+  * [previous](stdlib.html "10. Brief Tour of the Standard Library") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [11. Brief Tour of the Standard Library — Part II]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 11. Brief Tour of the Standard Library — Part II[¶](#brief-tour-of-the-standard-library-part-ii "Link to this heading")
+
+This second tour covers more advanced modules that support professional programming needs. These modules rarely occur in small scripts.
+
+## 11.1. Output Formatting[¶](#output-formatting "Link to this heading")
+
+The [`reprlib`](../library/reprlib.html#module-reprlib "reprlib: Alternate repr\(\) implementation with size limits.") module provides a version of [`repr()`](../library/functions.html#repr "repr") customized for abbreviated displays of large or deeply nested containers:
+
+>>>```
+
+    
+    
+    >>> import reprlib
+    >>> reprlib.repr(set('supercalifragilisticexpialidocious'))
+    "{'a', 'c', 'd', 'e', 'f', 'g', ...}"
+    
+```
+
+The [`pprint`](../library/pprint.html#module-pprint "pprint: Data pretty printer.") module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:
+
+>>>```
+
+    
+    
+    >>> import pprint
+    >>> t = [[[['black', 'cyan'], 'white', ['green', 'red']], [['magenta',
+    ... 'yellow'], 'blue']]]
+    ...
+    >>> pprint.pprint(t, width=30)
+    [[[['black', 'cyan'],
+      'white',
+      ['green', 'red']],
+     [['magenta', 'yellow'],
+      'blue']]]
+    
+```
+
+The [`textwrap`](../library/textwrap.html#module-textwrap "textwrap: Text wrapping and filling") module formats paragraphs of text to fit a given screen width:
+
+>>>```
+
+    
+    
+    >>> import textwrap
+    >>> doc = """The wrap() method is just like fill() except that it returns
+    ... a list of strings instead of one big string with newlines to separate
+    ... the wrapped lines."""
+    ...
+    >>> print(textwrap.fill(doc, width=40))
+    The wrap() method is just like fill()
+    except that it returns a list of strings
+    instead of one big string with newlines
+    to separate the wrapped lines.
+    
+```
+
+The [`locale`](../library/locale.html#module-locale "locale: Internationalization services.") module accesses a database of culture specific data formats. The grouping attribute of locale’s format function provides a direct way of formatting numbers with group separators:
+
+>>>```
+
+    
+    
+    >>> import locale
+    >>> locale.setlocale(locale.LC_ALL, 'English_United States.1252')
+    'English_United States.1252'
+    >>> conv = locale.localeconv()     # get a mapping of conventions
+    >>> x = 1234567.8
+    >>> locale.format_string("%d", x, grouping=True)
+    '1,234,567'
+    >>> locale.format_string("%s%.*f", (conv['currency_symbol'],
+    ... conv['frac_digits'], x), grouping=True)
+    '$1,234,567.80'
+    
+```
+
+## 11.2.

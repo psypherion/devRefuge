@@ -1,0 +1,55 @@
+For example, if you added a `reverse` function to the `sound/effects/__init__.py` file, the `from sound.effects import *` would only import the two submodules `echo` and `surround`, but _not_ the `reverse` submodule, because it is shadowed by the locally defined `reverse` function:
+
+```
+
+    
+    
+    __all__ = [
+      "echo",   # refers to the 'echo.py' file
+      "surround", # refers to the 'surround.py' file
+      "reverse",  # !!! refers to the 'reverse' function now !!!
+    ]
+    def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule
+      return msg[::-1]  #   in the case of a 'from sound.effects import *'
+    
+```
+
+If `__all__` is not defined, the statement `from sound.effects import *` does _not_ import all submodules from the package `sound.effects` into the current namespace; it only ensures that the package `sound.effects` has been imported (possibly running any initialization code in `__init__.py`) and then imports whatever names are defined in the package. This includes any names defined (and submodules explicitly loaded) by `__init__.py`. It also includes any submodules of the package that were explicitly loaded by previous [`import`](../reference/simple_stmts.html#import) statements. Consider this code:
+
+```
+
+    
+    
+    import sound.effects.echo
+    import sound.effects.surround
+    from sound.effects import *
+    
+```
+
+In this example, the `echo` and `surround` modules are imported in the current namespace because they are defined in the `sound.effects` package when the `from...import` statement is executed. (This also works when `__all__` is defined.)
+
+Although certain modules are designed to export only names that follow certain patterns when you use `import *`, it is still considered bad practice in production code.
+
+Remember, there is nothing wrong with using `from package import specific_submodule`! In fact, this is the recommended notation unless the importing module needs to use submodules with the same name from different packages.
+
+### 6.4.2. Intra-package References[¶](#intra-package-references "Link to this heading")
+
+When packages are structured into subpackages (as with the `sound` package in the example), you can use absolute imports to refer to submodules of siblings packages. For example, if the module `sound.filters.vocoder` needs to use the `echo` module in the `sound.effects` package, it can use `from sound.effects import echo`.
+
+You can also write relative imports, with the `from module import name` form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import. From the `surround` module for example, you might use:
+
+```
+
+    
+    
+    from . import echo
+    from .. import formats
+    from ..filters import equalizer
+    
+```
+
+Note that relative imports are based on the name of the current module. Since the name of the main module is always `"__main__"`, modules intended for use as the main module of a Python application must always use absolute imports.
+
+### 6.4.3. Packages in Multiple Directories[¶](#packages-in-multiple-directories "Link to this heading")
+
+Packages support one more special attribute, [`__path__`](../reference/datamodel.html#module.__path__ "module.__path__"). This is initialized to be a [sequence](../glossary.html#term-sequence) of strings containing the name of the directory holding the package’s `__init__.py` before the code in that file is executed.

@@ -1,0 +1,89 @@
+result = x / y
+    ... except ZeroDivisionError:
+    ... print("division by zero!")
+    ... else:
+    ... print("result is", result)
+    ... finally:
+    ... print("executing finally clause")
+    ...
+    >>> divide(2, 1)
+    result is 2.0
+    executing finally clause
+    >>> divide(2, 0)
+    division by zero!
+    executing finally clause
+    >>> divide("2", "1")
+    executing finally clause
+    Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+    divide("2", "1")
+    ~~~~~~^^^^^^^^^^
+     File "<stdin>", line 3, in divide
+    result = x / y
+    ~~^~~
+    TypeError: unsupported operand type(s) for /: 'str' and 'str'
+    
+```
+
+As you can see, the [`finally`](../reference/compound_stmts.html#finally) clause is executed in any event. The [`TypeError`](../library/exceptions.html#TypeError "TypeError") raised by dividing two strings is not handled by the [`except`](../reference/compound_stmts.html#except) clause and therefore re-raised after the `finally` clause has been executed.
+
+In real world applications, the [`finally`](../reference/compound_stmts.html#finally) clause is useful for releasing external resources (such as files or network connections), regardless of whether the use of the resource was successful.
+
+## 8.8. Predefined Clean-up Actions[¶](#predefined-clean-up-actions "Link to this heading")
+
+Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of whether or not the operation using the object succeeded or failed. Look at the following example, which tries to open a file and print its contents to the screen.
+
+```
+
+    
+    
+    for line in open("myfile.txt"):
+      print(line, end="")
+    
+```
+
+The problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The [`with`](../reference/compound_stmts.html#with) statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
+
+```
+
+    
+    
+    with open("myfile.txt") as f:
+      for line in f:
+        print(line, end="")
+    
+```
+
+After the statement is executed, the file _f_ is always closed, even if a problem was encountered while processing the lines. Objects which, like files, provide predefined clean-up actions will indicate this in their documentation.
+
+## 8.9. Raising and Handling Multiple Unrelated Exceptions[¶](#raising-and-handling-multiple-unrelated-exceptions "Link to this heading")
+
+There are situations where it is necessary to report several exceptions that have occurred. This is often the case in concurrency frameworks, when several tasks may have failed in parallel, but there are also other use cases where it is desirable to continue execution and collect multiple errors rather than raise the first exception.
+
+The builtin [`ExceptionGroup`](../library/exceptions.html#ExceptionGroup "ExceptionGroup") wraps a list of exception instances so that they can be raised together. It is an exception itself, so it can be caught like any other exception.
+
+>>>```
+
+    
+    
+    >>> def f():
+    ... excs = [OSError('error 1'), SystemError('error 2')]
+    ... raise ExceptionGroup('there were problems', excs)
+    ...
+    >>> f()
+     + Exception Group Traceback (most recent call last):
+     |  File "<stdin>", line 1, in <module>
+     |   f()
+     |   ~^^
+     |  File "<stdin>", line 3, in f
+     |   raise ExceptionGroup('there were problems', excs)
+     | ExceptionGroup: there were problems (2 sub-exceptions)
+     +-+---------------- 1 ----------------
+      | OSError: error 1
+      +---------------- 2 ----------------
+      | SystemError: error 2
+      +------------------------------------
+    >>> try:
+    ... f()
+    ... except Exception as e:
+    ...

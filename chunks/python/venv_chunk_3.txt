@@ -1,0 +1,49 @@
+When you’ve written a package and want to make it available on the Python Package Index, consult the [Python packaging user guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
+
+### [Table of Contents](../contents.html)
+
+  * [12. Virtual Environments and Packages](#)
+    * [12.1. Introduction](#introduction)
+    * [12.2. Creating Virtual Environments](#creating-virtual-environments)
+    * [12.3. Managing Packages with pip](#managing-packages-with-pip)
+
+
+
+#### Previous topic
+
+[11. Brief Tour of the Standard Library — Part II](stdlib2.html "previous chapter")
+
+#### Next topic
+
+[13. What Now?](whatnow.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/venv.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](whatnow.html "13. What Now?") |
+  * [previous](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [12. Virtual Environments and Packages]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+© [ Copyright ](../copyright.html) 2001-2024, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See [History and License](/license.html) for more information. The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/) Last updated on Nov 07, 2024 (15:51 UTC). [Found a bug](/bugs.html)? Created using [Sphinx](https://www.sphinx-doc.org/) 8.1.3. 

@@ -1,0 +1,80 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [3. An Informal Introduction to Python](#)
+    * [3.1. Using Python as a Calculator](#using-python-as-a-calculator)
+      * [3.1.1. Numbers](#numbers)
+      * [3.1.2. Text](#text)
+      * [3.1.3. Lists](#lists)
+    * [3.2. First Steps Towards Programming](#first-steps-towards-programming)
+
+
+
+#### Previous topic
+
+[2. Using the Python Interpreter](interpreter.html "previous chapter")
+
+#### Next topic
+
+[4. More Control Flow Tools](controlflow.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/introduction.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](controlflow.html "4. More Control Flow Tools") |
+  * [previous](interpreter.html "2. Using the Python Interpreter") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [3. An Informal Introduction to Python]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 3. An Informal Introduction to Python[¶](#an-informal-introduction-to-python "Link to this heading")
+
+In the following examples, input and output are distinguished by the presence or absence of prompts ([>>>](../glossary.html#term-0) and […](../glossary.html#term-...)): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.
+
+You can toggle the display of prompts and output by clicking on `>>>` in the upper-right corner of an example box. If you hide the prompts and output for an example, then you can easily copy and paste the input lines into your interpreter.
+
+Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character, `#`, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples.
+
+Some examples:
+
+```
+
+    
+    
+    # this is the first comment
+    spam = 1 # and this is the second comment
+         # ... and now a third!
+    text = "# This is not a comment because it's inside quotes."
+    
+```
+
+## 3.1. Using Python as a Calculator[¶](#using-python-as-a-calculator "Link to this heading")
+
+Let’s try some simple Python commands. Start the interpreter and wait for the primary prompt, `>>>`. (It shouldn’t take long.)
+
+### 3.1.1. Numbers[¶](#numbers "Link to this heading")
+
+The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators `+`, `-`, `*` and `/` can be used to perform arithmetic; parentheses (`()`) can be used for grouping.

@@ -1,0 +1,91 @@
+print('{0:2d}{1:3d}{2:4d}'.format(x, x*x, x*x*x))
+    ...
+     1  1  1
+     2  4  8
+     3  9  27
+     4 16  64
+     5 25 125
+     6 36 216
+     7 49 343
+     8 64 512
+     9 81 729
+    10 100 1000
+    
+```
+
+For a complete overview of string formatting with [`str.format()`](../library/stdtypes.html#str.format "str.format"), see [Format String Syntax](../library/string.html#formatstrings).
+
+### 7.1.3. Manual String Formatting[¶](#manual-string-formatting "Link to this heading")
+
+Here’s the same table of squares and cubes, formatted manually:
+
+>>>```
+
+    
+    
+    >>> for x in range(1, 11):
+    ... print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
+    ... # Note use of 'end' on previous line
+    ... print(repr(x*x*x).rjust(4))
+    ...
+     1  1  1
+     2  4  8
+     3  9  27
+     4 16  64
+     5 25 125
+     6 36 216
+     7 49 343
+     8 64 512
+     9 81 729
+    10 100 1000
+    
+```
+
+(Note that the one space between each column was added by the way [`print()`](../library/functions.html#print "print") works: it always adds spaces between its arguments.)
+
+The [`str.rjust()`](../library/stdtypes.html#str.rjust "str.rjust") method of string objects right-justifies a string in a field of a given width by padding it with spaces on the left. There are similar methods [`str.ljust()`](../library/stdtypes.html#str.ljust "str.ljust") and [`str.center()`](../library/stdtypes.html#str.center "str.center"). These methods do not write anything, they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If you really want truncation you can always add a slice operation, as in `x.ljust(n)[:n]`.)
+
+There is another method, [`str.zfill()`](../library/stdtypes.html#str.zfill "str.zfill"), which pads a numeric string on the left with zeros. It understands about plus and minus signs:
+
+>>>```
+
+    
+    
+    >>> '12'.zfill(5)
+    '00012'
+    >>> '-3.14'.zfill(7)
+    '-003.14'
+    >>> '3.14159265359'.zfill(5)
+    '3.14159265359'
+    
+```
+
+### 7.1.4. Old string formatting[¶](#old-string-formatting "Link to this heading")
+
+The % operator (modulo) can also be used for string formatting. Given `format % values` (where _format_ is a string), `%` conversion specifications in _format_ are replaced with zero or more elements of _values_. This operation is commonly known as string interpolation. For example:
+
+>>>```
+
+    
+    
+    >>> import math
+    >>> print('The value of pi is approximately %5.3f.' % math.pi)
+    The value of pi is approximately 3.142.
+    
+```
+
+More information can be found in the [printf-style String Formatting](../library/stdtypes.html#old-string-formatting) section.
+
+## 7.2. Reading and Writing Files[¶](#reading-and-writing-files "Link to this heading")
+
+[`open()`](../library/functions.html#open "open") returns a [file object](../glossary.html#term-file-object), and is most commonly used with two positional arguments and one keyword argument: `open(filename, mode, encoding=None)`
+
+>>>```
+
+    
+    
+    >>> f = open('workfile', 'w', encoding="utf-8")
+    
+```
+
+The first argument is a string containing the filename. The second argument is another string containing a few characters describing the way in which the file will be used. _mode_ can be `'r'` when the file will only be read, `'w'` for only writing (an existing file with the same name will be erased), and `'a'` opens the file for appending; any data written to the file is automatically added to the end. `'r+'` opens the file for both reading and writing.

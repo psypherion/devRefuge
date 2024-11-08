@@ -1,0 +1,84 @@
+For example, the [`winreg`](../library/winreg.html#module-winreg "winreg: Routines and objects for manipulating the Windows registry. \(Windows\)") module is only provided on Windows systems. One particular module deserves some attention: [`sys`](../library/sys.html#module-sys "sys: Access system-specific parameters and functions."), which is built into every Python interpreter. The variables `sys.ps1` and `sys.ps2` define the strings used as primary and secondary prompts:
+
+>>>```
+
+    
+    
+    >>> import sys
+    >>> sys.ps1
+    '>>> '
+    >>> sys.ps2
+    '... '
+    >>> sys.ps1 = 'C> '
+    C> print('Yuck!')
+    Yuck!
+    C>
+    
+```
+
+These two variables are only defined if the interpreter is in interactive mode.
+
+The variable `sys.path` is a list of strings that determines the interpreter’s search path for modules. It is initialized to a default path taken from the environment variable [`PYTHONPATH`](../using/cmdline.html#envvar-PYTHONPATH), or from a built-in default if [`PYTHONPATH`](../using/cmdline.html#envvar-PYTHONPATH) is not set. You can modify it using standard list operations:
+
+>>>```
+
+    
+    
+    >>> import sys
+    >>> sys.path.append('/ufs/guido/lib/python')
+    
+```
+
+## 6.3. The [`dir()`](../library/functions.html#dir "dir") Function[¶](#the-dir-function "Link to this heading")
+
+The built-in function [`dir()`](../library/functions.html#dir "dir") is used to find out which names a module defines. It returns a sorted list of strings:
+
+>>>```
+
+    
+    
+    >>> import fibo, sys
+    >>> dir(fibo)
+    ['__name__', 'fib', 'fib2']
+    >>> dir(sys) 
+    ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',
+     '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',
+     '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',
+     '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',
+     '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',
+     'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',
+     'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',
+     'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',
+     'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',
+     'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',
+     'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',
+     'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',
+     'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',
+     'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',
+     'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',
+     'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',
+     'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',
+     'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',
+     'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',
+     'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',
+     'warnoptions']
+    
+```
+
+Without arguments, [`dir()`](../library/functions.html#dir "dir") lists the names you have defined currently:
+
+>>>```
+
+    
+    
+    >>> a = [1, 2, 3, 4, 5]
+    >>> import fibo
+    >>> fib = fibo.fib
+    >>> dir()
+    ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
+    
+```
+
+Note that it lists all types of names: variables, modules, functions, etc.
+
+[`dir()`](../library/functions.html#dir "dir") does not list the names of built-in functions and variables.

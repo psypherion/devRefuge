@@ -1,0 +1,123 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [5. Data Structures](#)
+    * [5.1. More on Lists](#more-on-lists)
+      * [5.1.1. Using Lists as Stacks](#using-lists-as-stacks)
+      * [5.1.2. Using Lists as Queues](#using-lists-as-queues)
+      * [5.1.3. List Comprehensions](#list-comprehensions)
+      * [5.1.4. Nested List Comprehensions](#nested-list-comprehensions)
+    * [5.2. The `del` statement](#the-del-statement)
+    * [5.3. Tuples and Sequences](#tuples-and-sequences)
+    * [5.4. Sets](#sets)
+    * [5.5. Dictionaries](#dictionaries)
+    * [5.6. Looping Techniques](#looping-techniques)
+    * [5.7. More on Conditions](#more-on-conditions)
+    * [5.8. Comparing Sequences and Other Types](#comparing-sequences-and-other-types)
+
+
+
+#### Previous topic
+
+[4. More Control Flow Tools](controlflow.html "previous chapter")
+
+#### Next topic
+
+[6. Modules](modules.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/datastructures.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](modules.html "6. Modules") |
+  * [previous](controlflow.html "4. More Control Flow Tools") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [5. Data Structures]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 5. Data Structures[¶](#data-structures "Link to this heading")
+
+This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.
+
+## 5.1. More on Lists[¶](#more-on-lists "Link to this heading")
+
+The list data type has some more methods. Here are all of the methods of list objects:
+
+list.append(_x_)
+    
+
+Add an item to the end of the list. Similar to `a[len(a):] = [x]`.
+
+list.extend(_iterable_)
+    
+
+Extend the list by appending all the items from the iterable. Similar to `a[len(a):] = iterable`.
+
+list.insert(_i_ , _x_)
+    
+
+Insert an item at a given position. The first argument is the index of the element before which to insert, so `a.insert(0, x)` inserts at the front of the list, and `a.insert(len(a), x)` is equivalent to `a.append(x)`.
+
+list.remove(_x_)
+    
+
+Remove the first item from the list whose value is equal to _x_. It raises a [`ValueError`](../library/exceptions.html#ValueError "ValueError") if there is no such item.
+
+list.pop([_i_])
+    
+
+Remove the item at the given position in the list, and return it. If no index is specified, `a.pop()` removes and returns the last item in the list. It raises an [`IndexError`](../library/exceptions.html#IndexError "IndexError") if the list is empty or the index is outside the list range.
+
+list.clear()
+    
+
+Remove all items from the list. Similar to `del a[:]`.
+
+list.index(_x_[, _start_[, _end_]])
+    
+
+Return zero-based index in the list of the first item whose value is equal to _x_. Raises a [`ValueError`](../library/exceptions.html#ValueError "ValueError") if there is no such item.
+
+The optional arguments _start_ and _end_ are interpreted as in the slice notation and are used to limit the search to a particular subsequence of the list. The returned index is computed relative to the beginning of the full sequence rather than the _start_ argument.
+
+list.count(_x_)
+    
+
+Return the number of times _x_ appears in the list.
+
+list.sort(_*_ , _key =None_, _reverse =False_)
+    
+
+Sort the items of the list in place (the arguments can be used for sort customization, see [`sorted()`](../library/functions.html#sorted "sorted") for their explanation).
+
+list.reverse()
+    
+
+Reverse the elements of the list in place.
+
+list.copy()
+    
+
+Return a shallow copy of the list.

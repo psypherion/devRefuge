@@ -1,0 +1,99 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [15. Floating-Point Arithmetic: Issues and Limitations](#)
+    * [15.1. Representation Error](#representation-error)
+
+
+
+#### Previous topic
+
+[14. Interactive Input Editing and History Substitution](interactive.html "previous chapter")
+
+#### Next topic
+
+[16. Appendix](appendix.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/floatingpoint.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](appendix.html "16. Appendix") |
+  * [previous](interactive.html "14. Interactive Input Editing and History Substitution") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [15. Floating-Point Arithmetic: Issues and Limitations]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 15. Floating-Point Arithmetic: Issues and Limitations[¶](#floating-point-arithmetic-issues-and-limitations "Link to this heading")
+
+Floating-point numbers are represented in computer hardware as base 2 (binary) fractions. For example, the **decimal** fraction `0.625` has value 6/10 + 2/100 + 5/1000, and in the same way the **binary** fraction `0.101` has value 1/2 + 0/4 + 1/8. These two fractions have identical values, the only real difference being that the first is written in base 10 fractional notation, and the second in base 2.
+
+Unfortunately, most decimal fractions cannot be represented exactly as binary fractions. A consequence is that, in general, the decimal floating-point numbers you enter are only approximated by the binary floating-point numbers actually stored in the machine.
+
+The problem is easier to understand at first in base 10. Consider the fraction 1/3. You can approximate that as a base 10 fraction:
+
+```
+
+    
+    
+    0.3
+    
+```
+
+or, better,
+
+```
+
+    
+    
+    0.33
+    
+```
+
+or, better,
+
+```
+
+    
+    
+    0.333
+    
+```
+
+and so on. No matter how many digits you’re willing to write down, the result will never be exactly 1/3, but will be an increasingly better approximation of 1/3.
+
+In the same way, no matter how many base 2 digits you’re willing to use, the decimal value 0.1 cannot be represented exactly as a base 2 fraction. In base 2, 1/10 is the infinitely repeating fraction
+
+```
+
+    
+    
+    0.0001100110011001100110011001100110011001100110011...
+    
+```
+
+Stop at any finite number of bits, and you get an approximation. On most machines today, floats are approximated using a binary fraction with the numerator using the first 53 bits starting with the most significant bit and with the denominator as a power of two. In the case of 1/10, the binary fraction is `3602879701896397 / 2 ** 55` which is close to but not exactly equal to the true value of 1/10.
+
+Many users are not aware of the approximation because of the way values are displayed. Python only prints a decimal approximation to the true decimal value of the binary approximation stored by the machine.

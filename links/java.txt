@@ -1,0 +1,306 @@
+## Overview of Java
+
+    * [Introduction to Java](https://www.geeksforgeeks.org/introduction-to-java/?ref=lbp)
+    * [The Complete History of Java Programming Language](https://www.geeksforgeeks.org/the-complete-history-of-java-programming-language/?ref=lbp)
+    * [C++ vs Java vs Python](https://www.geeksforgeeks.org/c-vs-java-vs-python/?ref=lbp)
+    * [How to Download and Install Java for 64 bit machine?](https://www.geeksforgeeks.org/how-to-download-and-install-java-for-64-bit-machine/?ref=lbp)
+    * [Setting up the environment in Java](https://www.geeksforgeeks.org/setting-environment-java/?ref=lbp)
+    * [How to Download and Install Eclipse on Windows?](https://www.geeksforgeeks.org/how-to-download-and-install-eclipse-on-windows/?ref=lbp)
+    * [JDK in Java](https://www.geeksforgeeks.org/jdk-in-java/?ref=lbp)
+    * [How JVM Works - JVM Architecture](https://www.geeksforgeeks.org/jvm-works-jvm-architecture/?ref=lbp)
+    * [Differences between JDK, JRE and JVM](https://www.geeksforgeeks.org/differences-jdk-jre-jvm/?ref=lbp)
+    * [Just In Time Compiler](https://www.geeksforgeeks.org/just-in-time-compiler/?ref=lbp)
+    * [Difference between JIT and JVM in Java](https://www.geeksforgeeks.org/difference-between-jit-and-jvm-in-java/?ref=lbp)
+    * [Difference between Byte Code and Machine Code](https://www.geeksforgeeks.org/difference-between-byte-code-and-machine-code/?ref=lbp)
+    * [How is Java platform independent?](https://www.geeksforgeeks.org/java-platform-independent/?ref=lbp)
+
+## Basics of Java
+
+    * [Java Basic Syntax](https://www.geeksforgeeks.org/java-basic-syntax/?ref=lbp)
+    * [Java Hello World Program](https://www.geeksforgeeks.org/java-hello-world-program/?ref=lbp)
+    * [Java Data Types](https://www.geeksforgeeks.org/data-types-in-java/?ref=lbp)
+    * [Primitive data type vs. Object data type in Java with Examples](https://www.geeksforgeeks.org/primitive-data-type-vs-object-data-type-in-java-with-examples/?ref=lbp)
+    * [Java Identifiers](https://www.geeksforgeeks.org/java-identifiers/?ref=lbp)
+    * [Operators in Java](https://www.geeksforgeeks.org/operators-in-java/?ref=lbp)
+    * [Java Variables](https://www.geeksforgeeks.org/variables-in-java/?ref=lbp)
+    * [Scope of Variables In Java](https://www.geeksforgeeks.org/variable-scope-in-java/?ref=lbp)
+    * [Wrapper Classes in Java](https://www.geeksforgeeks.org/wrapper-classes-java/?ref=lbp)
+
+## Input/Output in Java
+
+    * [How to Take Input From User in Java?](https://www.geeksforgeeks.org/how-to-take-input-from-user-in-java/?ref=lbp)
+    * [Scanner Class in Java](https://www.geeksforgeeks.org/scanner-class-in-java/?ref=lbp)
+    * [Java.io.BufferedReader Class in Java](https://www.geeksforgeeks.org/java-io-bufferedreader-class-java/?ref=lbp)
+    * [Difference Between Scanner and BufferedReader Class in Java](https://www.geeksforgeeks.org/difference-between-scanner-and-bufferreader-class-in-java/?ref=lbp)
+    * [Ways to read input from console in Java](https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/?ref=lbp)
+    * [System.out.println in Java](https://www.geeksforgeeks.org/system-out-println-in-java/?ref=lbp)
+    * [Difference between print() and println() in Java](https://www.geeksforgeeks.org/difference-between-print-and-println-in-java/?ref=lbp)
+    * [Formatted Output in Java using printf()](https://www.geeksforgeeks.org/formatted-output-in-java/?ref=lbp)
+    * [Fast I/O in Java in Competitive Programming](https://www.geeksforgeeks.org/fast-io-in-java-in-competitive-programming/?ref=lbp)
+
+## Flow Control in Java
+
+    * [Decision Making in Java (if, if-else, switch, break, continue, jump)](https://www.geeksforgeeks.org/decision-making-javaif-else-switch-break-continue-jump/?ref=lbp)
+    * [Java if statement with Examples](https://www.geeksforgeeks.org/java-if-statement-with-examples/?ref=lbp)
+    * [Java if-else](https://www.geeksforgeeks.org/java-if-else-statement-with-examples/?ref=lbp)
+    * [Java if-else-if ladder with Examples](https://www.geeksforgeeks.org/java-if-else-if-ladder-with-examples/?ref=lbp)
+    * [Loops in Java](https://www.geeksforgeeks.org/loops-in-java/?ref=lbp)
+    * [For Loop in Java](https://www.geeksforgeeks.org/java-for-loop-with-examples/?ref=lbp)
+    * [Java while loop with Examples](https://www.geeksforgeeks.org/java-while-loop-with-examples/?ref=lbp)
+    * [Java do-while loop with Examples](https://www.geeksforgeeks.org/java-do-while-loop-with-examples/?ref=lbp)
+    * [For-each loop in Java](https://www.geeksforgeeks.org/for-each-loop-in-java/?ref=lbp)
+    * [Continue Statement in Java](https://www.geeksforgeeks.org/continue-statement-in-java/?ref=lbp)
+    * [Break statement in Java](https://www.geeksforgeeks.org/break-statement-in-java/?ref=lbp)
+    * [Usage of Break keyword in Java](https://www.geeksforgeeks.org/usage-of-break-keyword-in-java/?ref=lbp)
+    * [return keyword in Java](https://www.geeksforgeeks.org/return-keyword-java/?ref=lbp)
+
+## Operators in Java
+
+    * [Java Arithmetic Operators with Examples](https://www.geeksforgeeks.org/java-arithmetic-operators-with-examples/?ref=lbp)
+    * [Java Unary Operator with Examples](https://www.geeksforgeeks.org/java-unary-operator-with-examples/?ref=lbp)
+    * [Java Assignment Operators with Examples](https://www.geeksforgeeks.org/java-assignment-operator-with-examples/?ref=lbp)
+    * [Java Relational Operators with Examples](https://www.geeksforgeeks.org/java-relational-operators-with-examples/?ref=lbp)
+    * [Java Logical Operators with Examples](https://www.geeksforgeeks.org/java-logical-operators-with-examples/?ref=lbp)
+    * [Java Ternary Operator with Examples](https://www.geeksforgeeks.org/java-ternary-operator-with-examples/?ref=lbp)
+    * [Bitwise Operators in Java](https://www.geeksforgeeks.org/bitwise-operators-in-java/?ref=lbp)
+
+## Strings in Java
+
+    * [Strings in Java](https://www.geeksforgeeks.org/strings-in-java/?ref=lbp)
+    * [String class in Java](https://www.geeksforgeeks.org/string-class-in-java/?ref=lbp)
+    * [Java.lang.String class in Java | Set 2](https://www.geeksforgeeks.org/java-lang-string-class-java-set-2/?ref=lbp)
+    * [Why Java Strings are Immutable?](https://www.geeksforgeeks.org/java-string-is-immutable-what-exactly-is-the-meaning/?ref=lbp)
+    * [StringBuffer class in Java](https://www.geeksforgeeks.org/stringbuffer-class-in-java/?ref=lbp)
+    * [StringBuilder Class in Java with Examples](https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/?ref=lbp)
+    * [String vs StringBuilder vs StringBuffer in Java](https://www.geeksforgeeks.org/string-vs-stringbuilder-vs-stringbuffer-in-java/?ref=lbp)
+    * [StringTokenizer Class in Java](https://www.geeksforgeeks.org/stringtokenizer-class-in-java/?ref=lbp)
+    * [StringTokenizer Methods in Java with Examples | Set 2](https://www.geeksforgeeks.org/stringtokenizer-methods-java-examples-set-2/?ref=lbp)
+    * [StringJoiner Class in Java](https://www.geeksforgeeks.org/stringjoiner-class-in-java/?ref=lbp)
+
+## Arrays in Java
+
+    * [Arrays in Java](https://www.geeksforgeeks.org/arrays-in-java/?ref=lbp)
+    * [Arrays class in Java](https://www.geeksforgeeks.org/array-class-in-java/?ref=lbp)
+    * [Multidimensional Arrays in Java](https://www.geeksforgeeks.org/multidimensional-arrays-in-java/?ref=lbp)
+    * [Different Ways To Declare And Initialize 2-D Array in Java](https://www.geeksforgeeks.org/different-ways-to-declare-and-initialize-2-d-array-in-java/?ref=lbp)
+    * [Jagged Array in Java](https://www.geeksforgeeks.org/jagged-array-in-java/?ref=lbp)
+    * [Final Arrays in Java](https://www.geeksforgeeks.org/final-arrays-in-java/?ref=lbp)
+    * [Reflection Array Class in Java](https://www.geeksforgeeks.org/reflection-array-class-in-java/?ref=lbp)
+    * [util.Arrays vs reflect.Array in Java with Examples](https://www.geeksforgeeks.org/util-arrays-vs-reflect-array-in-java-with-examples/?ref=lbp)
+
+## OOPS in Java
+
+    * [Object Oriented Programming (OOPs) Concept in Java](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/?ref=lbp)
+    * [Why Java is not a purely Object-Oriented Language?](https://www.geeksforgeeks.org/java-not-purely-object-oriented-language/?ref=lbp)
+    * [Classes and Objects in Java](https://www.geeksforgeeks.org/classes-objects-java/?ref=lbp)
+    * [Naming Conventions in Java](https://www.geeksforgeeks.org/java-naming-conventions/?ref=lbp)
+    * [Java Methods](https://www.geeksforgeeks.org/methods-in-java/?ref=lbp)
+    * [Access Modifiers in Java](https://www.geeksforgeeks.org/access-modifiers-java/?ref=lbp)
+    * [Java Constructors](https://www.geeksforgeeks.org/constructors-in-java/?ref=lbp)
+    * [Four Main Object Oriented Programming Concepts of Java](https://www.geeksforgeeks.org/four-main-object-oriented-programming-concepts-of-java/?ref=lbp)
+    * [Inheritance in Java](https://www.geeksforgeeks.org/inheritance-in-java/?ref=lbp)
+    * [Abstraction in Java](https://www.geeksforgeeks.org/abstraction-in-java-2/?ref=lbp)
+    * [Encapsulation in Java](https://www.geeksforgeeks.org/encapsulation-in-java/?ref=lbp)
+    * [Polymorphism in Java](https://www.geeksforgeeks.org/polymorphism-in-java/?ref=lbp)
+    * [Interfaces in Java](https://www.geeksforgeeks.org/interfaces-in-java/?ref=lbp)
+    * ['this' reference in Java](https://www.geeksforgeeks.org/this-reference-in-java/?ref=lbp)
+
+## Inheritance in Java
+
+    * [Inheritance and Constructors in Java](https://www.geeksforgeeks.org/inheritance-and-constructors-in-java/?ref=lbp)
+    * [Java and Multiple Inheritance](https://www.geeksforgeeks.org/java-and-multiple-inheritance/?ref=lbp)
+    * [Interfaces and Inheritance in Java](https://www.geeksforgeeks.org/interfaces-and-inheritance-in-java/?ref=lbp)
+    * [Association, Composition and Aggregation in Java](https://www.geeksforgeeks.org/association-composition-aggregation-java/?ref=lbp)
+    * [Comparison of Inheritance in C++ and Java](https://www.geeksforgeeks.org/comparison-of-inheritance-in-c-and-java/?ref=lbp)
+
+## Abstraction in Java
+
+    * [abstract keyword in java](https://www.geeksforgeeks.org/abstract-keyword-in-java/?ref=lbp)
+    * [Abstract Class in Java](https://www.geeksforgeeks.org/abstract-classes-in-java/?ref=lbp)
+    * [Difference between Abstract Class and Interface in Java](https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/?ref=lbp)
+    * [Control Abstraction in Java with Examples](https://www.geeksforgeeks.org/control-abstraction-in-java-with-examples/?ref=lbp)
+    * [Difference Between Data Hiding and Abstraction in Java](https://www.geeksforgeeks.org/difference-between-data-hiding-and-abstraction-in-java/?ref=lbp)
+
+## Encapsulation in Java
+
+    * [Difference between Abstraction and Encapsulation in Java with Examples](https://www.geeksforgeeks.org/difference-between-abstraction-and-encapsulation-in-java-with-examples/?ref=lbp)
+
+## Polymorphism in Java
+
+    * [Difference between Inheritance and Polymorphism](https://www.geeksforgeeks.org/difference-between-inheritance-and-polymorphism/?ref=lbp)
+    * [Dynamic Method Dispatch or Runtime Polymorphism in Java](https://www.geeksforgeeks.org/dynamic-method-dispatch-runtime-polymorphism-java/?ref=lbp)
+    * [Difference between Compile-time and Run-time Polymorphism in Java](https://www.geeksforgeeks.org/difference-between-compile-time-and-run-time-polymorphism-in-java/?ref=lbp)
+
+## Constructors in Java
+
+    * [Copy Constructor in Java](https://www.geeksforgeeks.org/copy-constructor-in-java/?ref=lbp)
+    * [Constructor Overloading in Java](https://www.geeksforgeeks.org/constructor-overloading-java/?ref=lbp)
+    * [Constructor Chaining In Java with Examples](https://www.geeksforgeeks.org/constructor-chaining-java-examples/?ref=lbp)
+    * [Private Constructors and Singleton Classes in Java](https://www.geeksforgeeks.org/private-constructors-and-singleton-classes-in-java/?ref=lbp)
+
+## Methods in Java
+
+    * [Static methods vs Instance methods in Java](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/?ref=lbp)
+    * [Abstract Method in Java with Examples](https://www.geeksforgeeks.org/abstract-methods-in-java-with-examples/?ref=lbp)
+    * [Overriding in Java](https://www.geeksforgeeks.org/overriding-in-java/?ref=lbp)
+    * [Method Overloading in Java](https://www.geeksforgeeks.org/method-overloading-in-java/?ref=lbp)
+    * [Difference Between Method Overloading and Method Overriding in Java](https://www.geeksforgeeks.org/difference-between-method-overloading-and-method-overriding-in-java/?ref=lbp)
+
+## Interfaces in Java
+
+    * [Differences between Interface and Class in Java](https://www.geeksforgeeks.org/differences-between-interface-and-class-in-java/?ref=lbp)
+    * [Functional Interfaces in Java](https://www.geeksforgeeks.org/functional-interfaces-java/?ref=lbp)
+    * [Nested Interface in Java](https://www.geeksforgeeks.org/interface-nested-class-another-interface/?ref=lbp)
+    * [Marker interface in Java](https://www.geeksforgeeks.org/marker-interface-java/?ref=lbp)
+    * [Comparator Interface in Java with Examples](https://www.geeksforgeeks.org/comparator-interface-java/?ref=lbp)
+
+## Wrapper Classes in Java
+
+    * [Need of Wrapper Classes in Java](https://www.geeksforgeeks.org/need-of-wrapper-classes-in-java/?ref=lbp)
+    * [Different Ways to Create the Instances of Wrapper Classes in Java](https://www.geeksforgeeks.org/different-ways-to-create-the-instances-of-wrapper-classes-in-java/?ref=lbp)
+    * [Character Class in Java](https://www.geeksforgeeks.org/character-class-java/?ref=lbp)
+    * [Java.Lang.Byte class in Java](https://www.geeksforgeeks.org/java-lang-byte-class-java/?ref=lbp)
+    * [Java.Lang.Short class in Java](https://www.geeksforgeeks.org/java-lang-short-class-java/?ref=lbp)
+    * [Java.lang.Integer class in Java](https://www.geeksforgeeks.org/java-lang-integer-class-java/?ref=lbp)
+    * [Java.Lang.Long class in Java](https://www.geeksforgeeks.org/java-lang-long-class-in-java/?ref=lbp)
+    * [Java.Lang.Float class in Java](https://www.geeksforgeeks.org/java-lang-float-class-in-java/?ref=lbp)
+    * [Java.Lang.Double Class in Java](https://www.geeksforgeeks.org/java-lang-double-class-java/?ref=lbp)
+    * [Java.lang.Boolean Class in Java](https://www.geeksforgeeks.org/java-lang-boolean-class-java/?ref=lbp)
+    * [Autoboxing and Unboxing in Java](https://www.geeksforgeeks.org/autoboxing-unboxing-java/?ref=lbp)
+    * [Type conversion in Java with Examples](https://www.geeksforgeeks.org/type-conversion-java-examples/?ref=lbp)
+
+## Keywords in Java
+
+    * [Java Keywords](https://www.geeksforgeeks.org/list-of-all-java-keywords/?ref=lbp)
+    * [Important Keywords in Java](https://www.geeksforgeeks.org/important-keywords-java/?ref=lbp)
+    * [Super Keyword in Java](https://www.geeksforgeeks.org/super-keyword/?ref=lbp)
+    * [final Keyword in Java](https://www.geeksforgeeks.org/final-keyword-in-java/?ref=lbp)
+    * [static Keyword in Java](https://www.geeksforgeeks.org/static-keyword-java/?ref=lbp)
+    * [enum in Java](https://www.geeksforgeeks.org/enum-in-java/?ref=lbp)
+    * [transient keyword in Java](https://www.geeksforgeeks.org/transient-keyword-java/?ref=lbp)
+    * [volatile Keyword in Java](https://www.geeksforgeeks.org/volatile-keyword-in-java/?ref=lbp)
+    * [final, finally and finalize in Java](https://www.geeksforgeeks.org/g-fact-24-finalfinally-and-finalize-in-java/?ref=lbp)
+
+## Access Modifiers in Java
+
+    * [Public vs Protected vs Package vs Private Access Modifier in Java](https://www.geeksforgeeks.org/public-vs-protected-vs-package-vs-private-access-modifier-in-java/?ref=lbp)
+    * [Access and Non Access Modifiers in Java](https://www.geeksforgeeks.org/access-and-non-access-modifiers-in-java/?ref=lbp)
+
+## Memory Allocation in Java
+
+    * [Java Memory Management](https://www.geeksforgeeks.org/java-memory-management/?ref=lbp)
+    * [How are Java objects stored in memory?](https://www.geeksforgeeks.org/g-fact-46/?ref=lbp)
+    * [Stack vs Heap Memory Allocation](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/?ref=lbp)
+    * [How many types of memory areas are allocated by JVM?](https://www.geeksforgeeks.org/how-many-types-of-memory-areas-are-allocated-by-jvm/?ref=lbp)
+    * [Garbage Collection in Java](https://www.geeksforgeeks.org/garbage-collection-java/?ref=lbp)
+    * [Types of JVM Garbage Collectors in Java with implementation details](https://www.geeksforgeeks.org/types-of-jvm-garbage-collectors-in-java-with-implementation-details/?ref=lbp)
+    * [Memory leaks in Java](https://www.geeksforgeeks.org/memory-leaks-java/?ref=lbp)
+    * [Java Virtual Machine (JVM) Stack Area](https://www.geeksforgeeks.org/java-virtual-machine-jvm-stack-area/?ref=lbp)
+
+## Classes of Java
+
+    * [Understanding Classes and Objects in Java](https://www.geeksforgeeks.org/understanding-classes-and-objects-in-java/?ref=lbp)
+    * [Singleton Method Design Pattern in Java](https://www.geeksforgeeks.org/singleton-class-java/?ref=lbp)
+    * [Object Class in Java](https://www.geeksforgeeks.org/object-class-in-java/?ref=lbp)
+    * [Inner Class in Java](https://www.geeksforgeeks.org/inner-class-java/?ref=lbp)
+    * [Throwable Class in Java with Examples](https://www.geeksforgeeks.org/throwable-class-in-java-with-examples/?ref=lbp)
+
+## Packages in Java
+
+    * [Packages In Java](https://www.geeksforgeeks.org/packages-in-java/?ref=lbp)
+    * [How to Create a Package in Java?](https://www.geeksforgeeks.org/how-to-create-a-package-in-java/?ref=lbp)
+    * [Java.util Package in Java](https://www.geeksforgeeks.org/java-util-package-java/?ref=lbp)
+    * [Java.lang package in Java](https://www.geeksforgeeks.org/java-lang-package-java/?ref=lbp)
+    * [Java.io Package in Java](https://www.geeksforgeeks.org/java-io-packag/?ref=lbp)
+
+  * [Java Collection Tutorial](https://www.geeksforgeeks.org/java-collection-tutorial/?ref=lbp)
+
+## Exception Handling in Java
+
+    * [Exceptions in Java](https://www.geeksforgeeks.org/exceptions-in-java/?ref=lbp)
+    * [Types of Exception in Java with Examples](https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/?ref=lbp)
+    * [Checked vs Unchecked Exceptions in Java](https://www.geeksforgeeks.org/checked-vs-unchecked-exceptions-in-java/?ref=lbp)
+    * [Java Try Catch Block](https://www.geeksforgeeks.org/try-catch-throw-and-throws-in-java/?ref=lbp)
+    * [Flow control in try catch finally in Java](https://www.geeksforgeeks.org/flow-control-in-try-catch-finally-in-java/?ref=lbp)
+    * [throw and throws in Java](https://www.geeksforgeeks.org/throw-throws-java/?ref=lbp)
+    * [User-defined Custom Exception in Java](https://www.geeksforgeeks.org/user-defined-custom-exception-in-java/?ref=lbp)
+    * [Chained Exceptions in Java](https://www.geeksforgeeks.org/chained-exceptions-java/?ref=lbp)
+    * [Null Pointer Exception In Java](https://www.geeksforgeeks.org/null-pointer-exception-in-java/?ref=lbp)
+    * [Exception Handling with Method Overriding in Java](https://www.geeksforgeeks.org/exception-handling-with-method-overriding-in-java/?ref=lbp)
+
+## Multithreading in Java
+
+    * [Multithreading in Java](https://www.geeksforgeeks.org/multithreading-in-java/?ref=lbp)
+    * [Lifecycle and States of a Thread in Java](https://www.geeksforgeeks.org/lifecycle-and-states-of-a-thread-in-java/?ref=lbp)
+    * [Java Thread Priority in Multithreading](https://www.geeksforgeeks.org/java-thread-priority-multithreading/?ref=lbp)
+    * [Main thread in Java](https://www.geeksforgeeks.org/main-thread-java/?ref=lbp)
+    * [Java.lang.Thread Class in Java](https://www.geeksforgeeks.org/java-lang-thread-class-java/?ref=lbp)
+    * [Runnable interface in Java](https://www.geeksforgeeks.org/runnable-interface-in-java/?ref=lbp)
+    * [Naming a thread and fetching name of current thread in Java](https://www.geeksforgeeks.org/naming-thread-fetching-name-current-thread-java/?ref=lbp)
+    * [What does start() function do in multithreading in Java?](https://www.geeksforgeeks.org/start-function-multithreading-java/?ref=lbp)
+    * [Difference between Thread.start() and Thread.run() in Java](https://www.geeksforgeeks.org/difference-between-thread-start-and-thread-run-in-java/?ref=lbp)
+    * [Thread.sleep() Method in Java With Examples](https://www.geeksforgeeks.org/thread-sleep-method-in-java-with-examples/?ref=lbp)
+
+## Synchronization in Java
+
+    * [Synchronization in Java](https://www.geeksforgeeks.org/synchronization-in-java/?ref=lbp)
+    * [Importance of Thread Synchronization in Java](https://www.geeksforgeeks.org/importance-of-thread-synchronization-in-java/?ref=lbp)
+    * [Method and Block Synchronization in Java](https://www.geeksforgeeks.org/method-block-synchronization-java/?ref=lbp)
+    * [Lock framework vs Thread synchronization in Java](https://www.geeksforgeeks.org/lock-framework-vs-thread-synchronization-in-java/?ref=lbp)
+    * [Difference Between Atomic, Volatile and Synchronized in Java](https://www.geeksforgeeks.org/difference-between-atomic-volatile-and-synchronized-in-java/?ref=lbp)
+    * [Deadlock in Java Multithreading](https://www.geeksforgeeks.org/deadlock-in-java-multithreading/?ref=lbp)
+    * [Deadlock Prevention And Avoidance](https://www.geeksforgeeks.org/deadlock-prevention/?ref=lbp)
+    * [Difference Between Lock and Monitor in Java Concurrency](https://www.geeksforgeeks.org/difference-between-lock-and-monitor-in-java-concurrency/?ref=lbp)
+    * [Reentrant Lock in Java](https://www.geeksforgeeks.org/reentrant-lock-java/?ref=lbp)
+
+## File Handling in Java
+
+    * [Java.io.File Class in Java](https://www.geeksforgeeks.org/file-class-in-java/?ref=lbp)
+    * [Java Program to Create a New File](https://www.geeksforgeeks.org/java-program-to-create-a-new-file/?ref=lbp)
+    * [Different ways of Reading a text file in Java](https://www.geeksforgeeks.org/different-ways-reading-text-file-java/?ref=lbp)
+    * [Java Program to Write into a File](https://www.geeksforgeeks.org/java-program-to-write-into-a-file/?ref=lbp)
+    * [Delete a File Using Java](https://www.geeksforgeeks.org/delete-file-using-java/?ref=lbp)
+    * [File Permissions in Java](https://www.geeksforgeeks.org/file-permissions-java/?ref=lbp)
+    * [FileWriter Class in Java](https://www.geeksforgeeks.org/filewriter-class-in-java/?ref=lbp)
+    * [Java.io.FileDescriptor in Java](https://www.geeksforgeeks.org/java-io-filedescriptor-java/?ref=lbp)
+    * [Java.io.RandomAccessFile Class Method | Set 1](https://www.geeksforgeeks.org/java-io-randomaccessfile-class-method-set-1/?ref=lbp)
+
+## Java Regex
+
+    * [Regular Expressions in Java](https://www.geeksforgeeks.org/regular-expressions-in-java/?ref=lbp)
+    * [Regex Tutorial - How to write Regular Expressions?](https://www.geeksforgeeks.org/write-regular-expressions/?ref=lbp)
+    * [Matcher pattern() method in Java with Examples](https://www.geeksforgeeks.org/matcher-pattern-method-in-java-with-examples/?ref=lbp)
+    * [Pattern pattern() method in Java with Examples](https://www.geeksforgeeks.org/pattern-pattern-method-in-java-with-examples/?ref=lbp)
+    * [Quantifiers in Java](https://www.geeksforgeeks.org/quantifiers-in-java/?ref=lbp)
+    * [java.lang.Character class methods | Set 1](https://www.geeksforgeeks.org/java-lang-character-class-methods-set-1/?ref=lbp)
+
+## Java IO
+
+    * [Java IO : Input-output in Java with Examples](https://www.geeksforgeeks.org/java-io-input-output-in-java-with-examples/?ref=lbp)
+    * [Java.io.Reader class in Java](https://www.geeksforgeeks.org/java-io-reader-class-java/?ref=lbp)
+    * [Java.io.Writer Class in Java](https://www.geeksforgeeks.org/java-io-writer-class-java/?ref=lbp)
+    * [Java.io.FileInputStream Class in Java](https://www.geeksforgeeks.org/java-io-fileinputstream-class-java/?ref=lbp)
+    * [FileOutputStream in Java](https://www.geeksforgeeks.org/fileoutputstream-in-java/?ref=lbp)
+    * [Java.io.BufferedOutputStream class in Java](https://www.geeksforgeeks.org/java-io-bufferedoutputstream-class-java/?ref=lbp)
+
+## Java Networking
+
+    * [Java Networking](https://www.geeksforgeeks.org/java-networking/?ref=lbp)
+    * [TCP/IP Model](https://www.geeksforgeeks.org/tcp-ip-model/?ref=lbp)
+    * [User Datagram Protocol (UDP)](https://www.geeksforgeeks.org/user-datagram-protocol-udp/?ref=lbp)
+    * [Difference Between IPv4 and IPv6](https://www.geeksforgeeks.org/differences-between-ipv4-and-ipv6/?ref=lbp)
+    * [Difference Between Connection-oriented and Connection-less Services](https://www.geeksforgeeks.org/difference-between-connection-oriented-and-connection-less-services/?ref=lbp)
+    * [Socket Programming in Java](https://www.geeksforgeeks.org/socket-programming-in-java/?ref=lbp)
+    * [java.net.ServerSocket Class in Java](https://www.geeksforgeeks.org/java-net-serversocket-class-in-java/?ref=lbp)
+    * [URL Class in Java with Examples](https://www.geeksforgeeks.org/url-class-java-examples/?ref=lbp)
+
+## JDBC - Java Database Connectivity
+
+    * [Introduction to JDBC (Java Database Connectivity)](https://www.geeksforgeeks.org/introduction-to-jdbc/?ref=lbp)
+    * [JDBC Drivers](https://www.geeksforgeeks.org/jdbc-drivers/?ref=lbp)
+    * [Establishing JDBC Connection in Java](https://www.geeksforgeeks.org/establishing-jdbc-connection-in-java/?ref=lbp)
+    * [Types of Statements in JDBC](https://www.geeksforgeeks.org/types-of-statements-in-jdbc/?ref=lbp)
+    * [JDBC Tutorial](https://www.geeksforgeeks.org/jdbc-tutorial/?ref=lbp)
+
+  * [Java 8 Features - Complete Tutorial](https://www.geeksforgeeks.org/java-8-features/?ref=lbp)
+  * [Java Backend Development Course](https://www.geeksforgeeks.org/courses/Java-backend-live?utm_source=geeksforgeeks&utm_medium=leftbar_lcta&utm_campaign=courses)

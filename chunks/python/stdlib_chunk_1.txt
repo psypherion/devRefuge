@@ -1,0 +1,147 @@
+[ ![Python logo](../_static/py.svg) ](https://www.python.org/) dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+Theme  Auto Light Dark
+
+### [Table of Contents](../contents.html)
+
+  * [10. Brief Tour of the Standard Library](#)
+    * [10.1. Operating System Interface](#operating-system-interface)
+    * [10.2. File Wildcards](#file-wildcards)
+    * [10.3. Command Line Arguments](#command-line-arguments)
+    * [10.4. Error Output Redirection and Program Termination](#error-output-redirection-and-program-termination)
+    * [10.5. String Pattern Matching](#string-pattern-matching)
+    * [10.6. Mathematics](#mathematics)
+    * [10.7. Internet Access](#internet-access)
+    * [10.8. Dates and Times](#dates-and-times)
+    * [10.9. Data Compression](#data-compression)
+    * [10.10. Performance Measurement](#performance-measurement)
+    * [10.11. Quality Control](#quality-control)
+    * [10.12. Batteries Included](#batteries-included)
+
+
+
+#### Previous topic
+
+[9. Classes](classes.html "previous chapter")
+
+#### Next topic
+
+[11. Brief Tour of the Standard Library — Part II](stdlib2.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/stdlib.rst)
+
+
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](stdlib2.html "11. Brief Tour of the Standard Library — Part II") |
+  * [previous](classes.html "9. Classes") |
+  * ![Python logo](../_static/py.svg)
+  * [Python](https://www.python.org/) »
+  * EnglishSpanishFrenchItalianJapaneseKoreanBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
+
+dev (3.14)3.13.03.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
+
+  * [3.13.0 Documentation](../index.html) » 
+  * [The Python Tutorial](index.html) »
+  * [10. Brief Tour of the Standard Library]()
+  * | 
+  * Theme  Auto Light Dark |
+
+
+
+# 10. Brief Tour of the Standard Library[¶](#brief-tour-of-the-standard-library "Link to this heading")
+
+## 10.1. Operating System Interface[¶](#operating-system-interface "Link to this heading")
+
+The [`os`](../library/os.html#module-os "os: Miscellaneous operating system interfaces.") module provides dozens of functions for interacting with the operating system:
+
+>>>```
+
+    
+    
+    >>> import os
+    >>> os.getcwd()   # Return the current working directory
+    'C:\\Python313'
+    >>> os.chdir('/server/accesslogs')  # Change current working directory
+    >>> os.system('mkdir today')  # Run the command mkdir in the system shell
+    0
+    
+```
+
+Be sure to use the `import os` style instead of `from os import *`. This will keep [`os.open()`](../library/os.html#os.open "os.open") from shadowing the built-in [`open()`](../library/functions.html#open "open") function which operates much differently.
+
+The built-in [`dir()`](../library/functions.html#dir "dir") and [`help()`](../library/functions.html#help "help") functions are useful as interactive aids for working with large modules like [`os`](../library/os.html#module-os "os: Miscellaneous operating system interfaces."):
+
+>>>```
+
+    
+    
+    >>> import os
+    >>> dir(os)
+    <returns a list of all module functions>
+    >>> help(os)
+    <returns an extensive manual page created from the module's docstrings>
+    
+```
+
+For daily file and directory management tasks, the [`shutil`](../library/shutil.html#module-shutil "shutil: High-level file operations, including copying.") module provides a higher level interface that is easier to use:
+
+>>>```
+
+    
+    
+    >>> import shutil
+    >>> shutil.copyfile('data.db', 'archive.db')
+    'archive.db'
+    >>> shutil.move('/build/executables', 'installdir')
+    'installdir'
+    
+```
+
+## 10.2. File Wildcards[¶](#file-wildcards "Link to this heading")
+
+The [`glob`](../library/glob.html#module-glob "glob: Unix shell style pathname pattern expansion.") module provides a function for making file lists from directory wildcard searches:
+
+>>>```
+
+    
+    
+    >>> import glob
+    >>> glob.glob('*.py')
+    ['primes.py', 'random.py', 'quote.py']
+    
+```
+
+## 10.3. Command Line Arguments[¶](#command-line-arguments "Link to this heading")
+
+Common utility scripts often need to process command line arguments. These arguments are stored in the [`sys`](../library/sys.html#module-sys "sys: Access system-specific parameters and functions.") module’s _argv_ attribute as a list. For instance, let’s take the following `demo.py` file:
+
+```
+
+    
+    
+    # File demo.py
+    import sys
+    print(sys.argv)
+    
+```
+
+Here is the output from running `python demo.py one two three` at the command line:
+
+```
+
+    
+    
+    ['demo.py', 'one', 'two', 'three']
+    
+```
+
+The [`argparse`](../library/argparse.html#module-argparse "argparse: Command-line option and argument parsing library.") module provides a more sophisticated mechanism to process command line arguments.

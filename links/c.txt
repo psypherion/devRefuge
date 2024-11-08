@@ -1,0 +1,198 @@
+## C Basics
+
+    * [C Language Introduction](https://www.geeksforgeeks.org/c-language-introduction/?ref=lbp)
+    * [Features of C Programming Language](https://www.geeksforgeeks.org/features-of-c-programming-language/?ref=lbp)
+    * [C Programming Language Standard](https://www.geeksforgeeks.org/c-programming-language-standard/?ref=lbp)
+    * [C Hello World Program](https://www.geeksforgeeks.org/c-hello-world-program/?ref=lbp)
+    * [Compiling a C Program: Behind the Scenes](https://www.geeksforgeeks.org/compiling-a-c-program-behind-the-scenes/?ref=lbp)
+    * [C Comments](https://www.geeksforgeeks.org/c-comments/?ref=lbp)
+    * [Tokens in C](https://www.geeksforgeeks.org/tokens-in-c/?ref=lbp)
+    * [Keywords in C](https://www.geeksforgeeks.org/keywords-in-c/?ref=lbp)
+
+## C Variables and Constants
+
+    * [C Variables](https://www.geeksforgeeks.org/variables-in-c/?ref=lbp)
+    * [Constants in C](https://www.geeksforgeeks.org/constants-in-c/?ref=lbp)
+    * [Const Qualifier in C](https://www.geeksforgeeks.org/const-qualifier-in-c/?ref=lbp)
+    * [Different ways to declare variable as constant in C](https://www.geeksforgeeks.org/different-ways-declare-variable-constant-c-c/?ref=lbp)
+    * [Scope rules in C](https://www.geeksforgeeks.org/scope-rules-in-c/?ref=lbp)
+    * [Internal Linkage and External Linkage in C](https://www.geeksforgeeks.org/internal-linkage-external-linkage-c/?ref=lbp)
+    * [Global Variables in C](https://www.geeksforgeeks.org/global-variables-in-c/?ref=lbp)
+
+## C Data Types
+
+    * [Data Types in C](https://www.geeksforgeeks.org/data-types-in-c/?ref=lbp)
+    * [Literals in C](https://www.geeksforgeeks.org/literals-in-c-cpp-with-examples/?ref=lbp)
+    * [Escape Sequence in C](https://www.geeksforgeeks.org/escape-sequence-in-c/?ref=lbp)
+    * [bool in C](https://www.geeksforgeeks.org/bool-in-c/?ref=lbp)
+    * [Integer Promotions in C](https://www.geeksforgeeks.org/integer-promotions-in-c/?ref=lbp)
+    * [Character Arithmetic in C](https://www.geeksforgeeks.org/character-arithmetic-c-c/?ref=lbp)
+    * [Type Conversion in C](https://www.geeksforgeeks.org/type-conversion-c/?ref=lbp)
+
+## C Input/Output
+
+    * [Basic Input and Output in C](https://www.geeksforgeeks.org/basic-input-and-output-in-c/?ref=lbp)
+    * [Format Specifiers in C](https://www.geeksforgeeks.org/format-specifiers-in-c/?ref=lbp)
+    * [printf in C](https://www.geeksforgeeks.org/printf-in-c/?ref=lbp)
+    * [scanf in C](https://www.geeksforgeeks.org/scanf-in-c/?ref=lbp)
+    * [Scansets in C](https://www.geeksforgeeks.org/scansets-in-c/?ref=lbp)
+    * [Formatted and Unformatted Input/Output functions in C with Examples](https://www.geeksforgeeks.org/formatted-and-unformatted-input-output-functions-in-c-with-examples/?ref=lbp)
+
+## C Operators
+
+    * [Operators in C](https://www.geeksforgeeks.org/operators-in-c/?ref=lbp)
+    * [Arithmetic Operators in C](https://www.geeksforgeeks.org/arithmetic-operators-in-c/?ref=lbp)
+    * [Unary operators in C](https://www.geeksforgeeks.org/unary-operators-cc/?ref=lbp)
+    * [Relational Operators in C](https://www.geeksforgeeks.org/relational-operators-in-c/?ref=lbp)
+    * [Bitwise Operators in C](https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/?ref=lbp)
+    * [C Logical Operators](https://www.geeksforgeeks.org/logical-operators-in-c/?ref=lbp)
+    * [Assignment Operators in C](https://www.geeksforgeeks.org/assignment-operators-in-c-c/?ref=lbp)
+    * [Increment and Decrement Operators in C](https://www.geeksforgeeks.org/increment-and-decrement-operators-in-c/?ref=lbp)
+    * [Conditional or Ternary Operator (?:) in C](https://www.geeksforgeeks.org/conditional-or-ternary-operator-in-c/?ref=lbp)
+    * [sizeof operator in C](https://www.geeksforgeeks.org/sizeof-operator-c/?ref=lbp)
+    * [Operator Precedence and Associativity in C](https://www.geeksforgeeks.org/operator-precedence-and-associativity-in-c/?ref=lbp)
+
+## C Control Statements Decision-Making
+
+    * [Decision Making in C (if , if..else, Nested if, if-else-if )](https://www.geeksforgeeks.org/decision-making-c-cpp/?ref=lbp)
+    * [C - if Statement](https://www.geeksforgeeks.org/c-if-statement/?ref=lbp)
+    * [C if...else Statement](https://www.geeksforgeeks.org/c-if-else-statement/?ref=lbp)
+    * [C if else if ladder](https://www.geeksforgeeks.org/c-if-else-if-ladder/?ref=lbp)
+    * [Switch Statement in C](https://www.geeksforgeeks.org/c-switch-statement/?ref=lbp)
+    * [Using Range in switch Case in C](https://www.geeksforgeeks.org/using-range-switch-case-cc/?ref=lbp)
+    * [C - Loops](https://www.geeksforgeeks.org/c-loops/?ref=lbp)
+    * [C for Loop](https://www.geeksforgeeks.org/c-for-loop/?ref=lbp)
+    * [while loop in C](https://www.geeksforgeeks.org/c-while-loop/?ref=lbp)
+    * [do...while Loop in C](https://www.geeksforgeeks.org/c-do-while-loop/?ref=lbp)
+    * [For Versus While](https://www.geeksforgeeks.org/for-versus-while/?ref=lbp)
+    * [Continue Statement in C](https://www.geeksforgeeks.org/continue-in-c/?ref=lbp)
+    * [Break Statement in C](https://www.geeksforgeeks.org/c-break-statement/?ref=lbp)
+    * [goto Statement in C](https://www.geeksforgeeks.org/goto-statement-in-c/?ref=lbp)
+
+## C Functions
+
+    * [C Functions](https://www.geeksforgeeks.org/c-functions/?ref=lbp)
+    * [User-Defined Function in C](https://www.geeksforgeeks.org/user-defined-function-in-c/?ref=lbp)
+    * [Parameter Passing Techniques in C](https://www.geeksforgeeks.org/parameter-passing-techniques-in-c-cpp/?ref=lbp)
+    * [Function Prototype in C](https://www.geeksforgeeks.org/function-prototype-in-c/?ref=lbp)
+    * [How can I return multiple values from a function?](https://www.geeksforgeeks.org/how-can-i-return-multiple-values-from-a-function/?ref=lbp)
+    * [main Function in C](https://www.geeksforgeeks.org/main-function-in-c/?ref=lbp)
+    * [Implicit return type int in C](https://www.geeksforgeeks.org/implicit-return-type-int-c-language/?ref=lbp)
+    * [Callbacks in C](https://www.geeksforgeeks.org/callbacks-in-c/?ref=lbp)
+    * [Nested functions in C](https://www.geeksforgeeks.org/nested-functions-c/?ref=lbp)
+    * [Variadic functions in C](https://www.geeksforgeeks.org/variadic-functions-in-c/?ref=lbp)
+    * [_Noreturn function specifier in C](https://www.geeksforgeeks.org/_noreturn-function-specifier-c/?ref=lbp)
+    * [Predefined Identifier __func__ in C](https://www.geeksforgeeks.org/predefined-identifier-func-in-c/?ref=lbp)
+    * [C Library math.h Functions](https://www.geeksforgeeks.org/c-library-math-h-functions/?ref=lbp)
+
+## C Arrays & Strings
+
+    * [C Arrays](https://www.geeksforgeeks.org/c-arrays/?ref=lbp)
+    * [Properties of Array in C](https://www.geeksforgeeks.org/properties-of-array-in-c/?ref=lbp)
+    * [Multidimensional Arrays in C - 2D and 3D Arrays](https://www.geeksforgeeks.org/multidimensional-arrays-in-c/?ref=lbp)
+    * [Initialization of Multidimensional Array in C](https://www.geeksforgeeks.org/initialize-multidimensional-array-in-c/?ref=lbp)
+    * [Pass Array to Functions in C](https://www.geeksforgeeks.org/how-arrays-are-passed-to-functions-in-cc/?ref=lbp)
+    * [How to pass a 2D array as a parameter in C?](https://www.geeksforgeeks.org/pass-2d-array-parameter-c/?ref=lbp)
+    * [What are the data types for which it is not possible to create an array?](https://www.geeksforgeeks.org/can-we-have-an-array-of-all-types-in-c/?ref=lbp)
+    * [How to pass an array by value in C ?](https://www.geeksforgeeks.org/pass-array-value-c/?ref=lbp)
+    * [Strings in C](https://www.geeksforgeeks.org/strings-in-c/?ref=lbp)
+    * [Array of Strings in C](https://www.geeksforgeeks.org/array-of-strings-in-c/?ref=lbp)
+    * [What is the difference between single quoted and double quoted declaration of char array?](https://www.geeksforgeeks.org/g-fact/?ref=lbp)
+    * [C String Functions](https://www.geeksforgeeks.org/string-functions-in-c/?ref=lbp)
+
+## C Pointers
+
+    * [C Pointers](https://www.geeksforgeeks.org/c-pointers/?ref=lbp)
+    * [Pointer Arithmetics in C with Examples](https://www.geeksforgeeks.org/pointer-arithmetics-in-c-with-examples/?ref=lbp)
+    * [C - Pointer to Pointer (Double Pointer)](https://www.geeksforgeeks.org/c-pointer-to-pointer-double-pointer/?ref=lbp)
+    * [Function Pointer in C](https://www.geeksforgeeks.org/function-pointer-in-c/?ref=lbp)
+    * [How to declare a pointer to a function?](https://www.geeksforgeeks.org/how-to-declare-a-pointer-to-a-function/?ref=lbp)
+    * [Pointer to an Array | Array Pointer](https://www.geeksforgeeks.org/pointer-array-array-pointer/?ref=lbp)
+    * [Difference between constant pointer, pointers to constant, and constant pointers to constants](https://www.geeksforgeeks.org/difference-between-constant-pointer-pointers-to-constant-and-constant-pointers-to-constants/?ref=lbp)
+    * [Pointer vs Array in C](https://www.geeksforgeeks.org/pointer-vs-array-in-c/?ref=lbp)
+    * [Dangling, Void , Null and Wild Pointers in C](https://www.geeksforgeeks.org/dangling-void-null-wild-pointers/?ref=lbp)
+    * [Near, Far and Huge Pointers in C](https://www.geeksforgeeks.org/what-are-near-far-and-huge-pointers/?ref=lbp)
+    * [restrict keyword in C](https://www.geeksforgeeks.org/restrict-keyword-c/?ref=lbp)
+
+## C User-Defined Data Types
+
+    * [C Structures](https://www.geeksforgeeks.org/structures-c/?ref=lbp)
+    * [dot (.) Operator in C](https://www.geeksforgeeks.org/dot-operator-in-c/?ref=lbp)
+    * [C typedef](https://www.geeksforgeeks.org/typedef-in-c/?ref=lbp)
+    * [Structure Member Alignment, Padding and Data Packing](https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/?ref=lbp)
+    * [Flexible Array Members in a structure in C](https://www.geeksforgeeks.org/flexible-array-members-structure-c/?ref=lbp)
+    * [C Unions](https://www.geeksforgeeks.org/c-unions/?ref=lbp)
+    * [Bit Fields in C](https://www.geeksforgeeks.org/bit-fields-c/?ref=lbp)
+    * [Difference Between Structure and Union in C](https://www.geeksforgeeks.org/structure-vs-union-in-c/?ref=lbp)
+    * [Anonymous Union and Structure in C](https://www.geeksforgeeks.org/g-fact-38-anonymous-union-and-structure/?ref=lbp)
+    * [Enumeration (or enum) in C](https://www.geeksforgeeks.org/enumeration-enum-c/?ref=lbp)
+
+## C Storage Classes
+
+    * [Storage Classes in C](https://www.geeksforgeeks.org/storage-classes-in-c/?ref=lbp)
+    * [extern Keyword in C](https://www.geeksforgeeks.org/understanding-extern-keyword-in-c/?ref=lbp)
+    * [Static Variables in C](https://www.geeksforgeeks.org/static-variables-in-c/?ref=lbp)
+    * [Initialization of static variables in C](https://www.geeksforgeeks.org/g-fact-80/?ref=lbp)
+    * [Static functions in C](https://www.geeksforgeeks.org/what-are-static-functions-in-c/?ref=lbp)
+    * [Understanding "volatile" qualifier in C | Set 2 (Examples)](https://www.geeksforgeeks.org/understanding-volatile-qualifier-in-c/?ref=lbp)
+    * [Understanding "register" keyword in C](https://www.geeksforgeeks.org/understanding-register-keyword/?ref=lbp)
+
+## C Memory Management
+
+    * [Memory Layout of C Programs](https://www.geeksforgeeks.org/memory-layout-of-c-program/?ref=lbp)
+    * [Dynamic Memory Allocation in C using malloc(), calloc(), free() and realloc()](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/?ref=lbp)
+    * [Difference Between malloc() and calloc() with Examples](https://www.geeksforgeeks.org/difference-between-malloc-and-calloc-with-examples/?ref=lbp)
+    * [What is Memory Leak? How can we avoid?](https://www.geeksforgeeks.org/what-is-memory-leak-how-can-we-avoid/?ref=lbp)
+    * [Dynamic Array in C](https://www.geeksforgeeks.org/dynamic-array-in-c/?ref=lbp)
+    * [How to dynamically allocate a 2D array in C?](https://www.geeksforgeeks.org/dynamically-allocate-2d-array-c/?ref=lbp)
+    * [Dynamically Growing Array in C](https://www.geeksforgeeks.org/dynamically-growing-array-in-c/?ref=lbp)
+
+## C Preprocessor
+
+    * [C Preprocessors](https://www.geeksforgeeks.org/cc-preprocessors/?ref=lbp)
+    * [C Preprocessor Directives](https://www.geeksforgeeks.org/cpp-preprocessor-directives-set-2/?ref=lbp)
+    * [How a Preprocessor works in C?](https://www.geeksforgeeks.org/preprocessor-works-c/?ref=lbp)
+    * [Header Files in C](https://www.geeksforgeeks.org/header-files-in-c-cpp-and-its-uses/?ref=lbp)
+    * [What’s difference between header files "stdio.h" and "stdlib.h" ?](https://www.geeksforgeeks.org/whats-difference-between-and/?ref=lbp)
+    * [How to write your own header file in C?](https://www.geeksforgeeks.org/write-header-file-c/?ref=lbp)
+    * [Macros and its types in C](https://www.geeksforgeeks.org/macros-and-its-types-in-c-cpp/?ref=lbp)
+    * [Interesting Facts about Macros and Preprocessors in C](https://www.geeksforgeeks.org/interesting-facts-preprocessors-c/?ref=lbp)
+    * [# and ## Operators in C](https://www.geeksforgeeks.org/stringizing-and-token-pasting-operators-in-c/?ref=lbp)
+    * [How to print a variable name in C?](https://www.geeksforgeeks.org/how-to-print-a-variable-name-in-c/?ref=lbp)
+    * [Multiline macros in C](https://www.geeksforgeeks.org/multiline-macros-in-c/?ref=lbp)
+    * [Variable length arguments for Macros](https://www.geeksforgeeks.org/variable-length-arguments-for-macros/?ref=lbp)
+    * [Branch prediction macros in GCC](https://www.geeksforgeeks.org/branch-prediction-macros-in-gcc/?ref=lbp)
+    * [typedef versus #define in C](https://www.geeksforgeeks.org/typedef-versus-define-c/?ref=lbp)
+    * [Difference between #define and const in C?](https://www.geeksforgeeks.org/diffference-define-const-c/?ref=lbp)
+
+## C File Handling
+
+    * [Basics of File Handling in C](https://www.geeksforgeeks.org/basics-file-handling-c/?ref=lbp)
+    * [C fopen() function with Examples](https://www.geeksforgeeks.org/c-fopen-function-with-examples/?ref=lbp)
+    * [EOF, getc() and feof() in C](https://www.geeksforgeeks.org/eof-and-feof-in-c/?ref=lbp)
+    * [fgets() and gets() in C language](https://www.geeksforgeeks.org/fgets-gets-c-language/?ref=lbp)
+    * [fseek() vs rewind() in C](https://www.geeksforgeeks.org/g-fact-82/?ref=lbp)
+    * [What is return type of getchar(), fgetc() and getc() ?](https://www.geeksforgeeks.org/g-fact-11/?ref=lbp)
+    * [Read/Write Structure From/to a File in C](https://www.geeksforgeeks.org/read-write-structure-from-to-a-file-in-c/?ref=lbp)
+    * [C Program to print contents of file](https://www.geeksforgeeks.org/c-program-print-contents-file/?ref=lbp)
+    * [C program to delete a file](https://www.geeksforgeeks.org/c-program-delete-file/?ref=lbp)
+    * [C Program to merge contents of two files into a third file](https://www.geeksforgeeks.org/c-program-merge-contents-two-files-third-file/?ref=lbp)
+    * [What is the difference between printf, sprintf and fprintf?](https://www.geeksforgeeks.org/difference-printf-sprintf-fprintf/?ref=lbp)
+    * [Difference between getc(), getchar(), getch() and getche()](https://www.geeksforgeeks.org/difference-getchar-getch-getc-getche/?ref=lbp)
+
+## Miscellaneous
+
+    * [time.h header file in C with Examples](https://www.geeksforgeeks.org/time-h-header-file-in-c-with-examples/?ref=lbp)
+    * [Input-output system calls in C | Create, Open, Close, Read, Write](https://www.geeksforgeeks.org/input-output-system-calls-c-create-open-close-read-write/?ref=lbp)
+    * [Signals in C language](https://www.geeksforgeeks.org/signals-c-language/?ref=lbp)
+    * [Program error signals](https://www.geeksforgeeks.org/program-error-signals/?ref=lbp)
+    * [Socket Programming in C](https://www.geeksforgeeks.org/socket-programming-cc/?ref=lbp)
+    * [_Generics Keyword in C](https://www.geeksforgeeks.org/_generic-keyword-c/?ref=lbp)
+    * [Multithreading in C](https://www.geeksforgeeks.org/multithreading-in-c/?ref=lbp)
+
+## C Interview Questions
+
+    * [C Programming Interview Questions (2024)](https://www.geeksforgeeks.org/c-interview-questions/?ref=lbp)
+    * [Commonly Asked C Programming Interview Questions | Set 1](https://www.geeksforgeeks.org/commonly-asked-c-programming-interview-questions-set-1/?ref=lbp)
+    * [Commonly Asked C Programming Interview Questions | Set 2](https://www.geeksforgeeks.org/commonly-asked-c-programming-interview-questions-set-2/?ref=lbp)
+    * [Commonly Asked C Programming Interview Questions | Set 3](https://www.geeksforgeeks.org/commonly-asked-c-programming-interview-questions-set-3/?ref=lbp)

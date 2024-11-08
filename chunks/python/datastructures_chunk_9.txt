@@ -1,0 +1,84 @@
+For example, if `A` and `C` are true but `B` is false, `A and B and C` does not evaluate the expression `C`. When used as a general value and not as a Boolean, the return value of a short-circuit operator is the last evaluated argument.
+
+It is possible to assign the result of a comparison or other Boolean expression to a variable. For example,
+
+>>>```
+
+    
+    
+    >>> string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
+    >>> non_null = string1 or string2 or string3
+    >>> non_null
+    'Trondheim'
+    
+```
+
+Note that in Python, unlike C, assignment inside expressions must be done explicitly with the [walrus operator](../faq/design.html#why-can-t-i-use-an-assignment-in-an-expression) `:=`. This avoids a common class of problems encountered in C programs: typing `=` in an expression when `==` was intended.
+
+## 5.8. Comparing Sequences and Other Types[¶](#comparing-sequences-and-other-types "Link to this heading")
+
+Sequence objects typically may be compared to other objects with the same sequence type. The comparison uses _lexicographical_ ordering: first the first two items are compared, and if they differ this determines the outcome of the comparison; if they are equal, the next two items are compared, and so on, until either sequence is exhausted. If two items to be compared are themselves sequences of the same type, the lexicographical comparison is carried out recursively. If all items of two sequences compare equal, the sequences are considered equal. If one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser) one. Lexicographical ordering for strings uses the Unicode code point number to order individual characters. Some examples of comparisons between sequences of the same type:
+
+```
+
+    
+    
+    (1, 2, 3)       < (1, 2, 4)
+    [1, 2, 3]       < [1, 2, 4]
+    'ABC' < 'C' < 'Pascal' < 'Python'
+    (1, 2, 3, 4)      < (1, 2, 4)
+    (1, 2)         < (1, 2, -1)
+    (1, 2, 3)       == (1.0, 2.0, 3.0)
+    (1, 2, ('aa', 'ab'))  < (1, 2, ('abc', 'a'), 4)
+    
+```
+
+Note that comparing objects of different types with `<` or `>` is legal provided that the objects have appropriate comparison methods. For example, mixed numeric types are compared according to their numeric value, so 0 equals 0.0, etc. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a [`TypeError`](../library/exceptions.html#TypeError "TypeError") exception.
+
+Footnotes
+
+[[1](#id1)]
+
+Other languages may return the mutated object, which allows method chaining, such as `d->insert("a")->remove("b")->sort();`.
+
+### [Table of Contents](../contents.html)
+
+  * [5. Data Structures](#)
+    * [5.1. More on Lists](#more-on-lists)
+      * [5.1.1. Using Lists as Stacks](#using-lists-as-stacks)
+      * [5.1.2. Using Lists as Queues](#using-lists-as-queues)
+      * [5.1.3. List Comprehensions](#list-comprehensions)
+      * [5.1.4. Nested List Comprehensions](#nested-list-comprehensions)
+    * [5.2. The `del` statement](#the-del-statement)
+    * [5.3. Tuples and Sequences](#tuples-and-sequences)
+    * [5.4. Sets](#sets)
+    * [5.5. Dictionaries](#dictionaries)
+    * [5.6. Looping Techniques](#looping-techniques)
+    * [5.7. More on Conditions](#more-on-conditions)
+    * [5.8. Comparing Sequences and Other Types](#comparing-sequences-and-other-types)
+
+
+
+#### Previous topic
+
+[4. More Control Flow Tools](controlflow.html "previous chapter")
+
+#### Next topic
+
+[6. Modules](modules.html "next chapter")
+
+### This Page
+
+  * [Report a Bug](../bugs.html)
+  * [Show Source ](https://github.com/python/cpython/blob/main/Doc/tutorial/datastructures.rst)
+
+
+
+«
+
+### Navigation
+
+  * [index](../genindex.html "General Index")
+  * [modules](../py-modindex.html "Python Module Index") |
+  * [next](modules.html "6. Modules") |
+  * [previous](controlflow.html "4.
